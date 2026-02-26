@@ -39,21 +39,60 @@
     .font-serif-editorial { font-family: 'Cormorant Garamond', serif; }
     .font-sans-clean { font-family: 'Montserrat', sans-serif; }
 
-    /* Glassmorphism Classes */
+    /* Premium Glassmorphism Classes */
     .glass-panel {
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(212, 175, 55, 0.4);
-      box-shadow: 0 8px 32px 0 rgba(128, 0, 0, 0.08);
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      border-right: 1px solid rgba(212, 175, 55, 0.3);
+      box-shadow: 0 8px 32px 0 rgba(128, 0, 0, 0.1);
     }
     
     .glass-card {
-      background: rgba(253, 251, 247, 0.85);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      background: rgba(253, 251, 247, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      border-right: 1px solid rgba(212, 175, 55, 0.3);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .glass-dark {
+      background: rgba(20, 10, 10, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    }
+
+    /* Scroll Reveal Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-300 { transition-delay: 300ms; }
+    .delay-400 { transition-delay: 400ms; }
+
+    /* Floating Animation */
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
     }
 
     .text-gradient-gold {
@@ -106,7 +145,7 @@
       transition: max-height 0.8s ease-in-out, opacity 0.6s ease-in-out, margin-top 0.4s ease-in-out;
     }
     .accordion-content.open {
-      max-height: 2500px; /* Fixed: Allows long mobile lists to open completely without cutting off */
+      max-height: 2500px; /* Fixed: Massively increased so mobile content never cuts off */
       opacity: 1;
       margin-top: 1.5rem;
     }
@@ -170,44 +209,46 @@
   <audio id="bg-music" src="Indian 1.wav" loop></audio>
 
   <!-- SPLASH SCREEN (COVER PAGE) -->
-  <div id="splash-screen" class="fixed inset-0 z-[100] bg-[#fdfbf7] flex flex-col items-center justify-center p-4 text-center overflow-hidden transition-opacity duration-1000">
+  <div id="splash-screen" class="fixed inset-0 z-[100] bg-[#fdfbf7] bg-mandala flex flex-col items-center justify-center p-4 text-center overflow-hidden transition-opacity duration-1000">
     <div id="petals-container"></div>
     
-    <!-- Outer Decorative Border similar to the provided screenshot -->
-    <div class="absolute inset-4 border border-[#d4af37]/30 rounded-t-[50%] pointer-events-none opacity-50"></div>
-    <div class="absolute inset-8 border border-[#d4af37]/10 rounded-t-[50%] pointer-events-none opacity-30"></div>
+    <!-- Restored Exact Design from Uploaded Screenshot -->
+    <div class="z-10 flex flex-col items-center w-[92%] max-w-md bg-white p-8 md:p-10 rounded-2xl shadow-xl relative border border-transparent">
+      
+      <!-- Exact Double Inner Border -->
+      <div class="absolute inset-2 border border-[#d4af37]/40 rounded-xl pointer-events-none"></div>
+      <div class="absolute inset-3 border border-[#d4af37]/20 rounded-lg pointer-events-none"></div>
 
-    <div class="z-10 flex flex-col items-center w-full max-w-md bg-transparent relative pt-8">
-      
-      <p class="font-serif-editorial text-sm md:text-base text-[#800000] mb-6 italic px-2">"A tradition passed down through the Vedas..."</p>
-      
-      <span class="mb-6">
-        <i class="ph-fill ph-heart text-[#d4af37] text-4xl drop-shadow-sm"></i>
-      </span>
+      <div class="relative z-20 w-full flex flex-col items-center pt-2 pb-4">
+        <p class="font-serif-editorial text-[13px] md:text-base text-[#800000] mb-5 italic px-2">"A tradition passed down through the Vedas..."</p>
+        
+        <span class="mb-5">
+          <i class="ph-fill ph-heart text-[#d4af37] text-3xl drop-shadow-sm"></i>
+        </span>
 
-      <h2 class="font-serif-royal text-2xl md:text-3xl text-[#800000] mb-6 font-bold tracking-widest uppercase flex items-center gap-3">
-        <span class="text-[#800000] font-bold">॥</span>
-        SHUBH VIVAH
-        <span class="text-[#800000] font-bold">॥</span>
-      </h2>
-      
-      <p class="font-sans-clean text-xs md:text-sm font-semibold tracking-widest uppercase text-gray-600 mb-12">MONDAY, 9TH MARCH 2026</p>
+        <h2 class="font-serif-royal text-xl md:text-2xl text-[#800000] mb-6 font-bold tracking-widest uppercase flex items-center justify-center gap-4 w-full">
+          <span class="w-8 md:w-10 h-[1px] bg-[#d4af37]"></span>
+          SHUBH VIVAH
+          <span class="w-8 md:w-10 h-[1px] bg-[#d4af37]"></span>
+        </h2>
+        
+        <p class="font-sans-clean text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase text-gray-500 mb-8">MONDAY, 9TH MARCH 2026</p>
 
-      <h1 class="font-serif-royal text-[7.5vw] sm:text-4xl text-[#d4af37] mb-4 py-1 w-full text-center uppercase tracking-widest" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.05);">
-        HARSHVARDHANSINH
-      </h1>
-      
-      <span class="font-serif-editorial text-2xl text-[#800000] italic mb-4 block">weds</span>
-      
-      <h1 class="font-serif-royal text-[8.5vw] sm:text-5xl text-[#d4af37] mb-12 py-1 w-full text-center uppercase tracking-widest" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.05);">
-        JIGNABA
-      </h1>
+        <!-- Fluid Typography matching the exact gold gradient look -->
+        <h1 class="font-serif-royal text-[7vw] sm:text-[2rem] text-gradient-gold mb-3 py-1 w-full text-center leading-tight tracking-widest uppercase" id="splash-couple">
+          HARSHVARDHANSINH
+        </h1>
+        <span class="font-serif-editorial text-lg text-[#800000] italic mb-3 block">weds</span>
+        <h1 class="font-serif-royal text-[9vw] sm:text-[2.5rem] text-gradient-gold mb-12 py-1 w-full text-center leading-tight tracking-widest uppercase" id="splash-couple">
+          JIGNABA
+        </h1>
 
-      <!-- Premium White Button matching the screenshot -->
-      <button id="btn-open-invitation" class="bg-white px-8 py-3.5 rounded-full text-[#800000] font-bold tracking-widest uppercase text-xs hover:bg-[#800000] hover:text-white transition-all flex items-center gap-3 group cursor-pointer border border-[#800000]/30 shadow-lg">
-        OPEN INVITATION
-        <i class="ph ph-envelope-open text-lg group-hover:scale-110 transition-transform"></i>
-      </button>
+        <!-- Restored Premium Dark Maroon Button -->
+        <button id="btn-open-invitation" class="bg-[#4a0000] px-8 py-3.5 rounded-full text-white font-semibold tracking-widest uppercase text-xs hover:bg-[#800000] transition-colors duration-300 flex items-center gap-3 group cursor-pointer shadow-lg hover:shadow-xl">
+          OPEN INVITATION
+          <i class="ph ph-envelope-open text-lg group-hover:-translate-y-1 transition-transform text-[#d4af37]"></i>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -215,7 +256,7 @@
   <div id="main-app" class="hidden opacity-0 transition-opacity duration-1000 min-h-screen pb-24 md:pb-0">
     
     <!-- Floating Audio Control -->
-    <button id="btn-toggle-audio" class="fixed top-4 right-4 z-50 glass-panel p-2.5 md:p-3 rounded-full text-[#800000] shadow-lg hover:bg-white/80 transition-colors cursor-pointer backdrop-blur-md">
+    <button id="btn-toggle-audio" class="fixed top-6 right-6 z-50 glass-panel p-3 rounded-full text-[#800000] shadow-lg hover:bg-white/50 transition-colors cursor-pointer">
       <i id="audio-icon" class="ph ph-speaker-slash text-xl"></i>
     </button>
 
@@ -227,8 +268,8 @@
         <div class="absolute inset-0 bg-gradient-to-b from-[#800000]/60 via-[#800000]/30 to-[#fdfbf7]"></div>
       </div>
       
-      <div class="relative z-10 text-center px-4 flex flex-col items-center mt-20 md:mt-48 w-full">
-        <div class="flex flex-wrap justify-center gap-2 md:gap-6 text-white font-serif-editorial text-xs md:text-lg font-bold drop-shadow-md tracking-widest mb-4">
+      <div class="relative z-10 text-center px-4 flex flex-col items-center mt-28 md:mt-48 w-full max-w-[100vw] overflow-hidden">
+        <div class="flex flex-wrap justify-center gap-2 md:gap-6 text-[#d4af37] font-serif-editorial text-xs md:text-lg font-bold drop-shadow-md tracking-widest mb-4 reveal active">
           <span>॥ Shree Ganeshay Namah ॥</span>
           <span class="hidden md:inline">•</span>
           <span>॥ Shree Ambaji Matay Namah ॥</span>
@@ -237,26 +278,26 @@
           <span class="hidden md:inline">•</span>
           <span>॥ Jay Shree Swaminarayan ॥</span>
         </div>
-        <p class="font-serif-editorial text-xs md:text-base text-white drop-shadow-md mb-6 italic max-w-[90%] md:max-w-2xl leading-relaxed">
+        <p class="font-serif-editorial text-xs md:text-base text-white drop-shadow-md mb-6 italic max-w-[90%] md:max-w-2xl leading-relaxed reveal active delay-100">
           Vakratunda Mahakaya Suryakoti Samaprabha |<br>Nirvighnam Kuru Me Deva Sarva-Kaaryeshu Sarvada ||
         </p>
-        <p class="font-serif-editorial text-lg md:text-3xl text-white drop-shadow-md mb-2 italic px-4">With the divine blessings of Narnarayan Dev & Kuldevi Shree Ambaji Mataji</p>
+        <p class="font-serif-editorial text-lg md:text-3xl text-white drop-shadow-md mb-2 italic px-4 reveal active delay-200">With the divine blessings of Narnarayan Dev & Kuldevi Shree Ambaji Mataji</p>
         
-        <!-- FLUID HERO TYPOGRAPHY FIX -->
-        <h1 class="font-serif-royal text-white drop-shadow-2xl mb-6 mt-4 leading-tight w-full px-2 flex flex-col items-center overflow-hidden">
-          <span class="block text-[7.5vw] sm:text-6xl md:text-7xl lg:text-8xl w-full text-center drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] tracking-wider">HARSHVARDHANSINH</span>
-          <span class="block text-3xl sm:text-5xl lg:text-6xl text-[#d4af37] my-2 sm:my-4 drop-shadow-md font-serif-editorial italic">&</span> 
-          <span class="block text-[11vw] sm:text-6xl md:text-7xl lg:text-8xl w-full text-center drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] tracking-widest">JIGNABA</span>
+        <!-- FLUID HERO TYPOGRAPHY FIX (Guarantees NO cut-offs) -->
+        <h1 class="font-serif-royal text-white drop-shadow-2xl mb-6 mt-4 leading-tight w-full flex flex-col items-center">
+          <span class="block text-[6vw] sm:text-[4rem] md:text-7xl lg:text-8xl w-full text-center drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] uppercase tracking-wide px-1 md:px-0 reveal active delay-300" style="word-break: keep-all;">HARSHVARDHANSINH</span>
+          <span class="block text-3xl sm:text-5xl lg:text-6xl text-[#d4af37] my-3 sm:my-4 drop-shadow-md floating reveal active delay-400">&</span> 
+          <span class="block text-[9vw] sm:text-[4.5rem] md:text-7xl lg:text-8xl w-full text-center drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] uppercase tracking-widest px-1 md:px-0 reveal active delay-500">JIGNABA</span>
         </h1>
         
-        <div class="glass-panel px-6 py-3 md:px-8 md:py-3 rounded-full inline-block mb-10 bg-white/80 border-[#d4af37]">
+        <div class="glass-panel px-6 py-3 md:px-8 md:py-3 rounded-full inline-block mb-10 border-[#d4af37]/50 reveal active delay-500">
           <p class="font-sans-clean tracking-widest uppercase text-xs md:text-base text-[#800000] font-bold">
             9th March 2026 <span class="mx-1 md:mx-2 text-[#d4af37]">•</span> Godhavi, Ahmedabad
           </p>
         </div>
 
         <!-- Countdown -->
-        <div class="flex gap-3 md:gap-8 justify-center mt-2 text-center glass-panel px-6 py-4 md:px-8 md:py-4 rounded-3xl md:rounded-full max-w-max mx-auto border-[#d4af37]/50 bg-white/70">
+        <div class="flex gap-3 md:gap-8 justify-center mt-2 text-center glass-panel px-6 py-4 md:px-8 md:py-4 rounded-3xl md:rounded-full max-w-max mx-auto border-[#d4af37]/50 reveal active delay-500">
           <div class="flex flex-col items-center min-w-[50px] md:min-w-[60px]">
             <span id="cd-days" class="text-2xl md:text-4xl font-serif-royal text-[#800000] font-bold">00</span>
             <span class="text-[9px] md:text-xs uppercase tracking-[0.2em] text-gray-800 mt-1 font-semibold">days</span>
@@ -274,24 +315,24 @@
         </div>
       </div>
 
-      <div class="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer opacity-70 hover:opacity-100 text-[#800000] bg-white/50 p-2 rounded-full backdrop-blur-sm" onclick="document.getElementById('family').scrollIntoView({behavior: 'smooth'})">
-        <i class="ph ph-caret-down text-3xl md:text-4xl"></i>
+      <!-- Animated Scroll Down Button -->
+      
       </div>
     </section>
 
     <!-- FAMILIES SECTION (Page 1 Details) -->
     <section class="py-16 md:py-24 px-4 md:px-6 bg-mandala relative" id="family">
       <div class="max-w-6xl mx-auto text-center">
-        <h2 class="font-serif-royal text-3xl md:text-5xl text-[#800000] mb-4">Two Families, One Heart</h2>
-        <div class="w-24 md:w-32 h-1 bg-[#d4af37] mx-auto mb-10 md:mb-16 rounded-full"></div>
+        <h2 class="font-serif-royal text-3xl md:text-5xl text-[#800000] mb-4 reveal">Two Families, One Heart</h2>
+        <div class="w-24 md:w-32 h-1 bg-[#d4af37] mx-auto mb-10 md:mb-16 rounded-full reveal delay-100"></div>
         
-        <p class="font-sans-clean text-sm md:text-lg text-gray-700 max-w-3xl mx-auto mb-12 md:mb-16 leading-relaxed px-4">
+        <p class="font-sans-clean text-sm md:text-lg text-gray-700 max-w-3xl mx-auto mb-12 md:mb-16 leading-relaxed px-4 reveal delay-200">
           It brings us immense joy to invite you to celebrate the union of two souls. We look forward to your presence as they step onto the glorious path of marital bliss.
         </p>
 
         <div class="grid md:grid-cols-2 gap-8 md:gap-12 mb-16">
           <!-- Groom Side -->
-          <div class="glass-card p-8 md:p-10 rounded-3xl border border-[#d4af37]/40 shadow-xl relative overflow-hidden ornate-corners">
+          <div class="glass-card p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden ornate-corners reveal hover:-translate-y-2 transition-transform duration-500">
             <div class="absolute top-0 right-0 p-4 opacity-5">
               <svg width="120" height="120" viewBox="0 0 24 24" fill="#800000"><path d="M12 2L2 22h20L12 2z"/></svg>
             </div>
@@ -306,7 +347,7 @@
           </div>
 
           <!-- Bride Side -->
-          <div class="glass-card p-8 md:p-10 rounded-3xl border border-[#d4af37]/40 shadow-xl relative overflow-hidden ornate-corners">
+          <div class="glass-card p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden ornate-corners reveal delay-200 hover:-translate-y-2 transition-transform duration-500">
             <div class="absolute top-0 left-0 p-4 opacity-5">
               <svg width="120" height="120" viewBox="0 0 24 24" fill="#800000"><circle cx="12" cy="12" r="10"/></svg>
             </div>
@@ -321,7 +362,7 @@
         </div>
 
         <!-- Heavenly Blessings & Inviters -->
-        <div class="bg-gradient-to-br from-[#800000] to-[#5a0000] text-[#fdfbf7] p-6 md:p-12 rounded-[2rem] shadow-2xl relative overflow-hidden">
+        <div class="bg-gradient-to-br from-[#800000] to-[#5a0000] text-[#fdfbf7] p-6 md:p-12 rounded-[2rem] shadow-2xl relative overflow-hidden reveal delay-300">
           <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 mix-blend-overlay"></div>
           
           <!-- Decorative SVGs for Royal feel -->
@@ -372,8 +413,8 @@
             </div>
 
             <div class="text-left lg:col-span-5 flex flex-col justify-center lg:pl-4">
-              <div class="bg-black/20 p-6 md:p-8 rounded-3xl border border-[#d4af37]/30 backdrop-blur-sm shadow-xl relative">
-                <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#d4af37] text-[#800000] p-2 rounded-full shadow-lg">
+              <div class="glass-dark p-6 md:p-8 rounded-3xl relative reveal delay-400">
+                <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-br from-[#f3e5ab] to-[#d4af37] text-[#800000] p-3 rounded-full shadow-[0_4px_15px_rgba(212,175,55,0.4)] floating">
                   <i class="ph-fill ph-envelope-open text-2xl"></i>
                 </div>
                 <h4 class="font-serif-royal text-xl md:text-2xl text-[#d4af37] mb-6 text-center mt-4">Cordial Invitation</h4>
@@ -405,17 +446,18 @@
     <!-- EVENT SCHEDULE (Pages 2 & 3 Translated) -->
     <section id="schedule" class="py-16 md:py-24 px-4 md:px-6 bg-[#fdfbf7] relative">
       <div class="max-w-5xl mx-auto">
-        <h2 class="font-serif-royal text-3xl md:text-5xl text-center text-[#800000] mb-2">Mangalik Prasango</h2>
-        <p class="font-serif-editorial text-xl text-center text-[#d4af37] italic mb-10 md:mb-16">Auspicious Wedding Events</p>
+        <h2 class="font-serif-royal text-3xl md:text-5xl text-center text-[#800000] mb-2 reveal">Mangalik Prasango</h2>
+        <p class="font-serif-editorial text-xl text-center text-[#d4af37] italic mb-10 md:mb-16 reveal delay-100">Auspicious Wedding Events</p>
         
+        <!-- Mobile optimized margin and padding -->
         <div class="relative border-l-2 border-[#d4af37]/40 ml-2 md:ml-12 space-y-8 pb-8">
           
           <!-- Date 1 -->
-          <div class="relative pl-6 md:pl-12 group cursor-pointer event-accordion">
-            <div class="absolute w-6 h-6 md:w-8 md:h-8 bg-[#800000] rounded-full -left-[13px] md:-left-[17px] top-6 md:top-4 border-4 border-[#fdfbf7] shadow-sm flex items-center justify-center">
+          <div class="relative pl-6 md:pl-12 group cursor-pointer event-accordion reveal">
+            <div class="absolute w-6 h-6 md:w-8 md:h-8 bg-[#800000] rounded-full -left-[13px] md:-left-[17px] top-5 md:top-4 border-4 border-[#fdfbf7] shadow-sm flex items-center justify-center group-hover:scale-125 transition-transform duration-300 z-10">
               <div class="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#d4af37] rounded-full"></div>
             </div>
-            <div class="glass-card p-5 md:p-8 rounded-2xl transition-all duration-300 shadow-md hover:shadow-2xl border-l-[3px] md:border-l-4 border-l-[#800000]">
+            <div class="glass-panel p-5 md:p-8 rounded-2xl transition-all duration-300 shadow-md hover:shadow-[0_15px_35px_rgba(128,0,0,0.1)] border-l-[4px] border-l-[#800000]">
               <div class="flex justify-between items-start">
                 <div class="pr-2">
                   <h3 class="font-serif-editorial text-2xl md:text-3xl font-bold text-[#800000]">Vel Prasthan</h3>
@@ -435,11 +477,11 @@
           </div>
 
           <!-- Date 2 -->
-          <div class="relative pl-6 md:pl-12 group cursor-pointer event-accordion">
-            <div class="absolute w-6 h-6 md:w-8 md:h-8 bg-[#800000] rounded-full -left-[13px] md:-left-[17px] top-6 md:top-4 border-4 border-[#fdfbf7] shadow-sm flex items-center justify-center">
+          <div class="relative pl-6 md:pl-12 group cursor-pointer event-accordion reveal delay-100">
+            <div class="absolute w-6 h-6 md:w-8 md:h-8 bg-[#800000] rounded-full -left-[13px] md:-left-[17px] top-5 md:top-4 border-4 border-[#fdfbf7] shadow-sm flex items-center justify-center group-hover:scale-125 transition-transform duration-300 z-10">
               <div class="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#d4af37] rounded-full"></div>
             </div>
-            <div class="glass-card p-5 md:p-8 rounded-2xl transition-all duration-300 shadow-md hover:shadow-2xl border-l-[3px] md:border-l-4 border-l-[#800000]">
+            <div class="glass-panel p-5 md:p-8 rounded-2xl transition-all duration-300 shadow-md hover:shadow-[0_15px_35px_rgba(128,0,0,0.1)] border-l-[4px] border-l-[#800000]">
               <div class="flex justify-between items-start">
                 <div class="pr-2">
                   <h3 class="font-serif-editorial text-2xl md:text-3xl font-bold text-[#800000]">Pre-Wedding Rituals & Raas Garba</h3>
@@ -451,6 +493,7 @@
               </div>
               <div class="accordion-content">
                 <div class="grid md:grid-cols-2 gap-3 md:gap-4 mt-4 font-sans-clean text-gray-800">
+                  <!-- Redesigned as horizontal rows to save vertical space on mobile -->
                   <div class="bg-white/80 p-3 md:p-4 rounded-xl border border-[#d4af37]/20 shadow-sm flex justify-between items-center">
                     <p class="font-bold text-[#800000] text-sm md:text-base">Ganesh Sthapan</p>
                     <p class="text-xs md:text-sm font-semibold flex items-center gap-1 bg-[#800000]/5 px-2 py-1 rounded"><i class="ph ph-clock"></i> 7:55 AM</p>
@@ -488,11 +531,11 @@
           </div>
 
           <!-- Date 3 -->
-          <div class="relative pl-6 md:pl-12 group cursor-pointer event-accordion">
-            <div class="absolute w-6 h-6 md:w-8 md:h-8 bg-[#800000] rounded-full -left-[13px] md:-left-[17px] top-6 md:top-4 border-4 border-[#fdfbf7] shadow-sm flex items-center justify-center">
+          <div class="relative pl-6 md:pl-12 group cursor-pointer event-accordion reveal delay-200">
+            <div class="absolute w-6 h-6 md:w-8 md:h-8 bg-[#800000] rounded-full -left-[13px] md:-left-[17px] top-5 md:top-4 border-4 border-[#fdfbf7] shadow-sm flex items-center justify-center group-hover:scale-125 transition-transform duration-300 z-10">
               <div class="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#d4af37] rounded-full"></div>
             </div>
-            <div class="glass-card p-5 md:p-8 rounded-2xl transition-all duration-300 shadow-md hover:shadow-2xl border-l-[3px] md:border-l-4 border-l-[#800000]">
+            <div class="glass-panel p-5 md:p-8 rounded-2xl transition-all duration-300 shadow-md hover:shadow-[0_15px_35px_rgba(128,0,0,0.1)] border-l-[4px] border-l-[#800000]">
               <div class="flex justify-between items-start">
                 <div class="pr-2">
                   <h3 class="font-serif-editorial text-2xl md:text-3xl font-bold text-[#800000]">Avasar Anand Na</h3>
@@ -564,13 +607,13 @@
     <!-- VENUE MAP SECTION -->
     <section id="venue" class="py-24 px-6 bg-mandala relative">
       <div class="max-w-5xl mx-auto">
-        <h2 class="font-serif-royal text-3xl md:text-5xl text-center text-[#800000] mb-4">Shubh Sthal (The Venue)</h2>
-        <div class="w-32 h-1 bg-[#d4af37] mx-auto mb-16 rounded-full"></div>
+        <h2 class="font-serif-royal text-3xl md:text-5xl text-center text-[#800000] mb-4 reveal">Shubh Sthal (The Venue)</h2>
+        <div class="w-32 h-1 bg-[#d4af37] mx-auto mb-16 rounded-full reveal delay-100"></div>
 
-        <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl border-2 border-[#d4af37]/20">
+        <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl border-0 reveal delay-200">
           <div class="w-full md:w-1/2 h-[350px] md:h-auto bg-cover bg-center" style="background-image: url('https://i.pinimg.com/1200x/9e/40/60/9e40608d62fc4267f779fd94ea55bd21.jpg');">
           </div>
-          <div class="w-full md:w-1/2 p-10 md:p-14 flex flex-col justify-center bg-white/90">
+          <div class="w-full md:w-1/2 p-10 md:p-14 flex flex-col justify-center glass-panel rounded-none border-0">
             <h3 class="font-serif-editorial text-4xl text-[#800000] mb-4 font-bold">Bapa Sitaram Farm</h3>
             <div class="w-16 h-px bg-[#d4af37] mb-6"></div>
             <p class="font-sans-clean text-gray-800 mb-8 flex items-start gap-4 text-lg">
@@ -590,20 +633,20 @@
       <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
       
       <div class="max-w-4xl mx-auto relative z-10">
-        <h2 class="font-serif-royal text-3xl md:text-5xl text-center text-[#d4af37] mb-4">Bless the Couple</h2>
-        <div class="w-32 h-1 bg-[#fae8dd] mx-auto mb-16 rounded-full opacity-50"></div>
+        <h2 class="font-serif-royal text-3xl md:text-5xl text-center text-[#d4af37] mb-4 reveal">Bless the Couple</h2>
+        <div class="w-32 h-1 bg-[#fae8dd] mx-auto mb-16 rounded-full opacity-50 reveal delay-100"></div>
 
-        <div class="bg-white/10 backdrop-blur-md p-8 md:p-10 rounded-3xl mb-12 shadow-2xl border border-white/20">
+        <div class="glass-dark p-8 md:p-10 rounded-3xl mb-12 shadow-[0_20px_50px_rgba(0,0,0,0.4)] reveal delay-200">
           <form id="blessing-form" class="flex flex-col gap-5">
-            <input required type="text" id="blessing-name" placeholder="Your Name & Family" class="bg-white/90 border-0 rounded-xl px-5 py-4 focus:outline-none focus:ring-4 ring-[#d4af37]/40 text-[#800000] font-medium" />
-            <textarea required id="blessing-message" placeholder="Write your heartfelt wishes for Harshvardhansinh & Jignaba..." rows="4" class="bg-white/90 border-0 rounded-xl px-5 py-4 focus:outline-none focus:ring-4 ring-[#d4af37]/40 resize-none text-[#800000]"></textarea>
-            <button type="submit" id="blessing-submit-btn" class="bg-[#d4af37] text-[#800000] py-4 px-8 rounded-xl font-bold uppercase tracking-widest w-full md:w-max self-end hover:bg-[#c4a132] transition cursor-pointer shadow-lg">
+            <input required type="text" id="blessing-name" placeholder="Your Name & Family" class="bg-white/90 border-0 rounded-xl px-5 py-4 focus:outline-none focus:ring-4 ring-[#d4af37]/40 text-[#800000] font-medium shadow-inner" />
+            <textarea required id="blessing-message" placeholder="Write your heartfelt wishes for Harshvardhansinh & Jignaba..." rows="4" class="bg-white/90 border-0 rounded-xl px-5 py-4 focus:outline-none focus:ring-4 ring-[#d4af37]/40 resize-none text-[#800000] shadow-inner"></textarea>
+            <button type="submit" id="blessing-submit-btn" class="bg-gradient-to-r from-[#d4af37] to-[#b8860b] text-[#800000] py-4 px-8 rounded-xl font-bold uppercase tracking-widest w-full md:w-max self-end hover:brightness-110 transition cursor-pointer shadow-lg">
               Send Blessings
             </button>
           </form>
         </div>
 
-        <div id="blessings-list" class="grid md:grid-cols-2 gap-6 max-h-[500px] overflow-y-auto hide-scrollbar pb-10">
+        <div id="blessings-list" class="grid md:grid-cols-2 gap-6 max-h-[500px] overflow-y-auto hide-scrollbar pb-10 reveal delay-300">
           <!-- Blessings injected here dynamically -->
           <p class="text-center text-[#fae8dd]/70 col-span-2 italic py-8 text-lg">Awaiting the first blessing...</p>
         </div>
@@ -616,16 +659,16 @@
        
        <div class="max-w-7xl mx-auto relative z-10 mt-8 md:mt-12">
           
-          <div class="flex items-center justify-center gap-4 mb-12 md:mb-16">
+          <div class="flex items-center justify-center gap-4 mb-12 md:mb-16 reveal">
             <div class="h-px bg-[#d4af37]/50 flex-1 max-w-[100px] md:max-w-[200px]"></div>
             <h2 class="font-serif-royal text-2xl md:text-4xl text-[#d4af37] text-center px-4">Extended Family</h2>
             <div class="h-px bg-[#d4af37]/50 flex-1 max-w-[100px] md:max-w-[200px]"></div>
           </div>
 
           <!-- Darshanabhilashi -->
-          <div class="mb-12 md:mb-16 relative">
+          <div class="mb-12 md:mb-16 relative reveal delay-100">
             <h4 class="font-serif-editorial text-2xl md:text-3xl mb-6 text-[#fae8dd] italic font-semibold drop-shadow-md">Well Wishers (Darshanabhilashi)</h4>
-            <div class="text-left bg-gradient-to-b from-white/10 to-transparent p-6 md:p-10 rounded-[2rem] border border-white/20 shadow-2xl backdrop-blur-md relative ornate-corners">
+            <div class="text-left glass-dark p-6 md:p-10 rounded-[2rem] relative ornate-corners hover:-translate-y-2 transition-transform duration-500">
               <ul class="royal-list royal-list-light font-serif-editorial text-base md:text-lg text-gray-200 columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 md:gap-8">
                 <li>Vaghela Bhagirathsinh Dashrathsinh</li>
                 <li>Vaghela Jayendrasinh Dashrathsinh</li>
@@ -659,8 +702,8 @@
 
           <div class="grid lg:grid-cols-2 gap-8 md:gap-12 mb-16">
             <!-- Monghera Maheman -->
-            <div class="text-left bg-gradient-to-br from-[#800000]/40 to-transparent p-6 md:p-10 rounded-[2rem] border border-[#d4af37]/30 shadow-2xl h-full relative ornate-corners">
-              <div class="absolute top-6 right-6 text-[#d4af37] opacity-30"><i class="ph-fill ph-crown text-4xl"></i></div>
+            <div class="text-left glass-dark p-6 md:p-10 rounded-[2rem] h-full relative ornate-corners reveal delay-200 hover:-translate-y-2 transition-transform duration-500">
+              <div class="absolute top-6 right-6 text-[#d4af37] opacity-30"><i class="ph-fill ph-crown text-4xl floating"></i></div>
               <h4 class="font-serif-editorial text-2xl md:text-3xl mb-6 text-[#d4af37] font-semibold border-b border-[#d4af37]/20 pb-4 inline-block pr-8">Esteemed Guests <br><span class="text-lg italic text-[#fae8dd] font-normal">(Monghera Maheman)</span></h4>
               <ul class="royal-list royal-list-light text-base md:text-lg text-gray-200 font-serif-editorial">
                 <li>Jhala Manoharsinh Gajubha (Jamai Shri)</li>
@@ -676,8 +719,8 @@
             </div>
             
             <!-- Mosal Paksh -->
-            <div class="text-left bg-gradient-to-bl from-[#800000]/40 to-transparent p-6 md:p-10 rounded-[2rem] border border-[#d4af37]/30 shadow-2xl h-full relative ornate-corners">
-              <div class="absolute top-6 right-6 text-[#d4af37] opacity-30"><i class="ph-fill ph-users-three text-4xl"></i></div>
+            <div class="text-left glass-dark p-6 md:p-10 rounded-[2rem] h-full relative ornate-corners reveal delay-300 hover:-translate-y-2 transition-transform duration-500">
+              <div class="absolute top-6 right-6 text-[#d4af37] opacity-30"><i class="ph-fill ph-users-three text-4xl floating"></i></div>
               <h4 class="font-serif-editorial text-2xl md:text-3xl mb-6 text-[#d4af37] font-semibold border-b border-[#d4af37]/20 pb-4 inline-block pr-8">Maternal Side <br><span class="text-lg italic text-[#fae8dd] font-normal">(Mosal Paksh)</span></h4>
               
               <div class="mb-8 bg-[#2a0e0e]/80 p-5 md:p-6 rounded-2xl border-l-[6px] border-[#d4af37] shadow-[0_8px_30px_rgba(0,0,0,0.2)] relative overflow-hidden backdrop-blur-md">
@@ -685,7 +728,7 @@
                 <p class="text-xl md:text-2xl text-[#fae8dd] font-serif-editorial font-bold leading-snug">Late Shri Raol Digvijaysinh Ramdevsinh</p>
               </div>
 
-              <ul class="royal-list royal-list-light text-base md:text-lg text-gray-200 font-serif-editorial columns-1 sm:columns-2 gap-6">
+          <div class="glass-dark border-y border-[#d4af37]/40 py-6 md:py-8 px-4 rounded-3xl max-w-3xl mx-auto mb-16 shadow-2xl reveal delay-400">
                 <li>Raol Jagatsinh Harubha</li>
                 <li>Raol Ashkoksinh Govubha</li>
                 <li>Raol Vijaysinh Ramdevsinh</li>
@@ -816,6 +859,27 @@
       svg.appendChild(path);
       petalsContainer.appendChild(svg);
     }
+
+    // --- Intersection Observer for Scroll Animations ---
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.15
+    };
+
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          // Optional: Unobserve if you only want the animation to happen once
+          // observer.unobserve(entry.target); 
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach((el) => {
+      scrollObserver.observe(el);
+    });
 
     // --- UI Logic: Countdown Timer ---
     const elDays = document.getElementById('cd-days');
