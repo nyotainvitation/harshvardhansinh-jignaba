@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harshvardhansinh & Jignaba - Wedding Invitation</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&family=Samarkan&display=swap" rel="stylesheet">
+  
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <style>
+    :root {
+      --color-bg: #fdfbf7;
+      --color-maroon: #800000;
+      --color-gold: #d4af37;
+      --color-peach: #fae8dd;
+      --color-text: #2c1b1b;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: 'Montserrat', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .font-serif-royal { font-family: 'Cinzel', serif; }
+    .font-serif-editorial { font-family: 'Cormorant Garamond', serif; }
+    .font-sans-clean { font-family: 'Montserrat', sans-serif; }
+
+    /* Glassmorphism Classes */
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      box-shadow: 0 8px 32px 0 rgba(128, 0, 0, 0.08);
+    }
+    
+    .glass-card {
+      background: rgba(253, 251, 247, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .text-gradient-gold {
+      background: linear-gradient(to right, #b8860b, #d4af37, #f3e5ab, #d4af37);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      background-size: 200% auto;
+      animation: shine 5s linear infinite;
+    }
+
+    @keyframes shine {
+      to { background-position: 200% center; }
+    }
+
+    /* Petal Animations */
+    .petal {
+      position: fixed;
+      top: -10%;
+      z-index: 100;
+      pointer-events: none;
+      animation: fall linear infinite;
+    }
+    
+    @keyframes fall {
+      0% { transform: translateY(-10vh) rotate(0deg) scale(0.8); opacity: 0; }
+      10% { opacity: 0.8; }
+      90% { opacity: 0.8; }
+      100% { transform: translateY(110vh) rotate(360deg) scale(1.2); opacity: 0; }
+    }
+
+    /* Subtle Mandala Background */
+    .bg-mandala {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5c1.1 0 2 .9 2 2v2.1c4.5.6 8.3 3.4 10.3 7.4l1.8-1.1c.9-.6 2.2-.3 2.8.6.6.9.3 2.2-.6 2.8l-1.8 1.1c1.3 2.6 2.1 5.5 2.3 8.6H49c1.1 0 2 .9 2 2s-.9 2-2 2h-2.1c-.2 3.1-1 6-2.3 8.6l1.8 1.1c.9.6 1.2 1.9.6 2.8-.6.9-1.9 1.2-2.8.6l-1.8-1.1c-2 4-5.8 6.8-10.3 7.4V49c0 1.1-.9 2-2 2s-2-.9-2-2v-2.1c-4.5-.6-8.3-3.4-10.3-7.4l-1.8 1.1c-.9.6-2.2.3-2.8-.6-.6-.9-.3-2.2.6-2.8l1.8 1.1c-1.3-2.6-2.1-5.5-2.3-8.6H7c-1.1 0-2-.9-2-2s.9-2 2-2h2.1c.2-3.1 1-6 2.3-8.6l-1.8-1.1c-.9-.6-1.2-1.9-.6-2.8.6-.9 1.9-1.2 2.8-.6l1.8 1.1c2-4 5.8-6.8 10.3-7.4V7c0-1.1.9-2 2-2zm0 8c-7.7 0-14 6.3-14 14s6.3 14 14 14 14-6.3 14-14-6.3-14-14-14zm0 6c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8z' fill='%23d4af37' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Accordion transitions */
+    .accordion-content {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin-top 0.5s ease-in-out;
+    }
+    .accordion-content.open {
+      max-height: 500px;
+      opacity: 1;
+      margin-top: 1.5rem;
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.8s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Royal List Styling */
+    .royal-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .royal-list li::before {
+      content: '✧';
+      position: absolute;
+      left: 0;
+      top: -2px;
+      color: #d4af37;
+      font-size: 1.2em;
+      line-height: 1.2;
+      opacity: 0.8;
+    }
+    .royal-list-light li::before {
+      color: #fae8dd;
+      opacity: 0.6;
+    }
+
+    /* Ornate Corners */
+    .ornate-corners {
+      position: relative;
+    }
+    .ornate-corners::before, .ornate-corners::after {
+      content: '';
+      position: absolute;
+      width: 40px; height: 40px;
+      border: 2px solid #d4af37;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .ornate-corners::before {
+      top: 10px; left: 10px;
+      border-right: none; border-bottom: none;
+    }
+    .ornate-corners::after {
+      bottom: 10px; right: 10px;
+      border-left: none; border-top: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Audio Element -->
+  <audio id="bg-music" src="Indian 1.wav" loop></audio>
+
+  <!-- SPLASH SCREEN (COVER PAGE) -->
+  <div id="splash-screen" class="fixed inset-0 z-[100] bg-[#fdfbf7] bg-mandala flex flex-col items-center justify-center p-4 text-center overflow-hidden transition-opacity duration-1000">
+    <div id="petals-container"></div>
+    
+    <!-- Clean, Elegant Center Card for both Mobile & Desktop -->
+    <div class="z-10 flex flex-col items-center w-[92%] max-w-md bg-white/95 p-8 md:p-10 rounded-2xl shadow-[0_15px_40px_rgba(128,0,0,0.1)] relative border border-[#d4af37]/40">
+      
+      <!-- Elegant Double Inner Border -->
+      <div class="absolute inset-3 border border-[#d4af37]/30 rounded-xl pointer-events-none"></div>
+      <div class="absolute inset-4 border border-[#800000]/10 rounded-lg pointer-events-none"></div>
+
+      <div class="relative z-20 w-full flex flex-col items-center">
+        <p class="font-serif-editorial text-sm md:text-base text-[#800000] mb-4 italic px-2">"A tradition passed down through the Vedas..."</p>
+        
+        <span class="text-[#d4af37] mb-6">
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='#d4af37' width='36' height='36'>
+            <path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/>
+          </svg>
+        </span>
+
+        <h2 class="font-serif-royal text-2xl md:text-3xl text-[#800000] mb-5 font-bold tracking-widest uppercase flex items-center gap-3">
+          <span class="w-6 md:w-8 h-px bg-[#d4af37]"></span>
+          Shubh Vivah
+          <span class="w-6 md:w-8 h-px bg-[#d4af37]"></span>
+        </h2>
+        
+        <p class="font-sans-clean text-xs md:text-sm font-semibold tracking-widest uppercase text-gray-500 mb-8">Monday, 9th March 2026</p>
+
+        <!-- Fluid Typography for Long Name -->
+        <h1 class="font-serif-royal text-[6.5vw] sm:text-4xl md:text-4xl text-gradient-gold mb-3 py-1 w-full text-center leading-tight tracking-wide" id="splash-couple">
+          Harshvardhansinh
+        </h1>
+        <span class="font-serif-editorial text-lg text-[#800000] italic mb-3 block">weds</span>
+        <h1 class="font-serif-royal text-[8.5vw] sm:text-5xl md:text-5xl text-gradient-gold mb-10 py-1 w-full text-center leading-tight tracking-wide" id="splash-couple">
+          Jignaba
+        </h1>
+
+        <!-- Premium Button -->
+        <button id="btn-open-invitation" class="bg-gradient-to-r from-[#800000] to-[#5a0000] px-8 py-3.5 rounded-full text-[#fdfbf7] font-semibold tracking-widest uppercase text-xs hover:shadow-lg hover:shadow-[#800000]/30 transition-all flex items-center gap-3 group cursor-pointer border border-[#d4af37]/50">
+          Open Invitation
+          <i class="ph ph-envelope-open text-lg group-hover:scale-110 transition-transform text-[#d4af37]"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN APPLICATION -->
+  <div id="main-app" class="hidden opacity-0 transition-opacity duration-1000 min-h-screen pb-24 md:pb-0">
+    
+    <!-- Floating Audio Control -->
+    <button id="btn-toggle-audio" class="fixed top-6 right-6 z-50 glass-panel p-3 rounded-full text-[#800000] shadow-lg hover:bg-white/50 transition-colors cursor-pointer">
+      <i id="audio-icon" class="ph ph-speaker-slash text-xl"></i>
+    </button>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[100svh] flex flex-col items-center justify-center overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="https://i.pinimg.com/736x/36/bf/6b/36bf6bb0b883db1851be2b577e99daa5.jpg" alt="Royal Wedding" class="w-full h-full object-cover opacity-80 object-top"/>
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#800000]/60 via-[#800000]/30 to-[#fdfbf7]"></div>
+      </div>
+      
+      <div class="relative z-10 text-center px-4 flex flex-col items-center mt-28 md:mt-48 w-full">
+        <div class="flex flex-wrap justify-center gap-2 md:gap-6 text-white font-serif-editorial text-xs md:text-lg font-bold drop-shadow-md tracking-widest mb-4">
+          <span>॥ Shree Ganeshay Namah ॥</span>
+          <span class="hidden md:inline">•</span>
+          <span>॥ Shree Ambaji Matay Namah ॥</span>
+          <span class="hidden md:inline">•</span>
+          <span>॥ Shree Meldi Matay Namah ॥</span>
+          <span class="hidden md:inline">•</span>
+          <span>॥ Jay Shree Swaminarayan ॥</span>
+        </div>
+        <p class="font-serif-editorial text-xs md:text-base text-white drop-shadow-md mb-6 italic max-w-[90%] md:max-w-2xl leading-relaxed">
+          Vakratunda Mahakaya Suryakoti Samaprabha |<br>Nirvighnam Kuru Me Deva Sarva-Kaaryeshu Sarvada ||
+        </p>
+        <p class="font-serif-editorial text-lg md:text-3xl text-white drop-shadow-md mb-2 italic px-4">With the divine blessings of Narnarayan Dev & Kuldevi Shree Ambaji Mataji</p>
+        
+        <!-- FLUID HERO TYPOGRAPHY FIX -->
+        <h1 class="font-serif-royal text-white drop-shadow-2xl mb-6 mt-4 leading-tight w-full px-2 flex flex-col items-center">
+          <span class="block text-[6.5vw] sm:text-6xl md:text-7xl lg:text-8xl w-full text-center drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] tracking-wide">Harshvardhansinh</span>
+          <span class="block text-3xl sm:text-5xl lg:text-6xl text-[#d4af37] my-3 sm:my-4 drop-shadow-md">&</span> 
+          <span class="block text-[10vw] sm:text-6xl md:text-7xl lg:text-8xl w-full text-center drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] tracking-wide">Jignaba</span>
+        </h1>
+        
+        <div class="glass-panel px-6 py-3 md:px-8 md:py-3 rounded-full inline-block mb-10 bg-white/80 border-[#d4af37]">
+          <p class="font-sans-clean tracking-widest uppercase text-xs md:text-base text-[#800000] font-bold">
+            9th March 2026 <span class="mx-1 md:mx-2 text-[#d4af37]">•</span> Godhavi, Ahmedabad
+          </p>
+        </div>
+
+        <!-- Countdown -->
+        <div class="flex gap-3 md:gap-8 justify-center mt-2 text-center glass-panel px-6 py-4 md:px-8 md:py-4 rounded-3xl md:rounded-full max-w-max mx-auto border-[#d4af37]/50 bg-white/70">
+          <div class="flex flex-col items-center min-w-[50px] md:min-w-[60px]">
+            <span id="cd-days" class="text-2xl md:text-4xl font-serif-royal text-[#800000] font-bold">00</span>
+            <span class="text-[9px] md:text-xs uppercase tracking-[0.2em] text-gray-800 mt-1 font-semibold">days</span>
+          </div>
+          <span class="text-2xl md:text-3xl text-[#d4af37] font-serif-royal mt-1">:</span>
+          <div class="flex flex-col items-center min-w-[50px] md:min-w-[60px]">
+            <span id="cd-hours" class="text-2xl md:text-4xl font-serif-royal text-[#800000] font-bold">00</span>
+            <span class="text-[9px] md:text-xs uppercase tracking-[0.2em] text-gray-800 mt-1 font-semibold">hours</span>
+          </div>
+          <span class="text-2xl md:text-3xl text-[#d4af37] font-serif-royal mt-1">:</span>
+          <div class="flex flex-col items-center min-w-[50px] md:min-w-[60px]">
+            <span id="cd-minutes" class="text-2xl md:text-4xl font-serif-royal text-[#800000] font-bold">00</span>
+            <span class="text-[9px] md:text-xs uppercase tracking-[0.2em] text-gray-800 mt-1 font-semibold">mins</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer opacity-70 hover:opacity-100 text-[#800000] bg-white/50 p-2 rounded-full backdrop-blur-sm" onclick="document.getElementById('family').scrollIntoView({behavior: 'smooth'})">
+        <i class="ph ph-caret-down text-3xl md:text-4xl"></i>
+      </div>
+    </section>
+
+    <!-- FAMILIES SECTION (Page 1 Details) -->
+    <section class="py-16 md:py-24 px-4 md:px-6 bg-mandala relative" id="family">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="font-serif-royal text-3xl md:text-5xl text-[#800000] mb-4">Two Families, One Heart</h2>
+        <div class="w-24 md:w-32 h-1 bg-[#d4af37] mx-auto mb-10 md:mb-16 rounded-full"></div>
+        
+        <p class="font-sans-clean text-sm md:text-lg text-gray-700 max-w-3xl mx-auto mb-12 md:mb-16 leading-relaxed px-4">
+          It brings us immense joy to invite you to celebrate the union of two souls. We look forward to your presence as they step onto the glorious path of marital bliss.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 mb-16">
+          <!-- Groom Side -->
+          <div class="glass-card p-8 md:p-10 rounded-3xl border border-[#d4af37]/40 shadow-xl relative overflow-hidden ornate-corners">
+            <div class="absolute top-0 right-0 p-4 opacity-5">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="#800000"><path d="M12 2L2 22h20L12 2z"/></svg>
+            </div>
+            <h3 class="font-serif-editorial text-2xl md:text-3xl text-[#800000] mb-2 font-bold break-words">Chi. Harshvardhansinh</h3>
+            <div class="w-16 h-px bg-[#d4af37] mx-auto mb-6"></div>
+            <p class="font-sans-clean text-xs md:text-sm text-gray-500 uppercase tracking-widest mb-2">Grandson of</p>
+            <p class="font-serif-editorial text-lg md:text-xl font-semibold text-gray-800 mb-6">Late Shri Dashrathsinh Arjunsinh Vaghela</p>
+            
+            <p class="font-sans-clean text-xs md:text-sm text-gray-500 uppercase tracking-widest mb-2">Beloved Son of</p>
+            <p class="font-serif-editorial text-xl md:text-2xl font-bold mb-2 text-[#800000]">Shri Jayendrasinh Dashrathsinh Vaghela</p>
+            <p class="font-sans-clean text-xs md:text-sm text-gray-600 mb-2">Resident of Godhavi</p>
+          </div>
+
+          <!-- Bride Side -->
+          <div class="glass-card p-8 md:p-10 rounded-3xl border border-[#d4af37]/40 shadow-xl relative overflow-hidden ornate-corners">
+            <div class="absolute top-0 left-0 p-4 opacity-5">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="#800000"><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <h3 class="font-serif-editorial text-2xl md:text-3xl text-[#800000] mb-2 font-bold break-words">Sau. Kaa. Chi. Jignaba</h3>
+            <div class="w-16 h-px bg-[#d4af37] mx-auto mb-6"></div>
+            <p class="font-sans-clean text-xs md:text-sm text-gray-500 uppercase tracking-widest mb-2">Granddaughter of</p>
+            <p class="font-serif-editorial text-lg md:text-xl font-semibold text-gray-800 mb-6">Late Shri Bahadursinh Jadeja</p>
+            
+            <p class="font-sans-clean text-xs md:text-sm text-gray-500 uppercase tracking-widest mb-2">Beloved Daughter of</p>
+            <p class="font-serif-editorial text-xl md:text-2xl font-bold mb-2 text-[#800000]">Shri Narendrasinh Bahadursinh Jadeja</p>
+            <p class="font-sans-clean text-xs md:text-sm text-gray-600 mb-2">Resident of Haripar (Jamnagar)</p>
+          </div>
+        </div>
+
+        <!-- Heavenly Blessings & Inviters -->
+        <div class="bg-gradient-to-br from-[#800000] to-[#5a0000] text-[#fdfbf7] p-6 md:p-12 rounded-[2rem] shadow-2xl relative overflow-hidden">
+          <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 mix-blend-overlay"></div>
+          
+          <!-- Decorative SVGs for Royal feel -->
+          <svg class="absolute top-4 left-4 opacity-20 w-16 h-16 md:w-24 md:h-24" viewBox="0 0 100 100" fill="none" stroke="#d4af37" stroke-width="2"><path d="M10,50 Q50,10 50,50 T90,50" /><path d="M50,10 Q90,50 50,50 T50,90" /></svg>
+          <svg class="absolute bottom-4 right-4 opacity-20 w-16 h-16 md:w-24 md:h-24 rotate-180" viewBox="0 0 100 100" fill="none" stroke="#d4af37" stroke-width="2"><path d="M10,50 Q50,10 50,50 T90,50" /><path d="M50,10 Q90,50 50,50 T50,90" /></svg>
+
+          <div class="relative z-10 grid lg:grid-cols-12 gap-10">
+            
+            <div class="text-left lg:col-span-7 border-b lg:border-b-0 lg:border-r border-[#d4af37]/30 pb-10 lg:pb-0 lg:pr-10">
+              <h4 class="font-serif-royal text-xl md:text-3xl text-[#d4af37] mb-6 flex items-center gap-3 border-b border-[#d4af37]/20 pb-3 inline-flex">
+                <i class="ph ph-hands-praying"></i> Heavenly Blessings
+              </h4>
+              
+              <div class="mb-8 bg-black/30 p-5 md:p-6 rounded-2xl border-l-[6px] border-[#d4af37] shadow-[0_8px_30px_rgba(0,0,0,0.3)] relative overflow-hidden max-w-lg backdrop-blur-sm">
+                <p class="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[#d4af37] mb-2 font-sans-clean font-bold">In Loving Memory</p>
+                <p class="text-xl md:text-2xl text-[#fae8dd] font-serif-editorial font-bold leading-snug">Late Shri Vaghela Arjunsinh Kanjibha</p>
+              </div>
+
+              <ul class="royal-list royal-list-light font-serif-editorial text-base md:text-lg text-[#fae8dd] columns-1 sm:columns-2 gap-x-6">
+                <li>Late Shri Vaghela Rameshisinh Arjunsinh</li>
+                <li>Late Shri Vaghela Govubha Kanjibha</li>
+                <li>Late Shri Vaghela Ghanashyamsinh Rameshisinh</li>
+                <li>Late Shri Vaghela Jambha Kanjibha</li>
+                <li>Late Shri Vaghela Virendrasinh Mahendrasinh</li>
+                <li>Late Shri Vaghela Ranajitsinh Arjunsinh</li>
+                <li>Late Shri Vaghela Tejendrasinh Sukhdevsinh</li>
+                <li class="col-span-full mt-2 font-bold text-[#d4af37]">Late Shri Jhala Chhatrapalsinh Bharatsinh (Jamai Shri)</li>
+              </ul>
+
+              <h4 class="font-serif-royal text-xl md:text-3xl text-[#d4af37] mb-6 mt-12 flex items-center gap-3 border-b border-[#d4af37]/20 pb-3 inline-flex">
+                <i class="ph ph-heart"></i> Loving Family (Snehadheen)
+              </h4>
+              <ul class="royal-list royal-list-light font-serif-editorial text-sm md:text-base text-[#fae8dd] columns-1 sm:columns-2 gap-x-6">
+                <li>Vaghela Dashrathsinh Arjunsinh</li>
+                <li>Vaghela Bhimsinh Himmatsinh</li>
+                <li>Vaghela Mahendrasinh Jambha</li>
+                <li>Vaghela Dhirubha Himmatsinh</li>
+                <li>Vaghela Sukhdevsinh Govubha</li>
+                <li>Vaghela Balwantsinh Navalsinh</li>
+                <li>Vaghela Jabbarsinh Govubha</li>
+                <li>Vaghela Jitendrasinh Gambhirsinh</li>
+                <li>Vaghela Ashoksinh Jambha</li>
+                <li>Vaghela Vishnusinh Umedsinh</li>
+                <li>Vaghela Gajendrasinh Govubha</li>
+                <li>Vaghela Kalpeshsinh Dilipsinh</li>
+              </ul>
+            </div>
+
+            <div class="text-left lg:col-span-5 flex flex-col justify-center lg:pl-4">
+              <div class="bg-black/20 p-6 md:p-8 rounded-3xl border border-[#d4af37]/30 backdrop-blur-sm shadow-xl relative">
+                <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#d4af37] text-[#800000] p-2 rounded-full shadow-lg">
+                  <i class="ph-fill ph-envelope-open text-2xl"></i>
+                </div>
+                <h4 class="font-serif-royal text-xl md:text-2xl text-[#d4af37] mb-6 text-center mt-4">Cordial Invitation</h4>
+                
+                <div class="text-center mb-8">
+                  <p class="font-serif-editorial text-xl md:text-2xl font-bold text-white mb-2">Vaghela Dashrathsinh Arjunsinh</p>
+                  <p class="font-serif-editorial text-lg md:text-xl text-[#fae8dd]">Vaghela Bhagirathsinh Dashrathsinh</p>
+                </div>
+                
+                <div class="space-y-6">
+                  <div>
+                    <p class="font-sans-clean text-xs font-bold text-[#d4af37] mb-1 tracking-[0.2em] uppercase flex items-center gap-2"><i class="ph-fill ph-house-line text-lg"></i> Residence</p>
+                    <p class="font-sans-clean text-sm md:text-base text-gray-200 leading-relaxed pl-6">"Radha Krishna Niwas", Opp. Jain Derasar, Godhavi, Ta. Sanand, Dist. Ahmedabad</p>
+                  </div>
+                  <div>
+                    <p class="font-sans-clean text-xs font-bold text-[#d4af37] mb-1 tracking-[0.2em] uppercase flex items-center gap-2"><i class="ph-fill ph-phone-call text-lg"></i> Contact</p>
+                    <p class="font-sans-clean text-sm md:text-base text-gray-200 pl-6 tracking-wide">+91 97271 87173 <br class="md:hidden"><span class="hidden md:inline text-[#d4af37] mx-2">|</span> +91 79698 00976</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EVENT SCHEDULE (Pages 2 & 3 Translated) -->
+    <section id="schedule" class="py-24 px-6 bg-[#fdfbf7] relative">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-serif-royal text-3xl md:text-5xl text-center text-[#800000] mb-2">Mangalik Prasango</h2>
+        <p class="font-serif-editorial text-xl text-center text-[#d4af37] italic mb-6">Auspicious Wedding Events</p>
+        <div class="w-32 h-1 bg-[#d4af37] mx-auto mb-16 rounded-full"></div>
+
+        <div class="relative border-l-2 border-[#d4af37]/40 ml-4 md:ml-12 space-y-8 pb-8">
+          
+          <!-- Date 1 -->
+          <div class="relative pl-8 md:pl-12 group cursor-pointer event-accordion">
+            <div class="absolute w-8 h-8 bg-[#800000] rounded-full -left-[17px] top-4 border-4 border-[#fdfbf7] shadow-sm flex items-center justify-center">
+              <div class="w-2 h-2 bg-[#d4af37] rounded-full"></div>
+            </div>
+            <div class="glass-card p-6 md:p-8 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-2xl border-l-4 border-l-[#800000]">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-serif-editorial text-3xl font-bold text-[#800000]">Vel Prasthan</h3>
+                  <p class="text-[#d4af37] font-bold mt-2 text-sm uppercase tracking-widest bg-[#800000]/5 inline-block px-3 py-1 rounded-md">7 March 2026, Saturday • 9:30 AM</p>
+                </div>
+                <div class="bg-[#fae8dd] p-3 rounded-full text-[#800000]">
+                  <i class="ph ph-caret-down text-xl event-icon"></i>
+                </div>
+              </div>
+              <div class="accordion-content">
+                <p class="font-sans-clean text-gray-700 mb-4 mt-2">The joyful departure of the groom's family to commence the wedding festivities.</p>
+                <div class="flex items-center gap-2 bg-[#fdfbf7] px-4 py-2 rounded-full border border-[#d4af37]/30 w-max text-sm font-medium">
+                  <i class="ph-fill ph-house-line text-[#800000]"></i> <span>Groom's Residence, Godhavi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Date 2 -->
+          <div class="relative pl-8 md:pl-12 group cursor-pointer event-accordion">
+            <div class="absolute w-8 h-8 bg-[#800000] rounded-full -left-[17px] top-4 border-4 border-[#fdfbf7] shadow-sm flex items-center justify-center">
+              <div class="w-2 h-2 bg-[#d4af37] rounded-full"></div>
+            </div>
+            <div class="glass-card p-6 md:p-8 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-2xl border-l-4 border-l-[#800000]">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-serif-editorial text-3xl font-bold text-[#800000]">Pre-Wedding Rituals & Raas Garba</h3>
+                  <p class="text-[#d4af37] font-bold mt-2 text-sm uppercase tracking-widest bg-[#800000]/5 inline-block px-3 py-1 rounded-md">8 March 2026, Sunday</p>
+                </div>
+                <div class="bg-[#fae8dd] p-3 rounded-full text-[#800000]">
+                  <i class="ph ph-caret-down text-xl event-icon"></i>
+                </div>
+              </div>
+              <div class="accordion-content">
+                <div class="grid md:grid-cols-2 gap-4 mt-4 font-sans-clean text-gray-800">
+                  <div class="bg-white/60 p-4 rounded-xl border border-[#d4af37]/20">
+                    <p class="font-bold text-[#800000]">Ganesh Sthapan</p>
+                    <p class="text-sm flex items-center gap-1"><i class="ph ph-clock"></i> 7:55 AM</p>
+                  </div>
+                  <div class="bg-white/60 p-4 rounded-xl border border-[#d4af37]/20">
+                    <p class="font-bold text-[#800000]">Mandap Muhurat</p>
+                    <p class="text-sm flex items-center gap-1"><i class="ph ph-clock"></i> 8:30 AM</p>
+                  </div>
+                  <div class="bg-white/60 p-4 rounded-xl border border-[#d4af37]/20">
+                    <p class="font-bold text-[#800000]">Grahshanti</p>
+                    <p class="text-sm flex items-center gap-1"><i class="ph ph-clock"></i> 2:00 PM</p>
+                  </div>
+                  <div class="bg-white/60 p-4 rounded-xl border border-[#d4af37]/20">
+                    <p class="font-bold text-[#800000]">Kanyadaan</p>
+                    <p class="text-sm flex items-center gap-1"><i class="ph ph-clock"></i> 3:00 PM</p>
+                  </div>
+                  <div class="bg-white/60 p-4 rounded-xl border border-[#d4af37]/20">
+                    <p class="font-bold text-[#800000]">Balvo</p>
+                    <p class="text-sm flex items-center gap-1"><i class="ph ph-clock"></i> 5:00 PM</p>
+                  </div>
+                  <div class="bg-gradient-to-r from-[#800000] to-[#b30000] text-white p-4 rounded-xl shadow-md">
+                    <p class="font-bold text-[#d4af37] text-lg">Raas Garba</p>
+                    <p class="text-sm flex items-center gap-1"><i class="ph ph-clock text-[#d4af37]"></i> 9:00 PM Onwards</p>
+                  </div>
+                </div>
+                <div class="mt-6 flex items-center gap-2 bg-[#fdfbf7] px-4 py-3 rounded-xl border border-[#d4af37]/30 font-medium">
+                  <i class="ph-fill ph-map-pin text-[#800000] text-xl"></i> 
+                  <span><strong class="text-[#800000]">Venue:</strong> Bapa Sitaram Farm, Godhavi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Date 3 -->
+          <div class="relative pl-8 md:pl-12 group cursor-pointer event-accordion">
+            <div class="absolute w-8 h-8 bg-[#800000] rounded-full -left-[17px] top-4 border-4 border-[#fdfbf7] shadow-sm flex items-center justify-center">
+              <div class="w-2 h-2 bg-[#d4af37] rounded-full"></div>
+            </div>
+            <div class="glass-card p-6 md:p-8 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-2xl border-l-4 border-l-[#800000]">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-serif-editorial text-3xl font-bold text-[#800000]">Avasar Anand Na (Wedding Day)</h3>
+                  <p class="text-[#d4af37] font-bold mt-2 text-sm uppercase tracking-widest bg-[#800000]/5 inline-block px-3 py-1 rounded-md">9 March 2026, Monday</p>
+                </div>
+                <div class="bg-[#fae8dd] p-3 rounded-full text-[#800000]">
+                  <i class="ph ph-caret-down text-xl event-icon"></i>
+                </div>
+              </div>
+              <div class="accordion-content">
+                <div class="space-y-4 mt-4 font-sans-clean">
+                  
+                  <div class="flex items-center justify-between bg-white/60 p-4 rounded-xl border border-[#d4af37]/20">
+                    <div class="flex items-center gap-4">
+                      <div class="bg-[#800000]/10 p-3 rounded-full"><i class="ph-fill ph-horse text-[#800000] text-2xl"></i></div>
+                      <div>
+                        <p class="font-bold text-[#800000] text-lg">Fuleku</p>
+                        <p class="text-sm text-gray-600">The Groom's Procession</p>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <p class="font-bold text-gray-800">6:30 PM</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center justify-between bg-white/60 p-4 rounded-xl border border-[#d4af37]/20">
+                    <div class="flex items-center gap-4">
+                      <div class="bg-[#800000]/10 p-3 rounded-full"><i class="ph-fill ph-bowl-food text-[#800000] text-2xl"></i></div>
+                      <div>
+                        <p class="font-bold text-[#800000] text-lg">Swaruchi Bhojan</p>
+                        <p class="text-sm text-gray-600">Wedding Feast</p>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <p class="font-bold text-gray-800">7:00 PM</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center justify-between bg-gradient-to-r from-[#d4af37]/20 to-[#f3e5ab]/30 p-4 rounded-xl border border-[#d4af37]/50">
+                    <div class="flex items-center gap-4">
+                      <div class="bg-[#800000] p-3 rounded-full"><i class="ph-fill ph-hands-clapping text-[#d4af37] text-2xl"></i></div>
+                      <div>
+                        <p class="font-bold text-[#800000] text-xl">Hast Melap</p>
+                        <p class="text-sm text-gray-800 font-medium">The Holy Wedding Ceremony</p>
+                      </div>
+                    </div>
+                    <div class="text-right">
+                      <p class="font-bold text-[#800000] text-lg">7:30 PM</p>
+                    </div>
+                  </div>
+
+                </div>
+                
+                <div class="mt-6 flex items-center gap-2 bg-[#fdfbf7] px-4 py-3 rounded-xl border border-[#d4af37]/30 font-medium">
+                  <i class="ph-fill ph-map-pin text-[#800000] text-xl"></i> 
+                  <span><strong class="text-[#800000]">Venue:</strong> Bapa Sitaram Farm, Godhavi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VENUE MAP SECTION -->
+    <section id="venue" class="py-24 px-6 bg-mandala relative">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-serif-royal text-3xl md:text-5xl text-center text-[#800000] mb-4">Shubh Sthal (The Venue)</h2>
+        <div class="w-32 h-1 bg-[#d4af37] mx-auto mb-16 rounded-full"></div>
+
+        <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl border-2 border-[#d4af37]/20">
+          <div class="w-full md:w-1/2 h-[350px] md:h-auto bg-cover bg-center" style="background-image: url('https://i.pinimg.com/1200x/9e/40/60/9e40608d62fc4267f779fd94ea55bd21.jpg');">
+          </div>
+          <div class="w-full md:w-1/2 p-10 md:p-14 flex flex-col justify-center bg-white/90">
+            <h3 class="font-serif-editorial text-4xl text-[#800000] mb-4 font-bold">Bapa Sitaram Farm</h3>
+            <div class="w-16 h-px bg-[#d4af37] mb-6"></div>
+            <p class="font-sans-clean text-gray-800 mb-8 flex items-start gap-4 text-lg">
+              <i class="ph-fill ph-map-pin shrink-0 mt-1 text-[#d4af37] text-2xl"></i>
+              <span>Godhavi, Ta. Sanand,<br>District Ahmedabad,<br>Gujarat - India</span>
+            </p>
+            <button onclick="window.open('https://maps.google.com/?q=Godhavi,Sanand,Ahmedabad', '_blank')" class="bg-[#800000] text-white py-4 px-8 rounded-full font-bold tracking-widest uppercase text-sm hover:bg-[#520000] transition-colors flex items-center justify-center gap-3 w-max cursor-pointer shadow-lg shadow-[#800000]/30">
+              <i class="ph-bold ph-navigation-arrow text-xl text-[#d4af37]"></i> Get Directions
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLESSINGS WALL -->
+    <section class="py-24 px-6 bg-[#800000] relative overflow-hidden">
+      <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
+      
+      <div class="max-w-4xl mx-auto relative z-10">
+        <h2 class="font-serif-royal text-3xl md:text-5xl text-center text-[#d4af37] mb-4">Bless the Couple</h2>
+        <div class="w-32 h-1 bg-[#fae8dd] mx-auto mb-16 rounded-full opacity-50"></div>
+
+        <div class="bg-white/10 backdrop-blur-md p-8 md:p-10 rounded-3xl mb-12 shadow-2xl border border-white/20">
+          <form id="blessing-form" class="flex flex-col gap-5">
+            <input required type="text" id="blessing-name" placeholder="Your Name & Family" class="bg-white/90 border-0 rounded-xl px-5 py-4 focus:outline-none focus:ring-4 ring-[#d4af37]/40 text-[#800000] font-medium" />
+            <textarea required id="blessing-message" placeholder="Write your heartfelt wishes for Harshvardhansinh & Jignaba..." rows="4" class="bg-white/90 border-0 rounded-xl px-5 py-4 focus:outline-none focus:ring-4 ring-[#d4af37]/40 resize-none text-[#800000]"></textarea>
+            <button type="submit" id="blessing-submit-btn" class="bg-[#d4af37] text-[#800000] py-4 px-8 rounded-xl font-bold uppercase tracking-widest w-full md:w-max self-end hover:bg-[#c4a132] transition cursor-pointer shadow-lg">
+              Send Blessings
+            </button>
+          </form>
+        </div>
+
+        <div id="blessings-list" class="grid md:grid-cols-2 gap-6 max-h-[500px] overflow-y-auto hide-scrollbar pb-10">
+          <!-- Blessings injected here dynamically -->
+          <p class="text-center text-[#fae8dd]/70 col-span-2 italic py-8 text-lg">Awaiting the first blessing...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & FOOTER -->
+    <section id="contact" class="pt-24 pb-32 md:pb-16 px-4 md:px-6 bg-[#1a0f0f] text-[#fdfbf7] text-center relative overflow-hidden">
+       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[200%] h-16 md:h-24 bg-[#800000] rounded-b-[100%] shadow-[0_10px_30px_rgba(212,175,55,0.1)]"></div>
+       
+       <div class="max-w-7xl mx-auto relative z-10 mt-8 md:mt-12">
+          
+          <div class="flex items-center justify-center gap-4 mb-12 md:mb-16">
+            <div class="h-px bg-[#d4af37]/50 flex-1 max-w-[100px] md:max-w-[200px]"></div>
+            <h2 class="font-serif-royal text-2xl md:text-4xl text-[#d4af37] text-center px-4">Extended Family</h2>
+            <div class="h-px bg-[#d4af37]/50 flex-1 max-w-[100px] md:max-w-[200px]"></div>
+          </div>
+
+          <!-- Darshanabhilashi -->
+          <div class="mb-12 md:mb-16 relative">
+            <h4 class="font-serif-editorial text-2xl md:text-3xl mb-6 text-[#fae8dd] italic font-semibold drop-shadow-md">Well Wishers (Darshanabhilashi)</h4>
+            <div class="text-left bg-gradient-to-b from-white/10 to-transparent p-6 md:p-10 rounded-[2rem] border border-white/20 shadow-2xl backdrop-blur-md relative ornate-corners">
+              <ul class="royal-list royal-list-light font-serif-editorial text-base md:text-lg text-gray-200 columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 md:gap-8">
+                <li>Vaghela Bhagirathsinh Dashrathsinh</li>
+                <li>Vaghela Jayendrasinh Dashrathsinh</li>
+                <li>Vaghela Kirpalsinh Jayendrasinh</li>
+                <li>Vaghela Mukeshsinh Rameshisinh</li>
+                <li>Vaghela Merubha Ranajitsinh</li>
+                <li>Vaghela Digubha Mahendrasinh</li>
+                <li>Vaghela Shaktisinh Ranajitsinh</li>
+                <li>Vaghela Pradipsinh Ashoksinh</li>
+                <li>Vaghela Vijaysinh Ashoksinh</li>
+                <li>Vaghela Meghrajsinh Sukhdevsinh</li>
+                <li>Vaghela Mayursinh Jabbarsinh</li>
+                <li>Vaghela Hardipsinh Gajendrasinh</li>
+                <li>Vaghela Mahavirsinh Jabbarsinh</li>
+                <li>Vaghela Karansinh Gajendrasinh</li>
+                <li>Vaghela Krushnasinh Gajendrasinh</li>
+                <li>Vaghela Yuvarajsinh Virendrasinh</li>
+                <li>Vaghela Jayvirsinh Merubha</li>
+                <li>Vaghela Jayrajsinh Shaktisinh</li>
+                <li>Vaghela Rudrajsinh Digubha</li>
+                <li>Vaghela Smitrajsinh Pradipsinh</li>
+                <li>Vaghela Divyarajsinh Virendrasinh</li>
+                <li>Vaghela Vrajrajsinh Vijaysinh</li>
+                <li>Vaghela Rishirajsinh Digubha</li>
+                <li>Vaghela Hansrajsinh Mukeshsinh</li>
+                <li>Vaghela Karmarajsinh Pradipsinh</li>
+                <li>Vaghela Yagnikaba Bhagirathsinh</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-8 md:gap-12 mb-16">
+            <!-- Monghera Maheman -->
+            <div class="text-left bg-gradient-to-br from-[#800000]/40 to-transparent p-6 md:p-10 rounded-[2rem] border border-[#d4af37]/30 shadow-2xl h-full relative ornate-corners">
+              <div class="absolute top-6 right-6 text-[#d4af37] opacity-30"><i class="ph-fill ph-crown text-4xl"></i></div>
+              <h4 class="font-serif-editorial text-2xl md:text-3xl mb-6 text-[#d4af37] font-semibold border-b border-[#d4af37]/20 pb-4 inline-block pr-8">Esteemed Guests <br><span class="text-lg italic text-[#fae8dd] font-normal">(Monghera Maheman)</span></h4>
+              <ul class="royal-list royal-list-light text-base md:text-lg text-gray-200 font-serif-editorial">
+                <li>Jhala Manoharsinh Gajubha (Jamai Shri)</li>
+                <li>Jadeja Siddhrajshinh Kayanubha (Jamai Shri)</li>
+                <li>Jhala Kishorsinh Ranajitsinh (Jamai Shri)</li>
+                <li>Jhala Jashpalsinh Chhatrapalsinh (Bhanubha)</li>
+                <li>Jhala Bhavanisinh Dharmendrasinh (Bhanubha)</li>
+                <li>Jhala Parikshitsinh Chhatrapalsinh (Bhanubha)</li>
+                <li>Jhala Divyarajsinh Manoharsinh (Bhanubha)</li>
+                <li>Jhala Dharmarajsinh Manoharsinh (Bhanubha)</li>
+                <li>Jhala Bhagatsinh Gambhirsinh (Bhanubha)</li>
+              </ul>
+            </div>
+            
+            <!-- Mosal Paksh -->
+            <div class="text-left bg-gradient-to-bl from-[#800000]/40 to-transparent p-6 md:p-10 rounded-[2rem] border border-[#d4af37]/30 shadow-2xl h-full relative ornate-corners">
+              <div class="absolute top-6 right-6 text-[#d4af37] opacity-30"><i class="ph-fill ph-users-three text-4xl"></i></div>
+              <h4 class="font-serif-editorial text-2xl md:text-3xl mb-6 text-[#d4af37] font-semibold border-b border-[#d4af37]/20 pb-4 inline-block pr-8">Maternal Side <br><span class="text-lg italic text-[#fae8dd] font-normal">(Mosal Paksh)</span></h4>
+              
+              <div class="mb-8 bg-[#2a0e0e]/80 p-5 md:p-6 rounded-2xl border-l-[6px] border-[#d4af37] shadow-[0_8px_30px_rgba(0,0,0,0.2)] relative overflow-hidden backdrop-blur-md">
+                <p class="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[#d4af37] mb-2 font-sans-clean font-bold">In Loving Memory</p>
+                <p class="text-xl md:text-2xl text-[#fae8dd] font-serif-editorial font-bold leading-snug">Late Shri Raol Digvijaysinh Ramdevsinh</p>
+              </div>
+
+              <ul class="royal-list royal-list-light text-base md:text-lg text-gray-200 font-serif-editorial columns-1 sm:columns-2 gap-6">
+                <li>Raol Jagatsinh Harubha</li>
+                <li>Raol Ashkoksinh Govubha</li>
+                <li>Raol Vijaysinh Ramdevsinh</li>
+                <li>Raol Yuvarajsinh Digvijaysinh</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-r from-transparent via-[#800000]/60 to-transparent border-y border-[#d4af37]/40 py-6 md:py-8 px-4 rounded-3xl max-w-3xl mx-auto mb-16 backdrop-blur-md shadow-2xl">
+             <p class="font-sans-clean text-[#d4af37] font-bold tracking-widest text-xs md:text-base uppercase flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-center">
+               <i class="ph-fill ph-warning-circle text-2xl md:text-3xl mb-2 md:mb-0"></i> 
+               <span>Note: Ghor Pratha Bandh Che <br class="md:hidden"><span class="text-[10px] md:text-xs text-gray-300 font-medium normal-case block mt-1">(The custom of 'Ghor' is respectfully not observed)</span></span>
+             </p>
+          </div>
+
+          <div class="w-16 md:w-24 h-px bg-[#d4af37]/40 mx-auto mb-8 md:mb-10"></div>
+          
+          <p class="font-serif-editorial text-xl md:text-3xl italic mb-8 text-[#fae8dd] px-4 leading-relaxed">"We eagerly await your presence to grace this auspicious occasion."</p>
+          
+          <div class="flex justify-center pb-8">
+             <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="animate-pulse">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 10 18 8 12 2C6 8 2 10 2 12C2 17.5228 6.47715 22 12 22Z" fill="#d4af37" opacity="0.8"/>
+                <path d="M12 18C14.2091 18 16 16.2091 16 14C16 12.5 14 11 12 7C10 11 8 12.5 8 14C8 16.2091 9.79086 18 12 18Z" fill="#800000"/>
+             </svg>
+          </div>
+          
+          <!-- Custom Footer -->
+          <div class="mt-4 border-t border-[#d4af37]/20 pt-10 flex flex-col items-center justify-center relative z-10">
+             <h3 class="font-serif-royal text-3xl md:text-4xl text-[#d4af37] mb-4 drop-shadow-md tracking-wider">Vaghela Parivar</h3>
+             <p class="font-sans-clean text-[10px] md:text-xs text-gray-400/80 tracking-[0.2em] uppercase text-center px-4 leading-relaxed">
+               Designed By <span class="text-[#d4af37] font-bold">Nyota</span> <br class="md:hidden">For Harshvardhansinh & Vaghela Family
+             </p>
+          </div>
+
+       </div>
+    </section>
+
+    <!-- MOBILE STICKY QUICK ACTION BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#fdfbf7] border-t border-[#d4af37]/30 rounded-t-3xl px-6 py-4 flex justify-between items-center shadow-[0_-10px_40px_rgba(128,0,0,0.15)] pb-6">
+       <button onclick="document.getElementById('family').scrollIntoView({behavior: 'smooth'})" class="flex flex-col items-center gap-1 text-[#800000] opacity-70 hover:opacity-100">
+         <i class="ph-fill ph-users text-2xl"></i>
+         <span class="text-[9px] font-bold uppercase tracking-wider">Family</span>
+       </button>
+       <button onclick="document.getElementById('schedule').scrollIntoView({behavior: 'smooth'})" class="flex flex-col items-center gap-1 text-[#800000] opacity-70 hover:opacity-100">
+         <i class="ph-fill ph-calendar-check text-2xl"></i>
+         <span class="text-[9px] font-bold uppercase tracking-wider">Events</span>
+       </button>
+       <button onclick="document.getElementById('venue').scrollIntoView({behavior: 'smooth'})" class="flex flex-col items-center gap-1 text-white bg-gradient-to-b from-[#b30000] to-[#800000] p-4 rounded-full -mt-10 shadow-xl border-4 border-[#fdfbf7]">
+         <i class="ph-fill ph-map-pin text-3xl"></i>
+       </button>
+       <button onclick="window.open('https://calendar.google.com/', '_blank')" class="flex flex-col items-center gap-1 text-[#800000] opacity-70 hover:opacity-100">
+         <i class="ph-fill ph-calendar-plus text-2xl"></i>
+         <span class="text-[9px] font-bold uppercase tracking-wider">Save</span>
+       </button>
+       <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="flex flex-col items-center gap-1 text-[#800000] opacity-70 hover:opacity-100">
+         <i class="ph-fill ph-phone-call text-2xl"></i>
+         <span class="text-[9px] font-bold uppercase tracking-wider">Contact</span>
+       </button>
+    </div>
+  </div>
+
+  <!-- APPLICATION LOGIC -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, collection, addDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    // --- Configurations ---
+    const WEDDING_DATE = new Date('2026-03-09T19:30:00').getTime(); // Hast Melap Date/Time
+
+    // --- UI Logic: Splash Screen & Audio ---
+    const btnOpen = document.getElementById('btn-open-invitation');
+    const splashScreen = document.getElementById('splash-screen');
+    const mainApp = document.getElementById('main-app');
+    const bgMusic = document.getElementById('bg-music');
+    const btnToggleAudio = document.getElementById('btn-toggle-audio');
+    const audioIcon = document.getElementById('audio-icon');
+
+    let isPlaying = false;
+
+    btnOpen.addEventListener('click', () => {
+      splashScreen.style.opacity = '0';
+      setTimeout(() => {
+        splashScreen.style.display = 'none';
+        mainApp.classList.remove('hidden');
+        setTimeout(() => mainApp.style.opacity = '1', 50);
+        bgMusic.play().then(() => {
+          isPlaying = true;
+          updateAudioIcon();
+        }).catch(e => console.log("Audio autoplay blocked", e));
+      }, 1000);
+    });
+
+    function updateAudioIcon() {
+      if (isPlaying) {
+        audioIcon.className = 'ph-fill ph-speaker-high text-xl';
+      } else {
+        audioIcon.className = 'ph-fill ph-speaker-slash text-xl';
+      }
+    }
+
+    btnToggleAudio.addEventListener('click', () => {
+      if (isPlaying) {
+        bgMusic.pause();
+      } else {
+        bgMusic.play();
+      }
+      isPlaying = !isPlaying;
+      updateAudioIcon();
+    });
+
+    // --- UI Logic: Petals Animation ---
+    const petalsContainer = document.getElementById('petals-container');
+    for (let i = 0; i < 25; i++) {
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.setAttribute('class', 'petal');
+      svg.setAttribute('viewBox', '0 0 512 512');
+      svg.setAttribute('fill', '#800000'); // Maroon petals
+      svg.style.left = `${Math.random() * 100}vw`;
+      svg.style.animationDuration = `${Math.random() * 8 + 6}s`;
+      svg.style.animationDelay = `${Math.random() * 5}s`;
+      svg.style.width = `${Math.random() * 15 + 10}px`;
+      
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute('d', 'M256,0C157.9,0,80,105.7,80,256s77.9,256,176,256s176-105.7,176-256S354.1,0,256,0z');
+      path.setAttribute('opacity', '0.6');
+      
+      svg.appendChild(path);
+      petalsContainer.appendChild(svg);
+    }
+
+    // --- UI Logic: Countdown Timer ---
+    const elDays = document.getElementById('cd-days');
+    const elHours = document.getElementById('cd-hours');
+    const elMins = document.getElementById('cd-minutes');
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = WEDDING_DATE - now;
+      if (distance < 0) {
+        clearInterval(timer);
+        elDays.innerText = '00'; elHours.innerText = '00'; elMins.innerText = '00';
+        return;
+      }
+      elDays.innerText = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+      elHours.innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+      elMins.innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+    }, 1000);
+
+    // --- UI Logic: Event Accordions ---
+    const accordions = document.querySelectorAll('.event-accordion');
+    // Open the second one by default
+    if(accordions.length > 1) {
+       accordions[1].querySelector('.accordion-content').classList.add('open');
+       accordions[1].querySelector('.event-icon').className = 'ph ph-caret-up text-xl event-icon';
+    }
+
+    accordions.forEach(acc => {
+      acc.addEventListener('click', () => {
+        const content = acc.querySelector('.accordion-content');
+        const icon = acc.querySelector('.event-icon');
+        const isOpen = content.classList.contains('open');
+        
+        // Close all others
+        document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+        document.querySelectorAll('.event-icon').forEach(i => i.className = 'ph ph-caret-down text-xl event-icon');
+
+        if (!isOpen) {
+          content.classList.add('open');
+          icon.className = 'ph ph-caret-up text-xl event-icon';
+        }
+      });
+    });
+
+    // --- Firebase Setup ---
+    const firebaseConfigStr = typeof __firebase_config !== 'undefined' ? __firebase_config : '{}';
+    let firebaseConfig = {};
+    try { firebaseConfig = JSON.parse(firebaseConfigStr); } catch (e) {}
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+    const appId = typeof __app_id !== 'undefined' ? __app_id : 'rajput-wedding-app';
+    let currentUser = null;
+
+    const initAuth = async () => {
+      try {
+        if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+          await signInWithCustomToken(auth, __initial_auth_token);
+        } else {
+          await signInAnonymously(auth);
+        }
+      } catch (err) {
+        console.error("Auth error:", err);
+      }
+    };
+    initAuth();
+
+    onAuthStateChanged(auth, (user) => {
+      currentUser = user;
+      if (user) {
+        loadBlessings();
+      }
+    });
+
+    // --- Firebase: Blessings System ---
+    const blessForm = document.getElementById('blessing-form');
+    const blessBtn = document.getElementById('blessing-submit-btn');
+    const blessList = document.getElementById('blessings-list');
+
+    blessForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!currentUser) return;
+
+      const nameInput = document.getElementById('blessing-name');
+      const msgInput = document.getElementById('blessing-message');
+
+      if(!nameInput.value || !msgInput.value) return;
+
+      blessBtn.innerText = 'Sending...';
+      blessBtn.disabled = true;
+
+      try {
+        await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'blessings'), {
+          name: nameInput.value,
+          message: msgInput.value,
+          userId: currentUser.uid,
+          timestamp: Date.now()
+        });
+        nameInput.value = '';
+        msgInput.value = '';
+        blessBtn.innerText = 'Sent Successfully!';
+        setTimeout(() => {
+          blessBtn.innerText = 'Send Blessings';
+          blessBtn.disabled = false;
+        }, 3000);
+      } catch (err) {
+        console.error("Blessing Error:", err);
+        blessBtn.innerText = 'Send Blessings';
+        blessBtn.disabled = false;
+      }
+    });
+
+    function loadBlessings() {
+      const q = collection(db, 'artifacts', appId, 'public', 'data', 'blessings');
+      onSnapshot(q, (snapshot) => {
+        let blessings = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        blessings.sort((a, b) => b.timestamp - a.timestamp); 
+        
+        blessList.innerHTML = '';
+        if (blessings.length === 0) {
+          blessList.innerHTML = '<p class="text-center text-[#fae8dd]/70 col-span-2 italic py-8 text-lg">Awaiting the first blessing...</p>';
+          return;
+        }
+
+        blessings.forEach(b => {
+          const div = document.createElement('div');
+          div.className = 'bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 relative fade-in text-[#fdfbf7]';
+          div.innerHTML = `
+            <i class="ph-fill ph-quotes absolute top-4 right-4 text-3xl text-[#d4af37] opacity-30"></i>
+            <p class="font-serif-editorial text-xl mb-4 pr-6 leading-relaxed">"${b.message.replace(/</g, "&lt;").replace(/>/g, "&gt;")}"</p>
+            <p class="font-sans-clean font-bold text-[#d4af37] text-sm tracking-wide">- ${b.name.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>
+          `;
+          blessList.appendChild(div);
+        });
+      }, (err) => {
+        console.error("Fetch Blessings Error:", err);
+      });
+    }
+
+  </script>
+</body>
+</html>
