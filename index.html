@@ -8,10 +8,10 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Google Fonts -->
+  <!-- Google Fonts (Added Rasa for elegant Gujarati) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&family=Samarkan&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&family=Rasa:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -38,6 +38,19 @@
     .font-serif-royal { font-family: 'Cinzel', serif; }
     .font-serif-editorial { font-family: 'Cormorant Garamond', serif; }
     .font-sans-clean { font-family: 'Montserrat', sans-serif; }
+    .font-gujarati { font-family: 'Rasa', serif; } /* Royal Gujarati Font */
+
+    /* Parallax Effect */
+    .parallax-bg {
+      background-attachment: fixed;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media (max-width: 768px) {
+      .parallax-bg { background-attachment: scroll; } 
+    }
 
     /* Premium Glassmorphism Classes */
     .glass-panel {
@@ -126,7 +139,7 @@
 
     /* Subtle Mandala Background */
     .bg-mandala {
-      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5c1.1 0 2 .9 2 2v2.1c4.5.6 8.3 3.4 10.3 7.4l1.8-1.1c.9-.6 2.2-.3 2.8.6.6.9.3 2.2-.6 2.8l-1.8 1.1c1.3 2.6 2.1 5.5 2.3 8.6H49c1.1 0 2 .9 2 2s-.9 2-2 2h-2.1c-.2 3.1-1 6-2.3 8.6l1.8 1.1c.9.6 1.2 1.9.6 2.8-.6.9-1.9 1.2-2.8.6l-1.8-1.1c-2 4-5.8 6.8-10.3 7.4V49c0 1.1-.9 2-2 2s-2-.9-2-2v-2.1c-4.5-.6-8.3-3.4-10.3-7.4l-1.8 1.1c-.9.6-2.2.3-2.8-.6-.6-.9-.3-2.2.6-2.8l1.8 1.1c-1.3-2.6-2.1-5.5-2.3-8.6H7c-1.1 0-2-.9-2-2s.9-2 2-2h2.1c.2-3.1 1-6 2.3-8.6l-1.8-1.1c-.9-.6-1.2-1.9-.6-2.8.6-.9 1.9-1.2 2.8-.6l1.8 1.1c2-4 5.8-6.8 10.3-7.4V7c0-1.1.9-2 2-2zm0 8c-7.7 0-14 6.3-14 14s6.3 14 14 14 14-6.3 14-14-6.3-14-14-14zm0 6c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8z' fill='%23d4af37' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5c1.1 0 2 .9 2 2v2.1c4.5.6 8.3 3.4 10.3 7.4l1.8-1.1c.9-.6 2.2-.3 2.8.6.6.9.3 2.2-.6 2.8l-1.8 1.1c1.3 2.6 2.1 5.5 2.3 8.6H49c1.1 0 2 .9 2 2s-.9 2-2 2h-2.1c-.2 3.1-1 6-2.3 8.6l1.8 1.1c.9.6 1.2 1.9.6 2.8-.6.9-1.9 1.2-2.8.6l-1.8-1.1c-2 4-5.8 6.8-10.3 7.4V49c0 1.1-.9 2-2 2s-2-.9-2-2v-2.1c-4.5-.6-8.3-3.4-10.3-7.4l-1.8 1.1c-.9.6-2.2.3-2.8-.6-.6-.9-.3-2.2.6-2.8l1.8-1.1c-1.3-2.6-2.1-5.5-2.3-8.6H7c-1.1 0-2-.9-2-2s.9-2 2-2h2.1c.2-3.1 1-6 2.3-8.6l-1.8-1.1c-.9-.6-1.2-1.9-.6-2.8.6-.9 1.9-1.2 2.8-.6l1.8 1.1c2-4 5.8-6.8 10.3-7.4V7c0-1.1.9-2 2-2zm0 8c-7.7 0-14 6.3-14 14s6.3 14 14 14 14-6.3 14-14-6.3-14-14-14zm0 6c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8z' fill='%23d4af37' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
     }
 
     .hide-scrollbar::-webkit-scrollbar {
@@ -145,7 +158,7 @@
       transition: max-height 0.8s ease-in-out, opacity 0.6s ease-in-out, margin-top 0.4s ease-in-out;
     }
     .accordion-content.open {
-      max-height: 2500px; /* Fixed: Massively increased so mobile content never cuts off */
+      max-height: 2500px;
       opacity: 1;
       margin-top: 1.5rem;
     }
@@ -201,6 +214,16 @@
       bottom: 10px; right: 10px;
       border-left: none; border-top: none;
     }
+
+    /* Custom Royal Cursor (Desktop Only) */
+    @media (min-width: 768px) {
+      body {
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23d4af37"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2z"/></svg>') 12 12, auto;
+      }
+      a, button, .cursor-pointer, .gallery-img, .event-accordion {
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="%23800000" stroke="%23d4af37" stroke-width="1.5"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2z"/></svg>') 14 14, pointer !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -212,40 +235,50 @@
   <div id="splash-screen" class="fixed inset-0 z-[100] bg-[#fdfbf7] bg-mandala flex flex-col items-center justify-center p-4 text-center overflow-hidden transition-opacity duration-1000">
     <div id="petals-container"></div>
     
-    <!-- Restored Exact Design from Uploaded Screenshot -->
-    <div class="z-10 flex flex-col items-center w-[92%] max-w-md bg-white p-8 md:p-10 rounded-2xl shadow-xl relative border border-transparent">
-      
+    <div class="z-10 flex flex-col items-center w-[92%] max-w-md bg-white p-6 md:p-10 rounded-2xl shadow-xl relative border border-transparent overflow-hidden">
       <!-- Exact Double Inner Border -->
       <div class="absolute inset-2 border border-[#d4af37]/40 rounded-xl pointer-events-none"></div>
       <div class="absolute inset-3 border border-[#d4af37]/20 rounded-lg pointer-events-none"></div>
 
       <div class="relative z-20 w-full flex flex-col items-center pt-2 pb-4">
-        <p class="font-serif-editorial text-[13px] md:text-base text-[#800000] mb-5 italic px-2">"A tradition passed down through the Vedas..."</p>
+        <p class="font-serif-editorial text-[13px] md:text-base text-[#800000] mb-5 italic px-2">
+          <span class="lang-en">"A tradition passed down through the Vedas..."</span>
+          <span class="lang-gu hidden font-gujarati text-[15px] md:text-lg">"વેદો એ વહેતી કરેલી પરંપરા..."</span>
+        </p>
         
         <span class="mb-5">
           <i class="ph-fill ph-heart text-[#d4af37] text-3xl drop-shadow-sm"></i>
         </span>
 
         <h2 class="font-serif-royal text-xl md:text-2xl text-[#800000] mb-6 font-bold tracking-widest uppercase flex items-center justify-center gap-4 w-full">
-          <span class="w-8 md:w-10 h-[1px] bg-[#d4af37]"></span>
-          SHUBH VIVAH
-          <span class="w-8 md:w-10 h-[1px] bg-[#d4af37]"></span>
+          <span class="w-6 md:w-10 h-[1px] bg-[#d4af37]"></span>
+          <span class="lang-en">SHUBH VIVAH</span>
+          <span class="lang-gu hidden font-gujarati tracking-wide font-bold">॥ શુભવિવાહ ||</span>
+          <span class="w-6 md:w-10 h-[1px] bg-[#d4af37]"></span>
         </h2>
         
-        <p class="font-sans-clean text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase text-gray-500 mb-8">MONDAY, 9TH MARCH 2026</p>
+        <p class="font-sans-clean text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase text-gray-500 mb-8">
+          <span class="lang-en">MONDAY, 9TH MARCH 2026</span>
+          <span class="lang-gu hidden font-gujarati text-[13px] tracking-wide">તા. ૯-૩-૨૦૨૬, સોમવાર</span>
+        </p>
 
-        <!-- Fluid Typography matching the exact gold gradient look -->
-        <h1 class="font-serif-royal text-[7vw] sm:text-[2rem] text-gradient-gold mb-3 py-1 w-full text-center leading-tight tracking-widest uppercase" id="splash-couple">
-          HARSHVARDHANSINH
+        <!-- Fluid Typography Fixed to never cut off on Splash Screen -->
+        <h1 class="font-serif-royal text-[1.25rem] min-[375px]:text-[1.4rem] sm:text-[2rem] text-gradient-gold mb-3 py-1 w-full text-center leading-tight tracking-wide md:tracking-widest uppercase" style="word-break: keep-all;">
+          <span class="lang-en">HARSHVARDHANSINH</span>
+          <span class="lang-gu hidden font-gujarati tracking-wide font-bold text-2xl">ચિ. હર્ષવર્ધનસિંહ</span>
         </h1>
-        <span class="font-serif-editorial text-lg text-[#800000] italic mb-3 block">weds</span>
-        <h1 class="font-serif-royal text-[9vw] sm:text-[2.5rem] text-gradient-gold mb-12 py-1 w-full text-center leading-tight tracking-widest uppercase" id="splash-couple">
-          JIGNABA
+        <span class="font-serif-editorial text-lg text-[#800000] italic mb-3 block">
+          <span class="lang-en">weds</span>
+          <span class="lang-gu hidden font-gujarati font-bold text-xl not-italic">સંગાથે</span>
+        </span>
+        <h1 class="font-serif-royal text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] text-gradient-gold mb-12 py-1 w-full text-center leading-tight tracking-widest uppercase">
+          <span class="lang-en">JIGNABA</span>
+          <span class="lang-gu hidden font-gujarati tracking-wide font-bold text-3xl">સૌ. કાં. ચિ. જીજ્ઞાબા</span>
         </h1>
 
-        <!-- Restored Premium Dark Maroon Button -->
         <button id="btn-open-invitation" class="bg-[#4a0000] px-8 py-3.5 rounded-full text-white font-semibold tracking-widest uppercase text-xs hover:bg-[#800000] transition-colors duration-300 flex items-center gap-3 group cursor-pointer shadow-lg hover:shadow-xl">
-          OPEN INVITATION
+          <span class="lang-en">OPEN INVITATION</span>
+          <span class="lang-gu hidden font-gujarati text-[14px]">આમંત્રણ ખોલો</span>
           <i class="ph ph-envelope-open text-lg group-hover:-translate-y-1 transition-transform text-[#d4af37]"></i>
         </button>
       </div>
@@ -255,112 +288,227 @@
   <!-- MAIN APPLICATION -->
   <div id="main-app" class="hidden opacity-0 transition-opacity duration-1000 min-h-screen pb-24 md:pb-0">
     
-    <!-- Floating Audio Control -->
-    <button id="btn-toggle-audio" class="fixed top-6 right-6 z-50 glass-panel p-3 rounded-full text-[#800000] shadow-lg hover:bg-white/50 transition-colors cursor-pointer">
-      <i id="audio-icon" class="ph ph-speaker-slash text-xl"></i>
-    </button>
+    <!-- Floating Action Buttons -->
+    <div class="fixed top-3 right-3 md:top-6 md:right-6 z-[90] flex flex-row md:flex-col gap-2 md:gap-3">
+      <button id="btn-toggle-lang" class="glass-panel px-3 py-1.5 md:px-4 md:py-2.5 rounded-full text-[#800000] shadow-lg hover:bg-white/90 transition-colors cursor-pointer backdrop-blur-md border border-[#d4af37]/60 font-bold text-xs md:text-sm flex items-center justify-center">
+        <span id="lang-label" class="font-gujarati text-[13px] md:text-[15px] tracking-wide">ગુજરાતી</span>
+      </button>
+      <button id="btn-toggle-audio" class="glass-panel p-2 md:p-3 rounded-full text-[#800000] shadow-lg hover:bg-white/90 transition-colors cursor-pointer backdrop-blur-md border border-[#d4af37]/60 flex items-center justify-center">
+        <i id="audio-icon" class="ph ph-speaker-slash text-lg md:text-2xl"></i>
+      </button>
+    </div>
 
     <!-- HERO SECTION -->
-    <section class="relative min-h-[100svh] flex flex-col items-center justify-center overflow-hidden">
-      <div class="absolute inset-0">
-        <img src="https://i.pinimg.com/736x/36/bf/6b/36bf6bb0b883db1851be2b577e99daa5.jpg" alt="Royal Wedding" class="w-full h-full object-cover opacity-80 object-top"/>
-        <!-- Gradient Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-b from-[#800000]/60 via-[#800000]/30 to-[#fdfbf7]"></div>
-      </div>
+    <section class="relative min-h-[100svh] flex flex-col items-center justify-center overflow-hidden py-16 md:py-24">
+      <div class="absolute inset-0 parallax-bg" style="background-image: url('https://i.pinimg.com/736x/36/bf/6b/36bf6bb0b883db1851be2b577e99daa5.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#800000]/60 via-[#800000]/30 to-[#fdfbf7]"></div>
       
-      <div class="relative z-10 text-center px-4 flex flex-col items-center mt-28 md:mt-48 w-full max-w-[100vw] overflow-hidden">
-        <div class="flex flex-wrap justify-center gap-2 md:gap-6 text-[#d4af37] font-serif-editorial text-xs md:text-lg font-bold drop-shadow-md tracking-widest mb-4 reveal active">
-          <span>॥ Shree Ganeshay Namah ॥</span>
-          <span class="hidden md:inline">•</span>
-          <span>॥ Shree Ambaji Matay Namah ॥</span>
-          <span class="hidden md:inline">•</span>
-          <span>॥ Shree Meldi Matay Namah ॥</span>
-          <span class="hidden md:inline">•</span>
-          <span>॥ Jay Shree Swaminarayan ॥</span>
-        </div>
-        <p class="font-serif-editorial text-xs md:text-base text-white drop-shadow-md mb-6 italic max-w-[90%] md:max-w-2xl leading-relaxed reveal active delay-100">
-          Vakratunda Mahakaya Suryakoti Samaprabha |<br>Nirvighnam Kuru Me Deva Sarva-Kaaryeshu Sarvada ||
-        </p>
-        <p class="font-serif-editorial text-lg md:text-3xl text-white drop-shadow-md mb-2 italic px-4 reveal active delay-200">With the divine blessings of Narnarayan Dev & Kuldevi Shree Ambaji Mataji</p>
+      <div class="relative z-10 text-center px-2 flex flex-col items-center justify-center w-full max-w-[100vw] h-full pt-10 md:pt-0">
         
-        <!-- FLUID HERO TYPOGRAPHY FIX (Guarantees NO cut-offs) -->
-        <h1 class="font-serif-royal text-white drop-shadow-2xl mb-6 mt-4 leading-tight w-full flex flex-col items-center">
-          <span class="block text-[6vw] sm:text-[4rem] md:text-7xl lg:text-8xl w-full text-center drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] uppercase tracking-wide px-1 md:px-0 reveal active delay-300" style="word-break: keep-all;">HARSHVARDHANSINH</span>
-          <span class="block text-3xl sm:text-5xl lg:text-6xl text-[#d4af37] my-3 sm:my-4 drop-shadow-md floating reveal active delay-400">&</span> 
-          <span class="block text-[9vw] sm:text-[4.5rem] md:text-7xl lg:text-8xl w-full text-center drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] uppercase tracking-widest px-1 md:px-0 reveal active delay-500">JIGNABA</span>
+        <div class="flex flex-wrap justify-center gap-1 md:gap-6 text-[#d4af37] font-serif-editorial text-[10px] md:text-lg font-bold drop-shadow-md tracking-widest mb-3 md:mb-4 reveal active">
+          <span class="lang-en">॥ Shree Ganeshay Namah ॥</span>
+          <span class="lang-gu hidden font-gujarati tracking-wide">॥ શ્રી ગણેશાય નમઃ ॥</span>
+          <span class="hidden md:inline">•</span>
+          <span class="lang-en">॥ Shree Ambaji Matay Namah ॥</span>
+          <span class="lang-gu hidden font-gujarati tracking-wide">॥ શ્રી અંબાજી માતાય નમઃ ॥</span>
+          <span class="hidden md:inline">•</span>
+          <span class="lang-en">॥ Shree Meldi Matay Namah ॥</span>
+          <span class="lang-gu hidden font-gujarati tracking-wide">॥ શ્રી મેલડી માતાય નમઃ ॥</span>
+          <span class="hidden md:inline">•</span>
+          <span class="lang-en">॥ Jay Shree Swaminarayan ॥</span>
+          <span class="lang-gu hidden font-gujarati tracking-wide">॥ જય શ્રી સ્વામિનારાયણ ॥</span>
+        </div>
+        
+        <p class="font-serif-editorial text-[10px] md:text-base text-white drop-shadow-md mb-3 md:mb-6 italic max-w-[95%] md:max-w-2xl leading-relaxed reveal active delay-100">
+          <span class="lang-en">Vakratunda Mahakaya Suryakoti Samaprabha |<br>Nirvighnam Kuru Me Deva Sarva-Kaaryeshu Sarvada ||</span>
+          <span class="lang-gu hidden font-gujarati text-[13px] md:text-lg tracking-wide font-normal">॥ વક્રતુંડ મહાકાય, સૂર્યકોટિ સમપ્રભઃ । નિર્વિઘ્નં કુરુમે દેવ, સર્વ કાર્યેષુ સર્વદા ॥</span>
+        </p>
+
+        <p class="font-serif-editorial text-sm md:text-2xl text-white drop-shadow-md mb-2 italic px-2 reveal active delay-200">
+          <span class="lang-en">With the divine blessings of Narnarayan Dev & Kuldevi Shree Ambaji Mataji</span>
+          <span class="lang-gu hidden font-gujarati font-bold text-[17px] tracking-wide">નરનારાયણ દેવ તથા કુળદેવી શ્રીઅંબાજી માતાજીની અસીમ કૃપાથી</span>
+        </p>
+        
+        <!-- FLUID HERO TYPOGRAPHY -->
+        <h1 class="font-serif-royal text-white drop-shadow-2xl mb-4 md:mb-6 mt-2 md:mt-4 leading-tight w-full flex flex-col items-center">
+          <span class="block text-[1.4rem] min-[375px]:text-[1.6rem] sm:text-[3.5rem] md:text-6xl lg:text-7xl w-full text-center drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] uppercase tracking-wide md:tracking-wider px-2 md:px-0 reveal active delay-300" style="word-break: keep-all;">
+            <span class="lang-en">HARSHVARDHANSINH</span>
+            <span class="lang-gu hidden font-gujarati font-bold">ચિ. હર્ષવર્ધનસિંહ</span>
+          </span>
+          <span class="block text-2xl sm:text-4xl lg:text-5xl text-[#d4af37] my-1 sm:my-3 drop-shadow-md floating reveal active delay-400">
+            <span class="lang-en">&</span>
+            <span class="lang-gu hidden font-gujarati text-xl md:text-3xl not-italic">ના શુભ લગ્ન</span>
+          </span> 
+          <span class="block text-[2.5rem] min-[375px]:text-[3rem] sm:text-[4.5rem] md:text-7xl lg:text-8xl w-full text-center drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] uppercase tracking-widest px-2 md:px-0 reveal active delay-500">
+            <span class="lang-en">JIGNABA</span>
+            <span class="lang-gu hidden font-gujarati font-bold">સૌ. કાં. ચિ. જીજ્ઞાબા</span>
+          </span>
         </h1>
         
-        <div class="glass-panel px-6 py-3 md:px-8 md:py-3 rounded-full inline-block mb-10 border-[#d4af37]/50 reveal active delay-500">
-          <p class="font-sans-clean tracking-widest uppercase text-xs md:text-base text-[#800000] font-bold">
-            9th March 2026 <span class="mx-1 md:mx-2 text-[#d4af37]">•</span> Godhavi, Ahmedabad
+        <div class="glass-panel px-4 py-2 md:px-8 md:py-3 rounded-full inline-block mb-5 md:mb-10 border-[#d4af37]/50 reveal active delay-500">
+          <p class="font-sans-clean tracking-widest uppercase text-[10px] md:text-base text-[#800000] font-bold">
+            <span class="lang-en">9th March 2026</span>
+            <span class="lang-gu hidden font-gujarati tracking-wide text-xs md:text-lg">૯ માર્ચ ૨૦૨૬</span>
+            <span class="mx-1 md:mx-2 text-[#d4af37]">•</span> 
+            <span class="lang-en">Godhavi, Ahmedabad</span>
+            <span class="lang-gu hidden font-gujarati tracking-wide text-xs md:text-lg">ગોધાવી, અમદાવાદ</span>
           </p>
         </div>
 
         <!-- Countdown -->
-        <div class="flex gap-3 md:gap-8 justify-center mt-2 text-center glass-panel px-6 py-4 md:px-8 md:py-4 rounded-3xl md:rounded-full max-w-max mx-auto border-[#d4af37]/50 reveal active delay-500">
-          <div class="flex flex-col items-center min-w-[50px] md:min-w-[60px]">
-            <span id="cd-days" class="text-2xl md:text-4xl font-serif-royal text-[#800000] font-bold">00</span>
-            <span class="text-[9px] md:text-xs uppercase tracking-[0.2em] text-gray-800 mt-1 font-semibold">days</span>
+        <div class="flex gap-2 md:gap-8 justify-center text-center glass-panel px-4 py-3 md:px-8 md:py-4 rounded-3xl md:rounded-full max-w-max mx-auto border-[#d4af37]/50 reveal active delay-500">
+          <div class="flex flex-col items-center min-w-[45px] md:min-w-[60px]">
+            <span id="cd-days" class="text-xl md:text-4xl font-serif-royal text-[#800000] font-bold">00</span>
+            <span class="text-[8px] md:text-xs uppercase tracking-[0.2em] text-gray-800 mt-1 font-semibold">
+              <span class="lang-en">days</span><span class="lang-gu hidden font-gujarati tracking-normal">દિવસ</span>
+            </span>
           </div>
-          <span class="text-2xl md:text-3xl text-[#d4af37] font-serif-royal mt-1">:</span>
-          <div class="flex flex-col items-center min-w-[50px] md:min-w-[60px]">
-            <span id="cd-hours" class="text-2xl md:text-4xl font-serif-royal text-[#800000] font-bold">00</span>
-            <span class="text-[9px] md:text-xs uppercase tracking-[0.2em] text-gray-800 mt-1 font-semibold">hours</span>
+          <span class="text-xl md:text-3xl text-[#d4af37] font-serif-royal mt-0.5 md:mt-1">:</span>
+          <div class="flex flex-col items-center min-w-[45px] md:min-w-[60px]">
+            <span id="cd-hours" class="text-xl md:text-4xl font-serif-royal text-[#800000] font-bold">00</span>
+            <span class="text-[8px] md:text-xs uppercase tracking-[0.2em] text-gray-800 mt-1 font-semibold">
+              <span class="lang-en">hours</span><span class="lang-gu hidden font-gujarati tracking-normal">કલાક</span>
+            </span>
           </div>
-          <span class="text-2xl md:text-3xl text-[#d4af37] font-serif-royal mt-1">:</span>
-          <div class="flex flex-col items-center min-w-[50px] md:min-w-[60px]">
-            <span id="cd-minutes" class="text-2xl md:text-4xl font-serif-royal text-[#800000] font-bold">00</span>
-            <span class="text-[9px] md:text-xs uppercase tracking-[0.2em] text-gray-800 mt-1 font-semibold">mins</span>
+          <span class="text-xl md:text-3xl text-[#d4af37] font-serif-royal mt-0.5 md:mt-1">:</span>
+          <div class="flex flex-col items-center min-w-[45px] md:min-w-[60px]">
+            <span id="cd-minutes" class="text-xl md:text-4xl font-serif-royal text-[#800000] font-bold">00</span>
+            <span class="text-[8px] md:text-xs uppercase tracking-[0.2em] text-gray-800 mt-1 font-semibold">
+              <span class="lang-en">mins</span><span class="lang-gu hidden font-gujarati tracking-normal">મિનિટ</span>
+            </span>
           </div>
         </div>
-      </div>
+        
+        <!-- Play Teaser Button -->
+        <div class="mt-4 md:mt-8 flex justify-center reveal active delay-500 z-40">
+          <button id="btn-play-teaser" class="glass-panel px-5 py-2 md:py-3 rounded-full text-white border border-[#d4af37]/50 hover:bg-[#d4af37]/20 transition-all flex items-center gap-2 text-[10px] md:text-sm font-bold tracking-[0.2em] uppercase shadow-[0_0_15px_rgba(212,175,55,0.3)]">
+            <i class="ph-fill ph-play-circle text-[#d4af37] text-lg md:text-2xl"></i> 
+            <span class="lang-en">Watch Teaser</span>
+            <span class="lang-gu hidden font-gujarati tracking-wide text-xs md:text-sm">વિડીયો નિહાળો</span>
+          </button>
+        </div>
 
-      <!-- Animated Scroll Down Button -->
-      
+        <!-- Scroll Button -->
+        <div class="mt-6 md:mt-10 animate-bounce cursor-pointer z-30 text-[#d4af37] bg-gradient-to-b from-[#800000]/90 to-[#4a0000]/90 p-2.5 md:p-4 rounded-full backdrop-blur-md border border-[#d4af37]/60 shadow-[0_0_20px_rgba(212,175,55,0.5)] hover:bg-[#800000] transition-all hover:scale-110 flex items-center justify-center reveal active delay-500 w-max" onclick="document.getElementById('couple').scrollIntoView({behavior: 'smooth'})">
+          <i class="ph ph-caret-double-down text-xl md:text-3xl"></i>
+        </div>
+
       </div>
     </section>
 
-    <!-- FAMILIES SECTION (Page 1 Details) -->
-    <section class="py-16 md:py-24 px-4 md:px-6 bg-mandala relative" id="family">
+    <!-- THE COUPLE SECTION -->
+    <section id="couple" class="py-16 md:py-24 px-4 md:px-6 bg-[#fdfbf7] bg-mandala relative">
       <div class="max-w-6xl mx-auto text-center">
-        <h2 class="font-serif-royal text-3xl md:text-5xl text-[#800000] mb-4 reveal">Two Families, One Heart</h2>
-        <div class="w-24 md:w-32 h-1 bg-[#d4af37] mx-auto mb-10 md:mb-16 rounded-full reveal delay-100"></div>
+        <h2 class="font-serif-royal text-3xl md:text-5xl text-[#800000] mb-4 reveal">
+          <span class="lang-en">Two Souls, One Destiny</span>
+          <span class="lang-gu hidden font-gujarati font-bold">બે જીવ, એક મંઝિલ</span>
+        </h2>
+        <div class="w-24 md:w-32 h-1 bg-[#d4af37] mx-auto mb-16 md:mb-20 rounded-full reveal delay-100"></div>
         
-        <p class="font-sans-clean text-sm md:text-lg text-gray-700 max-w-3xl mx-auto mb-12 md:mb-16 leading-relaxed px-4 reveal delay-200">
-          It brings us immense joy to invite you to celebrate the union of two souls. We look forward to your presence as they step onto the glorious path of marital bliss.
-        </p>
+        <div class="grid md:grid-cols-2 gap-16 md:gap-12 lg:gap-24 items-center">
+          <!-- Groom Bio -->
+          <div class="reveal delay-200 flex flex-col items-center group">
+            <div class="w-56 h-56 md:w-72 md:h-72 rounded-full p-2 border-2 border-[#d4af37] shadow-[0_15px_40px_rgba(128,0,0,0.15)] mb-8 relative transition-transform duration-500 group-hover:scale-105 bg-white">
+              <div class="absolute inset-0 rounded-full border-4 border-transparent border-t-[#800000] border-b-[#800000] animate-[spin_10s_linear_infinite] opacity-30"></div>
+              <img src="Groom.jpeg" alt="Groom" class="w-full h-full rounded-full object-cover object-top" />
+            </div>
+            <p class="font-sans-clean text-[#d4af37] font-bold tracking-[0.3em] uppercase text-xs mb-2">
+              <span class="lang-en">The Groom</span>
+              <span class="lang-gu hidden font-gujarati text-sm tracking-widest">વરરાજા</span>
+            </p>
+            <h3 class="font-serif-editorial text-3xl md:text-4xl text-[#800000] mb-4 font-bold">
+              <span class="lang-en">Harshvardhansinh</span>
+              <span class="lang-gu hidden font-gujarati text-4xl">હર્ષવર્ધનસિંહ</span>
+            </h3>
+            <p class="font-sans-clean text-gray-600 text-sm md:text-base leading-relaxed max-w-sm">
+              <span class="lang-en">Carrying forward the proud legacy of the Vaghela family. A blend of modern vision rooted deeply in royal heritage and traditions.</span>
+              <span class="lang-gu hidden font-gujarati text-lg">વાઘેલા પરિવારની ગૌરવશાળી વિરાસતને આગળ ધપાવતા. આધુનિક દ્રષ્ટિ અને રાજવી પરંપરાઓનો સુંદર સંગમ.</span>
+            </p>
+          </div>
+
+          <!-- Bride Bio -->
+          <div class="reveal delay-300 flex flex-col items-center group">
+            <div class="w-56 h-56 md:w-72 md:h-72 rounded-full p-2 border-2 border-[#d4af37] shadow-[0_15px_40px_rgba(128,0,0,0.15)] mb-8 relative transition-transform duration-500 group-hover:scale-105 bg-white">
+              <div class="absolute inset-0 rounded-full border-4 border-transparent border-l-[#800000] border-r-[#800000] animate-[spin_10s_linear_infinite] opacity-30"></div>
+              <img src="https://images.unsplash.com/photo-1596450514735-717bdc676e1e?auto=format&fit=crop&q=80&w=800" alt="Bride" class="w-full h-full rounded-full object-cover object-top" />
+            </div>
+            <p class="font-sans-clean text-[#d4af37] font-bold tracking-[0.3em] uppercase text-xs mb-2">
+              <span class="lang-en">The Bride</span>
+              <span class="lang-gu hidden font-gujarati text-sm tracking-widest">કન્યા</span>
+            </p>
+            <h3 class="font-serif-editorial text-3xl md:text-4xl text-[#800000] mb-4 font-bold">
+              <span class="lang-en">Jignaba</span>
+              <span class="lang-gu hidden font-gujarati text-4xl">જીજ્ઞાબા</span>
+            </h3>
+            <p class="font-sans-clean text-gray-600 text-sm md:text-base leading-relaxed max-w-sm">
+              <span class="lang-en">The heart of the Jadeja family. Embodying grace, elegance, and warmth, she brings light and joy to every step of this beautiful journey.</span>
+              <span class="lang-gu hidden font-gujarati text-lg">જાડેજા પરિવારનું હૃદય. અદભુત સંસ્કાર, સુંદરતા અને સ્નેહની મૂર્તિ, જે આ યાત્રાને સોનેરી બનાવશે.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAMILIES SECTION -->
+    <section class="py-16 md:py-24 px-4 md:px-6 bg-[#fdfbf7] relative" id="family">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="font-serif-royal text-3xl md:text-5xl text-[#800000] mb-4 reveal">
+          <span class="lang-en">Familial Roots</span>
+          <span class="lang-gu hidden font-gujarati font-bold">પરિવાર પરિચય</span>
+        </h2>
+        <div class="w-24 md:w-32 h-1 bg-[#d4af37] mx-auto mb-10 md:mb-16 rounded-full reveal delay-100"></div>
 
         <div class="grid md:grid-cols-2 gap-8 md:gap-12 mb-16">
           <!-- Groom Side -->
-          <div class="glass-card p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden ornate-corners reveal hover:-translate-y-2 transition-transform duration-500">
+          <div class="glass-card p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden ornate-corners reveal hover:-translate-y-2 transition-transform duration-500 bg-white">
             <div class="absolute top-0 right-0 p-4 opacity-5">
               <svg width="120" height="120" viewBox="0 0 24 24" fill="#800000"><path d="M12 2L2 22h20L12 2z"/></svg>
             </div>
-            <h3 class="font-serif-editorial text-2xl md:text-3xl text-[#800000] mb-2 font-bold break-words">Chi. Harshvardhansinh</h3>
+            <h3 class="font-serif-editorial text-2xl md:text-3xl text-[#800000] mb-2 font-bold break-words">
+              <span class="lang-en">Chi. Harshvardhansinh</span>
+              <span class="lang-gu hidden font-gujarati text-3xl">ચિ. હર્ષવર્ધનસિંહ</span>
+            </h3>
             <div class="w-16 h-px bg-[#d4af37] mx-auto mb-6"></div>
-            <p class="font-sans-clean text-xs md:text-sm text-gray-500 uppercase tracking-widest mb-2">Grandson of</p>
-            <p class="font-serif-editorial text-lg md:text-xl font-semibold text-gray-800 mb-6">Shri Dashrathsinh Arjunsinh Vaghela</p>
             
-            <p class="font-sans-clean text-xs md:text-sm text-gray-500 uppercase tracking-widest mb-2">Beloved Son of</p>
-            <p class="font-serif-editorial text-xl md:text-2xl font-bold mb-2 text-[#800000]">Shri Jayendrasinh Dashrathsinh Vaghela</p>
-
-            <p class="font-sans-clean text-xs md:text-sm text-gray-500 uppercase tracking-widest mb-2">Brother of</p>
-            <p class="font-serif-editorial text-xl md:text-2xl font-bold mb-2 text-[#800000]">Shri Kripalsinh Jayendrasinh Vaghela</p>
-            <p class="font-sans-clean text-xs md:text-sm text-gray-600 mb-2">Resident of Godhavi</p>
+            <p class="font-serif-editorial text-lg md:text-xl font-semibold text-gray-800 mb-6 flex flex-col gap-1">
+              <span class="lang-en font-sans-clean text-xs uppercase tracking-widest text-gray-500">Grandson of</span>
+              <span class="lang-en">Shri Dashrathsinh Arjunsinh Vaghela</span>
+              <span class="lang-gu hidden font-gujarati text-[22px] tracking-wide">શ્રી દશરથસિંહ અર્જુનસિંહ વાઘેલા <br><span class="text-sm text-gray-500 tracking-normal">ના પૌત્ર</span></span>
+            </p>
+            
+            <p class="font-serif-editorial text-xl md:text-2xl font-bold mb-2 text-[#800000] flex flex-col gap-1">
+              <span class="lang-en font-sans-clean text-xs uppercase tracking-widest text-gray-500 font-normal">Beloved Son of</span>
+              <span class="lang-en">Shri Jayendrasinh Dashrathsinh Vaghela</span>
+              <span class="lang-gu hidden font-gujarati tracking-wide">શ્રી જયેન્દ્રસિંહ દશરથસિંહ વાઘેલા <br><span class="text-sm text-gray-500 tracking-normal font-normal">ના સુપુત્ર</span></span>
+            </p>
+            
+            <p class="font-sans-clean text-xs md:text-sm text-gray-600 mb-2 mt-4">
+              <span class="lang-en">Resident of Godhavi</span>
+              <span class="lang-gu hidden font-gujarati text-lg tracking-wide">ગામ ગોધાવી નિવાસી</span>
+            </p>
           </div>
 
           <!-- Bride Side -->
-          <div class="glass-card p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden ornate-corners reveal delay-200 hover:-translate-y-2 transition-transform duration-500">
+          <div class="glass-card p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden ornate-corners reveal delay-200 hover:-translate-y-2 transition-transform duration-500 bg-white">
             <div class="absolute top-0 left-0 p-4 opacity-5">
               <svg width="120" height="120" viewBox="0 0 24 24" fill="#800000"><circle cx="12" cy="12" r="10"/></svg>
             </div>
-            <h3 class="font-serif-editorial text-2xl md:text-3xl text-[#800000] mb-2 font-bold break-words">Sau. Kaa. Chi. Jignaba</h3>
+            <h3 class="font-serif-editorial text-2xl md:text-3xl text-[#800000] mb-2 font-bold break-words">
+              <span class="lang-en">Sau. Kaa. Chi. Jignaba</span>
+              <span class="lang-gu hidden font-gujarati text-3xl">સૌ. કાં. ચિ. જીજ્ઞાબા</span>
+            </h3>
             <div class="w-16 h-px bg-[#d4af37] mx-auto mb-6"></div>
            
+            <p class="font-serif-editorial text-xl md:text-2xl font-bold mb-2 text-[#800000] flex flex-col gap-1">
+              <span class="lang-en font-sans-clean text-xs uppercase tracking-widest text-gray-500 font-normal">Beloved Daughter of</span>
+              <span class="lang-en">Shri Narendrasinh Bahadursinh Jadeja</span>
+              <span class="lang-gu hidden font-gujarati tracking-wide">શ્રી નરેન્દ્રસિંહ બહાદુરસિંહ જાડેજા <br><span class="text-sm text-gray-500 tracking-normal font-normal">ના સુપુત્રી</span></span>
+            </p>
             
-            <p class="font-sans-clean text-xs md:text-sm text-gray-500 uppercase tracking-widest mb-2">Beloved Daughter of</p>
-            <p class="font-serif-editorial text-xl md:text-2xl font-bold mb-2 text-[#800000]">Shri Narendrasinh Bahadursinh Jadeja</p>
-            <p class="font-sans-clean text-xs md:text-sm text-gray-600 mb-2">Resident of Haripar (Jamnagar)</p>
+            <p class="font-sans-clean text-xs md:text-sm text-gray-600 mb-2 mt-4">
+              <span class="lang-en">Resident of Haripar (Jamnagar)</span>
+              <span class="lang-gu hidden font-gujarati text-lg tracking-wide">મુળ ગામ હરીપર (હાલ જામનગર) નિવાસી</span>
+            </p>
           </div>
         </div>
 
@@ -368,7 +516,6 @@
         <div class="bg-gradient-to-br from-[#800000] to-[#5a0000] text-[#fdfbf7] p-6 md:p-12 rounded-[2rem] shadow-2xl relative overflow-hidden reveal delay-300">
           <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 mix-blend-overlay"></div>
           
-          <!-- Decorative SVGs for Royal feel -->
           <svg class="absolute top-4 left-4 opacity-20 w-16 h-16 md:w-24 md:h-24" viewBox="0 0 100 100" fill="none" stroke="#d4af37" stroke-width="2"><path d="M10,50 Q50,10 50,50 T90,50" /><path d="M50,10 Q90,50 50,50 T50,90" /></svg>
           <svg class="absolute bottom-4 right-4 opacity-20 w-16 h-16 md:w-24 md:h-24 rotate-180" viewBox="0 0 100 100" fill="none" stroke="#d4af37" stroke-width="2"><path d="M10,50 Q50,10 50,50 T90,50" /><path d="M50,10 Q90,50 50,50 T50,90" /></svg>
 
@@ -376,42 +523,48 @@
             
             <div class="text-left lg:col-span-7 border-b lg:border-b-0 lg:border-r border-[#d4af37]/30 pb-10 lg:pb-0 lg:pr-10">
               <h4 class="font-serif-royal text-xl md:text-3xl text-[#d4af37] mb-6 flex items-center gap-3 border-b border-[#d4af37]/20 pb-3 inline-flex">
-                <i class="ph ph-hands-praying"></i> Heavenly Blessings
+                <i class="ph ph-hands-praying"></i> 
+                <span class="lang-en">Heavenly Blessings</span>
+                <span class="lang-gu hidden font-gujarati font-bold tracking-wide">સ્વર્ગના દિવ્ય દ્વારેથી આશિષ</span>
               </h4>
               
               <div class="mb-8 bg-black/30 p-5 md:p-6 rounded-2xl border-l-[6px] border-[#d4af37] shadow-[0_8px_30px_rgba(0,0,0,0.3)] relative overflow-hidden max-w-lg backdrop-blur-sm">
                 <p class="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[#d4af37] mb-2 font-sans-clean font-bold">In Loving Memory</p>
-                <p class="text-xl md:text-2xl text-[#fae8dd] font-serif-editorial font-bold leading-snug">Late Shri Vaghela Arjunsinh Kanjibha</p>
+                <p class="text-xl md:text-2xl text-[#fae8dd] font-serif-editorial font-bold leading-snug">
+                  <span class="lang-en">Late Shri Vaghela Arjunsinh Kanjibha</span>
+                  <span class="lang-gu hidden font-gujarati tracking-wide">સ્વ. શ્રી વાઘેલા અર્જુનસિંહ કાનજીભા</span>
+                </p>
               </div>
 
               <ul class="royal-list royal-list-light font-serif-editorial text-base md:text-lg text-[#fae8dd] columns-1 sm:columns-2 gap-x-6">
-              
-                <li>Late Shri Vaghela Govubha Kanjibha</li>
-                <li>Late Shri Vaghela Jambha Kanjibha</li>
-                <li>Late Shri Vaghela Ranajitsinh Arjunsinh</li>
-                <li>Late Shri Jhala Chhatrapalsinh Bharatsinh (Jamai Shri)</li>
-                <li>Late Shri Vaghela Rameshsinh Arjunsinh</li>
-                <li>Late Shri Vaghela Ghanashyamsinh Rameshsinh</li>
-                <li>Late Shri Vaghela Virendrasinh Mahendrasinh</li>
-                <li>Late Shri Vaghela Tejendrasinh Sukhdevsinh</li>
+                <li><span class="lang-en">Late Shri Vaghela Govubha Kanjibha</span><span class="lang-gu hidden font-gujarati">સ્વ. શ્રી વાઘેલા ગોવુભા કાનજીભા</span></li>
+                <li><span class="lang-en">Late Shri Vaghela Jambha Kanjibha</span><span class="lang-gu hidden font-gujarati">સ્વ. શ્રી વાઘેલા જામભા કાનજીભા</span></li>
+                <li><span class="lang-en">Late Shri Vaghela Ranajitsinh Arjunsinh</span><span class="lang-gu hidden font-gujarati">સ્વ. શ્રી વાઘેલા રણજીતસિંહ અર્જુનસિંહ</span></li>
+                <li><span class="lang-en">Late Shri Jhala Chhatrapalsinh Bharatsinh</span><span class="lang-gu hidden font-gujarati">સ્વ. શ્રી ઝાલા છત્રપાલસિંહ ભરતસિંહ (જમાઈશ્રી)</span></li>
+                <li><span class="lang-en">Late Shri Vaghela Rameshsinh Arjunsinh</span><span class="lang-gu hidden font-gujarati">સ્વ. શ્રી વાઘેલા રમેશસિંહ અર્જુનસિંહ</span></li>
+                <li><span class="lang-en">Late Shri Vaghela Ghanashyamsinh Rameshsinh</span><span class="lang-gu hidden font-gujarati">સ્વ. શ્રી વાઘેલા ઘનશ્યામસિંહ રમેશસિંહ</span></li>
+                <li><span class="lang-en">Late Shri Vaghela Virendrasinh Mahendrasinh</span><span class="lang-gu hidden font-gujarati">સ્વ. શ્રી વાઘેલા વિરેન્દ્રસિંહ મહેન્દ્રસિંહ</span></li>
+                <li><span class="lang-en">Late Shri Vaghela Tejendrasinh Sukhdevsinh</span><span class="lang-gu hidden font-gujarati">સ્વ. શ્રી વાઘેલા તેજેન્દ્રસિંહ સુખદેવસિંહ</span></li>
               </ul>
 
               <h4 class="font-serif-royal text-xl md:text-3xl text-[#d4af37] mb-6 mt-12 flex items-center gap-3 border-b border-[#d4af37]/20 pb-3 inline-flex">
-                <i class="ph ph-heart"></i> Loving Family (Snehadheen)
+                <i class="ph ph-heart"></i> 
+                <span class="lang-en">Loving Family</span>
+                <span class="lang-gu hidden font-gujarati font-bold tracking-wide">સ્નેહાધીન</span>
               </h4>
               <ul class="royal-list royal-list-light font-serif-editorial text-sm md:text-base text-[#fae8dd] columns-1 sm:columns-2 gap-x-6">
-                <li>Vaghela Dashrathsinh Arjunsinh</li>
-                <li>Vaghela Mahendrasinh Jambha</li>
-                <li>Vaghela Sukhdevsinh Govubha</li>
-                <li>Vaghela Jabbarsinh Govubha</li>
-                <li>Vaghela Ashoksinh Jambha</li>
-                <li>Vaghela Gajendrasinh Govubha</li>
-                <li>Vaghela Bhimsinh Himmatsinh</li>
-                <li>Vaghela Dhirubha Himmatsinh</li>
-                <li>Vaghela Balwantsinh Navalsinh</li>
-                <li>Vaghela Jitendrasinh Gambhirsinh</li>
-                <li>Vaghela Vishnusinh Umedsinh</li>
-                <li>Vaghela Kalpeshsinh Dilipsinh</li>
+                <li><span class="lang-en">Vaghela Dashrathsinh Arjunsinh</span><span class="lang-gu hidden font-gujarati text-[17px]">વાઘેલા દશરથસિંહ અર્જુનસિંહ</span></li>
+                <li><span class="lang-en">Vaghela Mahendrasinh Jambha</span><span class="lang-gu hidden font-gujarati text-[17px]">વાઘેલા મહેન્દ્રસિંહ જામભા</span></li>
+                <li><span class="lang-en">Vaghela Sukhdevsinh Govubha</span><span class="lang-gu hidden font-gujarati text-[17px]">વાઘેલા સુખદેવસિંહ ગોવુભા</span></li>
+                <li><span class="lang-en">Vaghela Jabbarsinh Govubha</span><span class="lang-gu hidden font-gujarati text-[17px]">વાઘેલા જબ્બરસિંહ ગોવુભા</span></li>
+                <li><span class="lang-en">Vaghela Ashoksinh Jambha</span><span class="lang-gu hidden font-gujarati text-[17px]">વાઘેલા અશોકસિંહ જામભા</span></li>
+                <li><span class="lang-en">Vaghela Gajendrasinh Govubha</span><span class="lang-gu hidden font-gujarati text-[17px]">વાઘેલા ગજેન્દ્રસિંહ ગોવુભા</span></li>
+                <li><span class="lang-en">Vaghela Bhimsinh Himmatsinh</span><span class="lang-gu hidden font-gujarati text-[17px]">વાઘેલા ભીમસિંહ હિંમતસિંહ</span></li>
+                <li><span class="lang-en">Vaghela Dhirubha Himmatsinh</span><span class="lang-gu hidden font-gujarati text-[17px]">વાઘેલા ધીરુભા હિંમતસિંહ</span></li>
+                <li><span class="lang-en">Vaghela Balwantsinh Navalsinh</span><span class="lang-gu hidden font-gujarati text-[17px]">વાઘેલા બળવંતસિંહ નવલસિંહ</span></li>
+                <li><span class="lang-en">Vaghela Jitendrasinh Gambhirsinh</span><span class="lang-gu hidden font-gujarati text-[17px]">વાઘેલા જીતેન્દ્રસિંહ ગંભીરસિંહ</span></li>
+                <li><span class="lang-en">Vaghela Vishnusinh Umedsinh</span><span class="lang-gu hidden font-gujarati text-[17px]">વાઘેલા વિષ્ણુસિંહ ઉમેદસિંહ</span></li>
+                <li><span class="lang-en">Vaghela Kalpeshsinh Dilipsinh</span><span class="lang-gu hidden font-gujarati text-[17px]">વાઘેલા કલ્પેશસિંહ દિલીપસિંહ</span></li>
               </ul>
             </div>
 
@@ -420,20 +573,38 @@
                 <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-br from-[#f3e5ab] to-[#d4af37] text-[#800000] p-3 rounded-full shadow-[0_4px_15px_rgba(212,175,55,0.4)] floating">
                   <i class="ph-fill ph-envelope-open text-2xl"></i>
                 </div>
-                <h4 class="font-serif-royal text-xl md:text-2xl text-[#d4af37] mb-6 text-center mt-4">Cordial Invitation</h4>
+                <h4 class="font-serif-royal text-xl md:text-2xl text-[#d4af37] mb-6 text-center mt-4">
+                  <span class="lang-en">Cordial Invitation</span>
+                  <span class="lang-gu hidden font-gujarati font-bold tracking-wide text-3xl">નિમંત્રક</span>
+                </h4>
                 
                 <div class="text-center mb-8">
-                  <p class="font-serif-editorial text-xl md:text-2xl font-bold text-white mb-2">Vaghela Dashrathsinh Arjunsinh</p>
-                  <p class="font-serif-editorial text-lg md:text-xl text-[#fae8dd]">Vaghela Bhagirathsinh Dashrathsinh</p>
+                  <p class="font-serif-editorial text-xl md:text-2xl font-bold text-white mb-2">
+                    <span class="lang-en">Vaghela Dashrathsinh Arjunsinh</span>
+                    <span class="lang-gu hidden font-gujarati tracking-wide">વાઘેલા દશરથસિંહ અર્જુનસિંહ</span>
+                  </p>
+                  <p class="font-serif-editorial text-lg md:text-xl text-[#fae8dd]">
+                    <span class="lang-en">Vaghela Bhagirathsinh Dashrathsinh</span>
+                    <span class="lang-gu hidden font-gujarati tracking-wide">વાઘેલા ભગીરથસિંહ દશરથસિંહ</span>
+                  </p>
                 </div>
                 
                 <div class="space-y-6">
                   <div>
-                    <p class="font-sans-clean text-xs font-bold text-[#d4af37] mb-1 tracking-[0.2em] uppercase flex items-center gap-2"><i class="ph-fill ph-house-line text-lg"></i> Residence</p>
-                    <p class="font-sans-clean text-sm md:text-base text-gray-200 leading-relaxed pl-6">"Radha Krishna Niwas", Opp. Jain Derasar, Godhavi, Ta. Sanand, Dist. Ahmedabad</p>
+                    <p class="font-sans-clean text-xs font-bold text-[#d4af37] mb-1 tracking-[0.2em] uppercase flex items-center gap-2"><i class="ph-fill ph-house-line text-lg"></i> 
+                      <span class="lang-en">Residence</span>
+                      <span class="lang-gu hidden font-gujarati text-sm tracking-wide">રહેઠાણ</span>
+                    </p>
+                    <p class="font-sans-clean text-sm md:text-base text-gray-200 leading-relaxed pl-6">
+                      <span class="lang-en">"Radha Krishna Niwas", Opp. Jain Derasar, Godhavi, Ta. Sanand, Dist. Ahmedabad</span>
+                      <span class="lang-gu hidden font-gujarati text-[17px] tracking-wide">"રાધા કૃષ્ણ નિવાસ", જૈન દેરાસરની સામે, ગોધાવી, તા. સાણંદ, જી. અમદાવાદ</span>
+                    </p>
                   </div>
                   <div>
-                    <p class="font-sans-clean text-xs font-bold text-[#d4af37] mb-1 tracking-[0.2em] uppercase flex items-center gap-2"><i class="ph-fill ph-phone-call text-lg"></i> Contact</p>
+                    <p class="font-sans-clean text-xs font-bold text-[#d4af37] mb-1 tracking-[0.2em] uppercase flex items-center gap-2"><i class="ph-fill ph-phone-call text-lg"></i> 
+                      <span class="lang-en">Contact</span>
+                      <span class="lang-gu hidden font-gujarati text-sm tracking-wide">સંપર્ક</span>
+                    </p>
                     <p class="font-sans-clean text-sm md:text-base text-gray-200 pl-6 tracking-wide">+91 97271 87173 <br class="md:hidden"><span class="hidden md:inline text-[#d4af37] mx-2">|</span> +91 79698 00976</p>
                   </div>
                 </div>
@@ -446,13 +617,18 @@
       </div>
     </section>
 
-    <!-- EVENT SCHEDULE (Pages 2 & 3 Translated) -->
-    <section id="schedule" class="py-16 md:py-24 px-4 md:px-6 bg-[#fdfbf7] relative">
+    <!-- EVENT SCHEDULE -->
+    <section id="schedule" class="py-16 md:py-24 px-4 md:px-6 bg-[#fdfbf7] bg-mandala relative">
       <div class="max-w-5xl mx-auto">
-        <h2 class="font-serif-royal text-3xl md:text-5xl text-center text-[#800000] mb-2 reveal">Mangalik Prasango</h2>
-        <p class="font-serif-editorial text-xl text-center text-[#d4af37] italic mb-10 md:mb-16 reveal delay-100">Auspicious Wedding Events</p>
+        <h2 class="font-serif-royal text-3xl md:text-5xl text-center text-[#800000] mb-2 reveal">
+          <span class="lang-en">Mangalik Prasango</span>
+          <span class="lang-gu hidden font-gujarati font-bold tracking-wide">માંગલિક પ્રસંગો</span>
+        </h2>
+        <p class="font-serif-editorial text-xl text-center text-[#d4af37] italic mb-10 md:mb-16 reveal delay-100">
+          <span class="lang-en">Auspicious Wedding Events</span>
+          <span class="lang-gu hidden font-gujarati tracking-wide text-2xl font-bold">રૂડા અવસરે પધારવા ભાવભર્યું આમંત્રણ</span>
+        </p>
         
-        <!-- Mobile optimized margin and padding -->
         <div class="relative border-l-2 border-[#d4af37]/40 ml-2 md:ml-12 space-y-8 pb-8">
           
           <!-- Date 1 -->
@@ -460,20 +636,31 @@
             <div class="absolute w-6 h-6 md:w-8 md:h-8 bg-[#800000] rounded-full -left-[13px] md:-left-[17px] top-5 md:top-4 border-4 border-[#fdfbf7] shadow-sm flex items-center justify-center group-hover:scale-125 transition-transform duration-300 z-10">
               <div class="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#d4af37] rounded-full"></div>
             </div>
-            <div class="glass-panel p-5 md:p-8 rounded-2xl transition-all duration-300 shadow-md hover:shadow-[0_15px_35px_rgba(128,0,0,0.1)] border-l-[4px] border-l-[#800000]">
+            <div class="glass-panel p-5 md:p-8 rounded-2xl transition-all duration-300 shadow-md hover:shadow-[0_15px_35px_rgba(128,0,0,0.1)] border-l-[4px] border-l-[#800000] bg-white/70">
               <div class="flex justify-between items-start">
                 <div class="pr-2">
-                  <h3 class="font-serif-editorial text-2xl md:text-3xl font-bold text-[#800000]">Vel Prasthan</h3>
-                  <p class="text-[#d4af37] font-bold mt-2 text-[10px] md:text-sm uppercase tracking-widest bg-[#800000]/5 inline-block px-2 md:px-3 py-1 rounded-md">7 March 2026, Saturday • 9:30 AM</p>
+                  <h3 class="font-serif-editorial text-2xl md:text-3xl font-bold text-[#800000]">
+                    <span class="lang-en">Vel Prasthan</span>
+                    <span class="lang-gu hidden font-gujarati text-3xl">વેલ પ્રસ્થાન</span>
+                  </h3>
+                  <p class="text-[#d4af37] font-bold mt-2 text-[10px] md:text-sm uppercase tracking-widest bg-[#800000]/5 inline-block px-2 md:px-3 py-1 rounded-md">
+                    <span class="lang-en">7 March 2026, Saturday • 9:30 AM</span>
+                    <span class="lang-gu hidden font-gujarati tracking-wide text-[13px]">તા. ૭-૩-૨૦૨૬, શનિવાર • સવારે ૯:૩૦ કલાકે</span>
+                  </p>
                 </div>
                 <div class="bg-[#fae8dd] p-2 md:p-3 rounded-full text-[#800000] shrink-0">
                   <i class="ph ph-caret-down text-lg md:text-xl event-icon"></i>
                 </div>
               </div>
               <div class="accordion-content">
-                <p class="font-sans-clean text-sm md:text-base text-gray-700 mb-4 mt-2">The joyful departure of the groom's family to commence the wedding festivities.</p>
+                <p class="font-sans-clean text-sm md:text-base text-gray-700 mb-4 mt-2">
+                  <span class="lang-en">The joyful departure of the groom's family to commence the wedding festivities.</span>
+                  <span class="lang-gu hidden font-gujarati text-lg">લગ્ન પ્રસંગની શુભ શરૂઆત અને વરરાજાનું ઢોલ-નગારા સાથે પ્રસ્થાન.</span>
+                </p>
                 <div class="flex items-center gap-2 bg-[#fdfbf7] px-3 md:px-4 py-2 rounded-xl md:rounded-full border border-[#d4af37]/30 w-max text-xs md:text-sm font-medium">
-                  <i class="ph-fill ph-house-line text-[#800000]"></i> <span>Groom's Residence, Godhavi</span>
+                  <i class="ph-fill ph-house-line text-[#800000]"></i> 
+                  <span class="lang-en">Groom's Residence, Godhavi</span>
+                  <span class="lang-gu hidden font-gujarati tracking-wide text-base">વરરાજાનું નિવાસસ્થાન, ગોધાવી</span>
                 </div>
               </div>
             </div>
@@ -484,11 +671,17 @@
             <div class="absolute w-6 h-6 md:w-8 md:h-8 bg-[#800000] rounded-full -left-[13px] md:-left-[17px] top-5 md:top-4 border-4 border-[#fdfbf7] shadow-sm flex items-center justify-center group-hover:scale-125 transition-transform duration-300 z-10">
               <div class="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#d4af37] rounded-full"></div>
             </div>
-            <div class="glass-panel p-5 md:p-8 rounded-2xl transition-all duration-300 shadow-md hover:shadow-[0_15px_35px_rgba(128,0,0,0.1)] border-l-[4px] border-l-[#800000]">
+            <div class="glass-panel p-5 md:p-8 rounded-2xl transition-all duration-300 shadow-md hover:shadow-[0_15px_35px_rgba(128,0,0,0.1)] border-l-[4px] border-l-[#800000] bg-white/70">
               <div class="flex justify-between items-start">
                 <div class="pr-2">
-                  <h3 class="font-serif-editorial text-2xl md:text-3xl font-bold text-[#800000]">Pre-Wedding Rituals & Raas Garba</h3>
-                  <p class="text-[#d4af37] font-bold mt-2 text-[10px] md:text-sm uppercase tracking-widest bg-[#800000]/5 inline-block px-2 md:px-3 py-1 rounded-md">8 March 2026, Sunday</p>
+                  <h3 class="font-serif-editorial text-2xl md:text-3xl font-bold text-[#800000]">
+                    <span class="lang-en">Pre-Wedding Rituals & Raas Garba</span>
+                    <span class="lang-gu hidden font-gujarati text-3xl">માંગલિક પ્રસંગો અને રાસ ગરબા</span>
+                  </h3>
+                  <p class="text-[#d4af37] font-bold mt-2 text-[10px] md:text-sm uppercase tracking-widest bg-[#800000]/5 inline-block px-2 md:px-3 py-1 rounded-md">
+                    <span class="lang-en">8 March 2026, Sunday</span>
+                    <span class="lang-gu hidden font-gujarati tracking-wide text-[13px]">તા. ૮-૩-૨૦૨૬, રવિવાર</span>
+                  </p>
                 </div>
                 <div class="bg-[#fae8dd] p-2 md:p-3 rounded-full text-[#800000] shrink-0">
                   <i class="ph ph-caret-down text-lg md:text-xl event-icon"></i>
@@ -496,38 +689,76 @@
               </div>
               <div class="accordion-content">
                 <div class="grid md:grid-cols-2 gap-3 md:gap-4 mt-4 font-sans-clean text-gray-800">
-                  <!-- Redesigned as horizontal rows to save vertical space on mobile -->
                   <div class="bg-white/80 p-3 md:p-4 rounded-xl border border-[#d4af37]/20 shadow-sm flex justify-between items-center">
-                    <p class="font-bold text-[#800000] text-sm md:text-base">Ganesh Sthapan</p>
-                    <p class="text-xs md:text-sm font-semibold flex items-center gap-1 bg-[#800000]/5 px-2 py-1 rounded"><i class="ph ph-clock"></i> 7:55 AM</p>
+                    <p class="font-bold text-[#800000] text-sm md:text-base">
+                      <span class="lang-en">Ganesh Sthapan</span><span class="lang-gu hidden font-gujarati text-xl">ગણેશ સ્થાપન</span>
+                    </p>
+                    <p class="text-xs md:text-sm font-semibold flex items-center gap-1 bg-[#800000]/5 px-2 py-1 rounded">
+                      <i class="ph ph-clock"></i> <span class="lang-en">7:55 AM</span><span class="lang-gu hidden font-gujarati text-sm">સવારે ૭:૫૫ કલાકે</span>
+                    </p>
                   </div>
                   <div class="bg-white/80 p-3 md:p-4 rounded-xl border border-[#d4af37]/20 shadow-sm flex justify-between items-center">
-                    <p class="font-bold text-[#800000] text-sm md:text-base">Mandap Muhurat</p>
-                    <p class="text-xs md:text-sm font-semibold flex items-center gap-1 bg-[#800000]/5 px-2 py-1 rounded"><i class="ph ph-clock"></i> 8:30 AM</p>
+                    <p class="font-bold text-[#800000] text-sm md:text-base">
+                      <span class="lang-en">Mandap Muhurat</span><span class="lang-gu hidden font-gujarati text-xl">મંડપ મુહૂર્ત</span>
+                    </p>
+                    <p class="text-xs md:text-sm font-semibold flex items-center gap-1 bg-[#800000]/5 px-2 py-1 rounded">
+                      <i class="ph ph-clock"></i> <span class="lang-en">8:30 AM</span><span class="lang-gu hidden font-gujarati text-sm">સવારે ૮:૩૦ કલાકે</span>
+                    </p>
                   </div>
                   <div class="bg-white/80 p-3 md:p-4 rounded-xl border border-[#d4af37]/20 shadow-sm flex justify-between items-center">
-                    <p class="font-bold text-[#800000] text-sm md:text-base">Grahshanti</p>
-                    <p class="text-xs md:text-sm font-semibold flex items-center gap-1 bg-[#800000]/5 px-2 py-1 rounded"><i class="ph ph-clock"></i> 2:00 PM</p>
+                    <p class="font-bold text-[#800000] text-sm md:text-base">
+                      <span class="lang-en">Grahshanti</span><span class="lang-gu hidden font-gujarati text-xl">ગ્રહશાંતિ</span>
+                    </p>
+                    <p class="text-xs md:text-sm font-semibold flex items-center gap-1 bg-[#800000]/5 px-2 py-1 rounded">
+                      <i class="ph ph-clock"></i> <span class="lang-en">2:00 PM</span><span class="lang-gu hidden font-gujarati text-sm">બપોરે ૨:૦૦ કલાકે</span>
+                    </p>
                   </div>
                   <div class="bg-white/80 p-3 md:p-4 rounded-xl border border-[#d4af37]/20 shadow-sm flex justify-between items-center">
-                    <p class="font-bold text-[#800000] text-sm md:text-base">Kanyadaan</p>
-                    <p class="text-xs md:text-sm font-semibold flex items-center gap-1 bg-[#800000]/5 px-2 py-1 rounded"><i class="ph ph-clock"></i> 3:00 PM</p>
+                    <p class="font-bold text-[#800000] text-sm md:text-base">
+                      <span class="lang-en">Kanyadaan</span><span class="lang-gu hidden font-gujarati text-xl">કન્યાદાન</span>
+                    </p>
+                    <p class="text-xs md:text-sm font-semibold flex items-center gap-1 bg-[#800000]/5 px-2 py-1 rounded">
+                      <i class="ph ph-clock"></i> <span class="lang-en">3:00 PM</span><span class="lang-gu hidden font-gujarati text-sm">બપોરે ૩:૦૦ કલાકે</span>
+                    </p>
                   </div>
                   <div class="bg-white/80 p-3 md:p-4 rounded-xl border border-[#d4af37]/20 shadow-sm flex justify-between items-center">
-                    <p class="font-bold text-[#800000] text-sm md:text-base">Balvo</p>
-                    <p class="text-xs md:text-sm font-semibold flex items-center gap-1 bg-[#800000]/5 px-2 py-1 rounded"><i class="ph ph-clock"></i> 5:00 PM</p>
+                    <p class="font-bold text-[#800000] text-sm md:text-base">
+                      <span class="lang-en">Balvo</span><span class="lang-gu hidden font-gujarati text-xl">બળવો</span>
+                    </p>
+                    <p class="text-xs md:text-sm font-semibold flex items-center gap-1 bg-[#800000]/5 px-2 py-1 rounded">
+                      <i class="ph ph-clock"></i> <span class="lang-en">5:00 PM</span><span class="lang-gu hidden font-gujarati text-sm">સાંજે ૫:૦૦ કલાકે</span>
+                    </p>
                   </div>
                   <div class="bg-gradient-to-r from-[#800000] to-[#b30000] text-white p-3 md:p-4 rounded-xl shadow-md flex justify-between items-center">
-                    <p class="font-bold text-[#d4af37] text-base md:text-lg">Raas Garba</p>
-                    <p class="text-xs md:text-sm font-medium flex items-center gap-1 bg-black/20 px-2 py-1 rounded"><i class="ph ph-clock text-[#d4af37]"></i> 9:00 PM</p>
+                    <p class="font-bold text-[#d4af37] text-base md:text-lg">
+                      <span class="lang-en">Raas Garba</span><span class="lang-gu hidden font-gujarati text-2xl">રાસ ગરબા</span>
+                    </p>
+                    <p class="text-xs md:text-sm font-medium flex items-center gap-1 bg-black/20 px-2 py-1 rounded">
+                      <i class="ph ph-clock text-[#d4af37]"></i> <span class="lang-en">9:00 PM</span><span class="lang-gu hidden font-gujarati text-[15px]">રાત્રે ૯:૦૦ કલાકે</span>
+                    </p>
                   </div>
                 </div>
-                <div class="mt-6 flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-3 bg-[#fdfbf7] px-4 py-3 rounded-xl border border-[#d4af37]/30 text-xs md:text-sm font-medium">
+                
+                <div class="mt-4 flex flex-wrap gap-2 md:gap-3">
+                  <span class="bg-[#800000]/5 text-[#800000] border border-[#800000]/20 px-3 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-wide flex items-center gap-1.5">
+                    <i class="ph-fill ph-shirt-folded text-[#d4af37] text-sm"></i> 
+                    <span class="lang-en">Dress Code: Vibrant Traditional</span><span class="lang-gu hidden font-gujarati text-[13px] tracking-wide">પહેરવેશ: પારંપરિક ગરબા પોશાક</span>
+                  </span>
+                  <button onclick="window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&text=Raas+Garba+-+Harshvardhansinh+%26+Jignaba&dates=20260308T153000Z/20260308T183000Z&details=Join+us+for+an+evening+of+dance+and+celebration!&location=Bapa+Sitaram+Farm,+Godhavi', '_blank')" class="bg-[#d4af37]/10 text-[#800000] border border-[#d4af37]/50 px-3 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-wide hover:bg-[#d4af37] hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer z-20">
+                    <i class="ph-bold ph-calendar-plus text-sm"></i> 
+                    <span class="lang-en">Add to Calendar</span><span class="lang-gu hidden font-gujarati text-[13px] tracking-wide">કેલેન્ડરમાં ઉમેરો</span>
+                  </button>
+                </div>
+
+                <div class="mt-4 md:mt-6 flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-3 bg-[#fdfbf7] px-4 py-3 rounded-xl border border-[#d4af37]/30 text-xs md:text-sm font-medium">
                   <div class="flex items-center gap-2">
                     <i class="ph-fill ph-map-pin text-[#800000] text-lg md:text-xl shrink-0"></i> 
-                    <strong class="text-[#800000]">Venue:</strong>
+                    <strong class="text-[#800000]"><span class="lang-en">Venue:</span><span class="lang-gu hidden font-gujarati text-lg">સ્થળ:</span></strong>
                   </div>
-                  <span class="pl-6 md:pl-0 leading-tight">Bapa Sitaram Farm, Godhavi</span>
+                  <span class="pl-6 md:pl-0 leading-tight">
+                    <span class="lang-en">Bapa Sitaram Farm, Godhavi</span>
+                    <span class="lang-gu hidden font-gujarati text-lg tracking-wide">બાપા સીતારામ ફાર્મ, ગોધાવી</span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -538,11 +769,17 @@
             <div class="absolute w-6 h-6 md:w-8 md:h-8 bg-[#800000] rounded-full -left-[13px] md:-left-[17px] top-5 md:top-4 border-4 border-[#fdfbf7] shadow-sm flex items-center justify-center group-hover:scale-125 transition-transform duration-300 z-10">
               <div class="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#d4af37] rounded-full"></div>
             </div>
-            <div class="glass-panel p-5 md:p-8 rounded-2xl transition-all duration-300 shadow-md hover:shadow-[0_15px_35px_rgba(128,0,0,0.1)] border-l-[4px] border-l-[#800000]">
+            <div class="glass-panel p-5 md:p-8 rounded-2xl transition-all duration-300 shadow-md hover:shadow-[0_15px_35px_rgba(128,0,0,0.1)] border-l-[4px] border-l-[#800000] bg-white/70">
               <div class="flex justify-between items-start">
                 <div class="pr-2">
-                  <h3 class="font-serif-editorial text-2xl md:text-3xl font-bold text-[#800000]">Avasar Anand Na</h3>
-                  <p class="text-[#d4af37] font-bold mt-2 text-[10px] md:text-sm uppercase tracking-widest bg-[#800000]/5 inline-block px-2 md:px-3 py-1 rounded-md">9 March 2026, Monday</p>
+                  <h3 class="font-serif-editorial text-2xl md:text-3xl font-bold text-[#800000]">
+                    <span class="lang-en">Avasar Anand Na</span>
+                    <span class="lang-gu hidden font-gujarati text-3xl font-bold">અવસર આનંદના</span>
+                  </h3>
+                  <p class="text-[#d4af37] font-bold mt-2 text-[10px] md:text-sm uppercase tracking-widest bg-[#800000]/5 inline-block px-2 md:px-3 py-1 rounded-md">
+                    <span class="lang-en">9 March 2026, Monday</span>
+                    <span class="lang-gu hidden font-gujarati text-[13px] tracking-wide">તા. ૯-૩-૨૦૨૬, સોમવાર</span>
+                  </p>
                 </div>
                 <div class="bg-[#fae8dd] p-2 md:p-3 rounded-full text-[#800000] shrink-0">
                   <i class="ph ph-caret-down text-lg md:text-xl event-icon"></i>
@@ -555,12 +792,18 @@
                     <div class="flex items-center gap-3 md:gap-4">
                       <div class="bg-[#800000]/10 p-2 md:p-3 rounded-full shrink-0"><i class="ph-fill ph-horse text-[#800000] text-xl md:text-2xl"></i></div>
                       <div>
-                        <p class="font-bold text-[#800000] text-sm md:text-lg">Fuleku</p>
-                        <p class="text-[10px] md:text-xs text-gray-600 uppercase tracking-wide">Groom's Procession</p>
+                        <p class="font-bold text-[#800000] text-sm md:text-lg">
+                          <span class="lang-en">Fuleku</span><span class="lang-gu hidden font-gujarati text-2xl">ફુલેકુ</span>
+                        </p>
+                        <p class="text-[10px] md:text-xs text-gray-600 uppercase tracking-wide">
+                          <span class="lang-en">Groom's Procession</span><span class="lang-gu hidden font-gujarati text-sm tracking-wide">વરઘોડો</span>
+                        </p>
                       </div>
                     </div>
                     <div class="text-right shrink-0">
-                      <p class="font-bold text-gray-800 text-sm md:text-base bg-[#800000]/5 px-2 py-1 rounded">6:30 PM</p>
+                      <p class="font-bold text-gray-800 text-sm md:text-base bg-[#800000]/5 px-2 py-1 rounded">
+                        <span class="lang-en">6:30 PM</span><span class="lang-gu hidden font-gujarati text-base">સાંજે ૬:૩૦ કલાકે</span>
+                      </p>
                     </div>
                   </div>
 
@@ -568,12 +811,18 @@
                     <div class="flex items-center gap-3 md:gap-4">
                       <div class="bg-[#800000]/10 p-2 md:p-3 rounded-full shrink-0"><i class="ph-fill ph-bowl-food text-[#800000] text-xl md:text-2xl"></i></div>
                       <div>
-                        <p class="font-bold text-[#800000] text-sm md:text-lg">Swaruchi Bhojan</p>
-                        <p class="text-[10px] md:text-xs text-gray-600 uppercase tracking-wide">Wedding Feast</p>
+                        <p class="font-bold text-[#800000] text-sm md:text-lg">
+                          <span class="lang-en">Swaruchi Bhojan</span><span class="lang-gu hidden font-gujarati text-2xl">સ્વરૂચિ ભોજન</span>
+                        </p>
+                        <p class="text-[10px] md:text-xs text-gray-600 uppercase tracking-wide">
+                          <span class="lang-en">Wedding Feast</span><span class="lang-gu hidden font-gujarati text-sm tracking-wide">મહા પ્રસાદ</span>
+                        </p>
                       </div>
                     </div>
                     <div class="text-right shrink-0">
-                      <p class="font-bold text-gray-800 text-sm md:text-base bg-[#800000]/5 px-2 py-1 rounded">7:00 PM</p>
+                      <p class="font-bold text-gray-800 text-sm md:text-base bg-[#800000]/5 px-2 py-1 rounded">
+                        <span class="lang-en">7:00 PM</span><span class="lang-gu hidden font-gujarati text-base">સાંજે ૭:૦૦ કલાકે</span>
+                      </p>
                     </div>
                   </div>
 
@@ -581,23 +830,45 @@
                     <div class="flex items-center gap-3 md:gap-4">
                       <div class="bg-[#800000] p-2 md:p-3 rounded-full shrink-0"><i class="ph-fill ph-hands-clapping text-[#d4af37] text-xl md:text-2xl"></i></div>
                       <div>
-                        <p class="font-bold text-[#800000] text-base md:text-xl">Hast Melap</p>
-                        <p class="text-[10px] md:text-xs text-gray-800 font-medium uppercase tracking-wide">Holy Ceremony</p>
+                        <p class="font-bold text-[#800000] text-base md:text-xl">
+                          <span class="lang-en">Hast Melap</span><span class="lang-gu hidden font-gujarati text-2xl">હસ્ત મેળાપ</span>
+                        </p>
+                        <p class="text-[10px] md:text-xs text-gray-800 font-medium uppercase tracking-wide">
+                          <span class="lang-en">Holy Ceremony</span><span class="lang-gu hidden font-gujarati text-sm tracking-wide">શુભ લગ્ન વિધિ</span>
+                        </p>
                       </div>
                     </div>
                     <div class="text-right shrink-0">
-                      <p class="font-bold text-[#800000] text-sm md:text-lg bg-white/50 px-2 py-1 rounded border border-[#800000]/10">7:30 PM</p>
+                      <p class="font-bold text-[#800000] text-sm md:text-lg bg-white/50 px-2 py-1 rounded border border-[#800000]/10">
+                        <span class="lang-en">7:30 PM</span><span class="lang-gu hidden font-gujarati text-[17px]">સાંજે ૭:૩0 કલાકે</span>
+                      </p>
                     </div>
                   </div>
 
                 </div>
                 
-                <div class="mt-6 flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-3 bg-[#fdfbf7] px-4 py-3 rounded-xl border border-[#d4af37]/30 text-xs md:text-sm font-medium">
+                <div class="mt-4 flex flex-wrap gap-2 md:gap-3">
+                  <span class="bg-[#800000]/5 text-[#800000] border border-[#800000]/20 px-3 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-wide flex items-center gap-1.5">
+                    <i class="ph-fill ph-crown text-[#d4af37] text-sm"></i> 
+                    <span class="lang-en">Dress Code: Royal Rajputana</span>
+                    <span class="lang-gu hidden font-gujarati text-[13px] tracking-wide">પહેરવેશ: રાજપૂતી પોશાક</span>
+                  </span>
+                  <button onclick="window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&text=Hast+Melap+-+Harshvardhansinh+%26+Jignaba&dates=20260309T140000Z/20260309T160000Z&details=The+holy+wedding+ceremony.&location=Bapa+Sitaram+Farm,+Godhavi', '_blank')" class="bg-[#d4af37]/10 text-[#800000] border border-[#d4af37]/50 px-3 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-wide hover:bg-[#d4af37] hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer z-20">
+                    <i class="ph-bold ph-calendar-plus text-sm"></i> 
+                    <span class="lang-en">Add to Calendar</span>
+                    <span class="lang-gu hidden font-gujarati text-[13px] tracking-wide">કેલેન્ડરમાં ઉમેરો</span>
+                  </button>
+                </div>
+
+                <div class="mt-4 md:mt-6 flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-3 bg-[#fdfbf7] px-4 py-3 rounded-xl border border-[#d4af37]/30 text-xs md:text-sm font-medium">
                   <div class="flex items-center gap-2">
                     <i class="ph-fill ph-map-pin text-[#800000] text-lg md:text-xl shrink-0"></i> 
-                    <strong class="text-[#800000]">Venue:</strong>
+                    <strong class="text-[#800000]"><span class="lang-en">Venue:</span><span class="lang-gu hidden font-gujarati text-lg">સ્થળ:</span></strong>
                   </div>
-                  <span class="pl-6 md:pl-0 leading-tight">Bapa Sitaram Farm, Godhavi</span>
+                  <span class="pl-6 md:pl-0 leading-tight">
+                    <span class="lang-en">Bapa Sitaram Farm, Godhavi</span>
+                    <span class="lang-gu hidden font-gujarati text-lg tracking-wide">બાપા સીતારામ ફાર્મ, ગોધાવી</span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -608,50 +879,120 @@
     </section>
 
     <!-- VENUE MAP SECTION -->
-    <section id="venue" class="py-24 px-6 bg-mandala relative">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="font-serif-royal text-3xl md:text-5xl text-center text-[#800000] mb-4 reveal">Shubh Sthal (The Venue)</h2>
-        <div class="w-32 h-1 bg-[#d4af37] mx-auto mb-16 rounded-full reveal delay-100"></div>
+    <section id="venue" class="py-24 px-6 relative parallax-bg flex items-center justify-center min-h-[70vh]" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=2000');">
+      <div class="absolute inset-0 bg-[#800000]/60 backdrop-blur-[2px]"></div>
 
-        <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl border-0 reveal delay-200">
-          <div class="w-full md:w-1/2 h-[350px] md:h-auto bg-cover bg-center" style="background-image: url('https://i.pinimg.com/1200x/9e/40/60/9e40608d62fc4267f779fd94ea55bd21.jpg');">
-          </div>
-          <div class="w-full md:w-1/2 p-10 md:p-14 flex flex-col justify-center glass-panel rounded-none border-0">
-            <h3 class="font-serif-editorial text-4xl text-[#800000] mb-4 font-bold">Bapa Sitaram Farm</h3>
+      <div class="max-w-4xl mx-auto relative z-10 w-full">
+        <h2 class="font-serif-royal text-3xl md:text-5xl text-center text-[#d4af37] mb-4 reveal drop-shadow-lg">
+          <span class="lang-en">Shubh Sthal (The Venue)</span>
+          <span class="lang-gu hidden font-gujarati font-bold tracking-wide">શુભ સ્થળ</span>
+        </h2>
+        <div class="w-32 h-1 bg-[#fae8dd] mx-auto mb-12 rounded-full opacity-60 reveal delay-100"></div>
+
+        <div class="glass-dark p-10 md:p-14 rounded-3xl flex flex-col items-center text-center reveal delay-200 border-[#d4af37]/50 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+            <h3 class="font-serif-editorial text-4xl text-[#fae8dd] mb-4 font-bold tracking-wide">
+              <span class="lang-en">Bapa Sitaram Farm</span>
+              <span class="lang-gu hidden font-gujarati text-4xl tracking-wider">બાપા સીતારામ ફાર્મ</span>
+            </h3>
             <div class="w-16 h-px bg-[#d4af37] mb-6"></div>
-            <p class="font-sans-clean text-gray-800 mb-8 flex items-start gap-4 text-lg">
-              <i class="ph-fill ph-map-pin shrink-0 mt-1 text-[#d4af37] text-2xl"></i>
-              <span>Godhavi, Ta. Sanand,<br>District Ahmedabad,<br>Gujarat - India</span>
+            <p class="font-sans-clean text-gray-200 mb-10 flex items-center gap-4 text-lg md:text-xl">
+              <i class="ph-fill ph-map-pin text-[#d4af37] text-3xl"></i>
+              <span class="leading-relaxed text-left">
+                <span class="lang-en">Godhavi, Ta. Sanand,<br>District Ahmedabad,<br>Gujarat - India</span>
+                <span class="lang-gu hidden font-gujarati text-2xl tracking-wide">ગોધાવી, તા. સાણંદ,<br>જી. અમદાવાદ, ગુજરાત</span>
+              </span>
             </p>
-            <button onclick="window.open('https://maps.google.com/?q=Godhavi,Sanand,Ahmedabad', '_blank')" class="bg-[#800000] text-white py-4 px-8 rounded-full font-bold tracking-widest uppercase text-sm hover:bg-[#520000] transition-colors flex items-center justify-center gap-3 w-max cursor-pointer shadow-lg shadow-[#800000]/30">
-              <i class="ph-bold ph-navigation-arrow text-xl text-[#d4af37]"></i> Get Directions
+            <button onclick="window.open('https://maps.google.com/?q=Godhavi,Sanand,Ahmedabad', '_blank')" class="bg-gradient-to-r from-[#d4af37] to-[#b8860b] text-[#800000] py-4 px-10 rounded-full font-bold tracking-widest uppercase text-sm hover:brightness-110 transition-all flex items-center justify-center gap-3 w-max cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1">
+              <i class="ph-bold ph-navigation-arrow text-xl"></i> 
+              <span class="lang-en">Get Directions</span>
+              <span class="lang-gu hidden font-gujarati tracking-wide text-lg">લોકેશન જુઓ</span>
             </button>
-          </div>
         </div>
       </div>
     </section>
 
+    <!-- ROYAL PHOTO GALLERY -->
+    <section id="gallery" class="py-16 md:py-24 px-4 md:px-6 bg-[#fdfbf7] relative bg-mandala">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="font-serif-royal text-3xl md:text-5xl text-[#800000] mb-4 reveal">
+          <span class="lang-en">Moments of Grace</span>
+          <span class="lang-gu hidden font-gujarati font-bold">અમારા મધુર સંસ્મરણો</span>
+        </h2>
+        <p class="font-serif-editorial text-xl text-center text-[#d4af37] italic mb-10 reveal delay-100">
+          <span class="lang-en">A glimpse into our beautiful journey</span>
+          <span class="lang-gu hidden font-gujarati tracking-wide text-2xl font-bold">અમારી યાત્રાની એક સુંદર ઝલક</span>
+        </p>
+        <div class="w-24 md:w-32 h-1 bg-[#d4af37] mx-auto mb-16 rounded-full reveal delay-100"></div>
+
+        <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4 reveal delay-200">
+           <img src="https://i.pinimg.com/1200x/b1/d2/7b/b1d27bbe96cc8a1c05d91befc40613a7.jpg" class="w-full rounded-xl cursor-pointer hover:scale-[1.03] transition-transform duration-300 shadow-md border border-[#d4af37]/30 gallery-img" alt="Gallery 1"/>
+           <img src="https://i.pinimg.com/736x/6c/88/52/6c88522786d5e7f265b79f767640461a.jpg" class="w-full rounded-xl cursor-pointer hover:scale-[1.03] transition-transform duration-300 shadow-md border border-[#d4af37]/30 gallery-img" alt="Gallery 2"/>
+           <img src="https://i.pinimg.com/736x/65/7b/b6/657bb63c0305106c4c6136acc7ebef60.jpg" class="w-full rounded-xl cursor-pointer hover:scale-[1.03] transition-transform duration-300 shadow-md border border-[#d4af37]/30 gallery-img" alt="Gallery 3"/>
+           <img src="https://i.pinimg.com/736x/7b/40/4c/7b404c8d76c65a9103a995c42b05a430.jpg" class="w-full rounded-xl cursor-pointer hover:scale-[1.03] transition-transform duration-300 shadow-md border border-[#d4af37]/30 gallery-img" alt="Gallery 4"/>
+           <img src="https://i.pinimg.com/1200x/18/42/27/184227390ed0f9805db2083d1f0cd43d.jpg" class="w-full rounded-xl cursor-pointer hover:scale-[1.03] transition-transform duration-300 shadow-md border border-[#d4af37]/30 gallery-img" alt="Gallery 5"/>
+           <img src="https://i.pinimg.com/736x/33/80/85/3380852a44a93f49f90fc07a49b147df.jpg" class="w-full rounded-xl cursor-pointer hover:scale-[1.03] transition-transform duration-300 shadow-md border border-[#d4af37]/30 gallery-img" alt="Gallery 6"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX & VIDEO MODALS -->
+    <div id="lightbox" class="fixed inset-0 z-[200] bg-black/95 hidden flex-col items-center justify-center backdrop-blur-md transition-opacity opacity-0">
+      <button id="close-lightbox" class="absolute top-6 right-6 text-[#d4af37] text-4xl hover:text-white cursor-pointer z-50 bg-black/50 w-12 h-12 rounded-full flex items-center justify-center border border-[#d4af37]/50">&times;</button>
+      <img id="lightbox-img" src="" class="max-w-[90vw] max-h-[85vh] rounded-xl border-[4px] border-[#d4af37] shadow-[0_0_50px_rgba(212,175,55,0.4)] object-contain" />
+    </div>
+
+    <!-- Fixed Native Video Player -->
+    <div id="video-modal" class="fixed inset-0 z-[250] bg-black/95 hidden flex-col items-center justify-center backdrop-blur-xl transition-opacity opacity-0">
+      <button id="close-video" class="absolute top-6 right-6 text-[#d4af37] text-4xl hover:text-white cursor-pointer z-50 bg-black/50 w-12 h-12 rounded-full flex items-center justify-center border border-[#d4af37]/50">&times;</button>
+      <div class="w-full max-w-5xl px-4 flex flex-col items-center">
+        <h3 class="font-serif-royal text-2xl md:text-4xl text-[#d4af37] mb-6 tracking-widest uppercase text-center">
+          <span class="lang-en">Our Royal Journey</span>
+          <span class="lang-gu hidden font-gujarati tracking-wide text-4xl">અમારી યાત્રા</span>
+        </h3>
+        <div class="w-full aspect-video rounded-2xl overflow-hidden border-2 border-[#d4af37]/50 shadow-[0_0_50px_rgba(212,175,55,0.2)] bg-black relative">
+           <video id="teaser-video" class="w-full h-full object-cover" controls playsinline preload="none" poster="https://images.unsplash.com/photo-1583939411023-14783179e581?auto=format&fit=crop&q=80&w=1000">
+             <source src="https://cdn.pixabay.com/video/2023/10/22/186121-877014605_large.mp4" type="video/mp4">
+             Your browser does not support HTML5 video.
+           </video>
+        </div>
+      </div>
+    </div>
+
     <!-- BLESSINGS WALL -->
-    <section class="py-24 px-6 bg-[#800000] relative overflow-hidden">
+    <section class="py-24 px-6 bg-[#800000] relative overflow-hidden" id="blessings-section">
       <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
       
       <div class="max-w-4xl mx-auto relative z-10">
-        <h2 class="font-serif-royal text-3xl md:text-5xl text-center text-[#d4af37] mb-4 reveal">Bless the Couple</h2>
-        <div class="w-32 h-1 bg-[#fae8dd] mx-auto mb-16 rounded-full opacity-50 reveal delay-100"></div>
+        <h2 class="font-serif-royal text-3xl md:text-5xl text-center text-[#d4af37] mb-4 reveal">
+          <span class="lang-en">Bless the Couple</span>
+          <span class="lang-gu hidden font-gujarati tracking-wide font-bold">નવદંપતી ને આશીર્વાદ આપો</span>
+        </h2>
+        <div class="w-32 h-1 bg-[#fae8dd] mx-auto mb-8 rounded-full opacity-50 reveal delay-100"></div>
+
+        <div class="mb-12 text-center reveal delay-100">
+          <p class="font-serif-editorial text-[#fae8dd] text-lg md:text-2xl italic max-w-2xl mx-auto px-4 leading-relaxed">
+            <span class="lang-en">"Your presence, love, and heartfelt blessings are the most cherished gifts we could ever ask for."</span>
+            <span class="lang-gu hidden font-gujarati tracking-wide font-bold">"તો આ રૂડા અવસરે શુભાશિષ પાઠવવા સહકુટુંબ પધારવા સ્નેહભર્યું આમંત્રણ પાઠવીએ છીએ."</span>
+          </p>
+        </div>
 
         <div class="glass-dark p-8 md:p-10 rounded-3xl mb-12 shadow-[0_20px_50px_rgba(0,0,0,0.4)] reveal delay-200">
           <form id="blessing-form" class="flex flex-col gap-5">
-            <input required type="text" id="blessing-name" placeholder="Your Name & Family" class="bg-white/90 border-0 rounded-xl px-5 py-4 focus:outline-none focus:ring-4 ring-[#d4af37]/40 text-[#800000] font-medium shadow-inner" />
-            <textarea required id="blessing-message" placeholder="Write your heartfelt wishes for Harshvardhansinh & Jignaba..." rows="4" class="bg-white/90 border-0 rounded-xl px-5 py-4 focus:outline-none focus:ring-4 ring-[#d4af37]/40 resize-none text-[#800000] shadow-inner"></textarea>
-            <button type="submit" id="blessing-submit-btn" class="bg-gradient-to-r from-[#d4af37] to-[#b8860b] text-[#800000] py-4 px-8 rounded-xl font-bold uppercase tracking-widest w-full md:w-max self-end hover:brightness-110 transition cursor-pointer shadow-lg">
-              Send Blessings
+            <input required type="text" id="blessing-name" placeholder="Your Name & Family" class="bg-white/90 border-0 rounded-xl px-5 py-4 focus:outline-none focus:ring-4 ring-[#d4af37]/40 text-[#800000] font-medium shadow-inner lang-placeholder" />
+            <textarea required id="blessing-message" placeholder="Write your heartfelt wishes..." rows="4" class="bg-white/90 border-0 rounded-xl px-5 py-4 focus:outline-none focus:ring-4 ring-[#d4af37]/40 resize-none text-[#800000] shadow-inner lang-placeholder-msg"></textarea>
+            <button type="submit" id="blessing-submit-btn" class="bg-gradient-to-r from-[#d4af37] to-[#b8860b] text-[#800000] py-4 px-8 rounded-xl font-bold uppercase tracking-widest w-full md:w-max self-end hover:brightness-110 transition cursor-pointer shadow-lg flex justify-center items-center gap-2">
+              <span class="lang-en">Send Blessings</span>
+              <span class="lang-gu hidden font-gujarati text-lg tracking-wide">આશીર્વાદ મોકલો</span>
+              <i class="ph-fill ph-paper-plane-tilt text-lg"></i>
             </button>
           </form>
         </div>
 
         <div id="blessings-list" class="grid md:grid-cols-2 gap-6 max-h-[500px] overflow-y-auto hide-scrollbar pb-10 reveal delay-300">
-          <!-- Blessings injected here dynamically -->
-          <p class="text-center text-[#fae8dd]/70 col-span-2 italic py-8 text-lg">Awaiting the first blessing...</p>
+          <p class="text-center text-[#fae8dd]/70 col-span-2 italic py-8 text-lg">
+            <span class="lang-en">Awaiting the first blessing...</span>
+            <span class="lang-gu hidden font-gujarati tracking-wide text-2xl font-bold">પ્રથમ આશીર્વાદની રાહ જોઇ રહ્યા છીએ...</span>
+          </p>
         </div>
       </div>
     </section>
@@ -664,115 +1005,159 @@
           
           <div class="flex items-center justify-center gap-4 mb-12 md:mb-16 reveal">
             <div class="h-px bg-[#d4af37]/50 flex-1 max-w-[100px] md:max-w-[200px]"></div>
-            <h2 class="font-serif-royal text-2xl md:text-4xl text-[#d4af37] text-center px-4">Extended Family</h2>
+            <h2 class="font-serif-royal text-2xl md:text-4xl text-[#d4af37] text-center px-4">
+              <span class="lang-en">Extended Family</span>
+              <span class="lang-gu hidden font-gujarati tracking-wide font-bold">વાઘેલા પરિવાર</span>
+            </h2>
             <div class="h-px bg-[#d4af37]/50 flex-1 max-w-[100px] md:max-w-[200px]"></div>
           </div>
 
-          <!-- Darshanabhilashi (Unboxed, Grid Aligned) -->
+          <!-- Darshanabhilashi -->
           <div class="mb-16 md:mb-24 relative reveal delay-100">
-            <h4 class="font-serif-editorial text-3xl md:text-4xl mb-12 text-[#fae8dd] italic font-semibold drop-shadow-md text-center tracking-wide">Well Wishers (Darshanabhilashi)</h4>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-6 gap-x-4 text-left font-serif-editorial text-base md:text-lg text-gray-200 px-2 md:px-4">
-              
-              <!-- Row 1 -->
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Bhagirathsinh Dashrathsinh</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Pradipsinh Ashoksinh</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Krushnasinh Gajendrasinh</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Vrajrajsinh Vijaysinh</span></div>
+            <h4 class="font-serif-editorial text-3xl md:text-4xl mb-8 text-[#fae8dd] italic font-semibold drop-shadow-md text-center tracking-wide">
+              <span class="lang-en">॥ Well Wishers (Darshanabhilashi) ॥</span>
+              <span class="lang-gu hidden font-gujarati tracking-wide font-bold">॥ દર્શનાભિલાષી ॥</span>
+            </h4>
 
-              <!-- Row 2 -->
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Jayendrasinh Dashrathsinh</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Vijaysinh Ashoksinh</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Yuvarajsinh Virendrasinh</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Rishirajsinh Digubha</span></div>
-
-              <!-- Row 3 (Contains Big Brother Highlight) -->
-              <div class="flex items-start gap-3 sm:col-span-2 lg:col-span-1 mt-1 lg:mt-0">
-                <i class="ph-fill ph-sparkle text-[#d4af37] mt-1 text-xl shrink-0 animate-pulse"></i>
-                <div class="flex flex-col">
-                  <span class="text-[#d4af37] font-bold text-lg md:text-xl drop-shadow-[0_2px_4px_rgba(212,175,55,0.5)]">Vaghela Kirpalsinh Jayendrasinh</span>
-                  <span class="font-sans-clean text-[10px] md:text-xs tracking-[0.2em] uppercase text-[#fae8dd]/90 mt-0.5 font-bold">(Big Brother)</span>
-                </div>
+            <!-- Top Centered 3 Names -->
+            <div class="flex flex-col items-center justify-center gap-3 mb-10 text-center font-serif-editorial text-lg md:text-xl text-gray-200">
+              <div class="flex items-center gap-3 justify-center w-full">
+                  <i class="ph ph-sparkle text-[#d4af37] text-sm shrink-0"></i>
+                  <span>
+                      <span class="lang-en">Vaghela Bhagirathsinh Dashrathsinh</span>
+                      <span class="lang-gu hidden font-gujarati tracking-wide text-[22px]">વાઘેલા ભગીરથસિંહ દશરથસિંહ</span>
+                  </span>
               </div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Meghrajsinh Sukhdevsinh</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Jayvirsinh Merubha</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Hansrajsinh Mukeshsinh</span></div>
-
-              <!-- Row 4 -->
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Mukeshsinh Rameshisinh</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Mayursinh Jabbarsinh</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Jayrajsinh Shaktisinh</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Karmarajsinh Pradipsinh</span></div>
-
-              <!-- Row 5 -->
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Merubha Ranajitsinh</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Hardipsinh Gajendrasinh</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Rudrajsinh Digubha</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Yagnikaba Bhagirathsinh</span></div>
-
-              <!-- Row 6 -->
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Digubha Mahendrasinh</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Mahavirsinh Jabbarsinh</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Smitrajsinh Pradipsinh</span></div>
-              <div class="hidden lg:block"></div> <!-- Empty spacer to keep grid aligned perfectly -->
-
-              <!-- Row 7 -->
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Shaktisinh Ranajitsinh</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Karansinh Gajendrasinh</span></div>
-              <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Vaghela Divyarajsinh Virendrasinh</span></div>
+              <div class="flex items-center gap-3 justify-center w-full">
+                  <i class="ph ph-sparkle text-[#d4af37] text-sm shrink-0"></i>
+                  <span>
+                      <span class="lang-en">Vaghela Jayendrasinh Dashrathsinh</span>
+                      <span class="lang-gu hidden font-gujarati tracking-wide text-[22px]">વાઘેલા જયેન્દ્રસિંહ દશરથસિંહ</span>
+                  </span>
+              </div>
+              <div class="flex items-center gap-3 justify-center w-full">
+                  <i class="ph ph-sparkle text-[#d4af37] text-sm shrink-0"></i>
+                  <span>
+                      <span class="lang-en">Vaghela Kirpalsinh Jayendrasinh</span>
+                      <span class="lang-gu hidden font-gujarati tracking-wide text-[22px]">વાઘેલા કિરપાલસિંહ જયેન્દ્રસિંહ</span>
+                  </span>
+              </div>
             </div>
+
+            <!-- 4 Columns layout matching original card -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-3 gap-x-4 text-center lg:text-left font-serif-editorial text-base md:text-lg text-gray-300 px-2 md:px-4 leading-relaxed">
+              
+              <!-- Column 1 -->
+              <div class="flex flex-col gap-2">
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Mukeshsinh Rameshisinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા મુકેશસિંહ રમેશસિંહ</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Merubha Ranajitsinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા મેરુભા રણજીતસિંહ</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Digubha Mahendrasinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા દિગુભા મહેન્દ્રસિંહ</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Shaktisinh Ranajitsinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા શક્તિસિંહ રણજીતસિંહ</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Pradipsinh Ashoksinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા પ્રદિપસિંહ અશોકસિંહ</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Vijaysinh Ashoksinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા વિજયસિંહ અશોકસિંહ</span></span></div>
+              </div>
+
+              <!-- Column 2 -->
+              <div class="flex flex-col gap-2">
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Meghrajsinh Sukhdevsinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા મેઘરાજસિંહ સુખદેવસિંહ</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Mayursinh Jabbarsinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા મયુરસિંહ જબ્બરરસિંહ</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Hardipsinh Gajendrasinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા હરદીપસિંહ ગજેન્દ્રસિંહ</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Mahavirsinh Jabbarsinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા મહાવીરસિંહ જબ્બરસિંહ</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Karansinh Gajendrasinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા કરણસિંહ ગજેન્દ્રસિંહ</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Krushnasinh Gajendrasinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા કૃષ્ણસિંહ ગજેન્દ્રસિંહ</span></span></div>
+              </div>
+
+              <!-- Column 3 -->
+              <div class="flex flex-col gap-2">
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Yuvarajsinh Virendrasinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા યુવરાજસિંહ વિરેન્દ્રસિંહ</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Jayvirsinh Merubha</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા જયવીરસિંહ મેરુભા</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Jayrajsinh Shaktisinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા જયરાજસિંહ શક્તિસિંહ</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Rudrajsinh Digubha</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા રૂદ્રરાજસિંહ દિગુભા</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Smitrajsinh Pradipsinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા સ્મિતરાજસિંહ પ્રદિપસિંહ</span></span></div>
+              </div>
+
+              <!-- Column 4 -->
+              <div class="flex flex-col gap-2">
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Divyarajsinh Virendrasinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા દિવ્યરાજસિંહ વિરેન્દ્રસિંહ</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Vrajrajsinh Vijaysinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા વ્રજરાજસિંહ વિજયસિંહ</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Rishirajsinh Digubha</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા રિષિરાજસિંહ દિગુભા</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Hansrajsinh Mukeshsinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા હંસરાજસિંહ મુકેશસિંહ</span></span></div>
+                  <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Karmarajsinh Pradipsinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા કર્મરાજસિંહ પ્રદિપસિંહ</span></span></div>
+              </div>
+            </div>
+            
+            <!-- Bottom Centered Special Mention -->
+            <div class="mt-6 text-center lg:text-right lg:pr-12 font-serif-editorial text-base md:text-lg text-gray-200 w-full">
+               <span class="lang-en">Vaghela Yakshikaba Bhagirathsinh</span>
+               <span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા યક્ષિકાબા ભગીરથસિંહ</span>
+            </div>
+            
+
           </div>
 
           <div class="grid lg:grid-cols-2 gap-8 md:gap-12 mb-16">
             <!-- Monghera Maheman -->
             <div class="text-left glass-dark p-6 md:p-10 rounded-[2rem] h-full relative ornate-corners reveal delay-200 hover:-translate-y-2 transition-transform duration-500">
               <div class="absolute top-6 right-6 text-[#d4af37] opacity-30"><i class="ph-fill ph-crown text-4xl floating"></i></div>
-              <h4 class="font-serif-editorial text-2xl md:text-3xl mb-8 text-[#d4af37] font-semibold border-b border-[#d4af37]/20 pb-4 inline-block pr-8">Esteemed Guests <br><span class="text-lg italic text-[#fae8dd] font-normal">(Monghera Maheman)</span></h4>
+              <h4 class="font-serif-editorial text-2xl md:text-3xl mb-8 text-[#d4af37] font-semibold border-b border-[#d4af37]/20 pb-4 inline-block pr-8">
+                <span class="lang-en">Esteemed Guests <br><span class="text-lg italic text-[#fae8dd] font-normal">(Monghera Maheman)</span></span>
+                <span class="lang-gu hidden font-gujarati tracking-wide font-bold text-3xl">મોંઘેરા મહેમાન</span>
+              </h4>
               
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-4 text-base md:text-lg text-gray-200 font-serif-editorial">
-                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Jhala Manoharsinh Gajubha (Jamai Shri)</span></div>
-                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Jadeja Siddhrajshinh Kayanubha (Jamai Shri)</span></div>
-                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Jhala Kishorsinh Ranajitsinh (Jamai Shri)</span></div>
-                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Jhala Jashpalsinh Chhatrapalsinh (Bhanubha)</span></div>
-                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Jhala Bhavanisinh Dharmendrasinh (Bhanubha)</span></div>
-                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Jhala Parikshitsinh Chhatrapalsinh (Bhanubha)</span></div>
-                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Jhala Divyarajsinh Manoharsinh (Bhanubha)</span></div>
-                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Jhala Dharmarajsinh Manoharsinh (Bhanubha)</span></div>
-                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span>Jhala Bhagatsinh Gambhirsinh (Bhanubha)</span></div>
+                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Jhala Manoharsinh Gajubha (Jamai Shri)</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">ઝાલા મનોહરસિંહ ગજુભા (જમાઈશ્રી)</span></span></div>
+                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Jadeja Siddhrajshinh Kayanubha (Jamai Shri)</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">જાડેજા સિદ્ધરાજસિંહ કયાણુભા (જમાઈશ્રી)</span></span></div>
+                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Jhala Kishorsinh Ranajitsinh (Jamai Shri)</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">ઝાલા કિશોરસિંહ રણજીતસિંહ (જમાઈશ્રી)</span></span></div>
+                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Jhala Jashpalsinh Chhatrapalsinh (Bhanubha)</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">ઝાલા જશપાલસિંહ છત્રપાલસિંહ (ભાણુભા)</span></span></div>
+                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Jhala Bhavanisinh Dharmendrasinh (Bhanubha)</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">ઝાલા ભવાનીસિંહ ધર્મેન્દ્રસિંહ (ભાણુભા)</span></span></div>
+                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Jhala Parikshitsinh Chhatrapalsinh (Bhanubha)</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">ઝાલા પરીક્ષીતસિંહ છત્રપાલસિંહ (ભાણુભા)</span></span></div>
+                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Jhala Divyarajsinh Manoharsinh (Bhanubha)</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">ઝાલા દિવ્યરાજસિંહ મનોહરસિંહ (ભાણુભા)</span></span></div>
+                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Jhala Dharmarajsinh Manoharsinh (Bhanubha)</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">ઝાલા ધર્મરાજસિંહ મનોહરસિંહ (ભાણુભા)</span></span></div>
+                <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Jhala Bhagatsinh Gambhirsinh (Bhanubha)</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">ઝાલા ભગતસિંહ ગંભીરસિંહ (ભાણુભા)</span></span></div>
               </div>
             </div>
             
             <!-- Mosal Paksh -->
             <div class="text-left bg-[#130b0b] p-6 md:p-10 rounded-[2rem] border border-[#d4af37]/40 shadow-2xl h-full relative reveal delay-300 hover:-translate-y-2 transition-transform duration-500">
               <div class="absolute top-6 right-6 text-[#d4af37] opacity-30"><i class="ph-fill ph-users-three text-4xl floating"></i></div>
-              <h4 class="font-serif-editorial text-2xl md:text-3xl mb-8 text-[#d4af37] font-semibold border-b border-[#d4af37]/20 pb-4 inline-block pr-8">Maternal Side <br><span class="text-lg italic text-[#fae8dd] font-normal">(Mosal Paksh)</span></h4>
+              <h4 class="font-serif-editorial text-2xl md:text-3xl mb-8 text-[#d4af37] font-semibold border-b border-[#d4af37]/20 pb-4 inline-block pr-8">
+                <span class="lang-en">Maternal Side <br><span class="text-lg italic text-[#fae8dd] font-normal">(Mosal Paksh)</span></span>
+                <span class="lang-gu hidden font-gujarati tracking-wide font-bold text-3xl">મોસાળ પક્ષ</span>
+              </h4>
               
               <div class="mb-8 bg-[#2a0e0e]/80 p-5 md:p-6 rounded-2xl border-l-[6px] border-[#d4af37] shadow-[0_8px_30px_rgba(0,0,0,0.2)] relative overflow-hidden backdrop-blur-md">
                 <p class="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[#d4af37] mb-2 font-sans-clean font-bold">In Loving Memory</p>
-                <p class="text-xl md:text-2xl text-[#fae8dd] font-serif-editorial font-bold leading-snug">Late Shri Raol Digvijaysinh Ramdevsinh</p>
+                <p class="text-xl md:text-2xl text-[#fae8dd] font-serif-editorial font-bold leading-snug">
+                  <span class="lang-en">Late Shri Raol Digvijaysinh Ramdevsinh</span>
+                  <span class="lang-gu hidden font-gujarati tracking-wide">સ્વ. શ્રી રાઓલ દિગ્વિજયસિંહ રામદેવસિંહ</span>
+                </p>
               </div>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-4 text-base md:text-lg text-gray-200 font-serif-editorial">
-                <div class="flex items-start gap-3"><div class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></div><span>Raol Jagatsinh Harubha</span></div>
-                <div class="flex items-start gap-3"><div class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></div><span>Raol Ashkoksinh Govubha</span></div>
-                <div class="flex items-start gap-3"><div class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></div><span>Raol Vijaysinh Ramdevsinh</span></div>
-                <div class="flex items-start gap-3"><div class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></div><span>Raol Yuvarajsinh Digvijaysinh</span></div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-4 text-base md:text-lg text-gray-200 font-sans-clean tracking-wide">
+                <div class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0"></div><span><span class="lang-en">Raol Jagatsinh Harubha</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">રાઓલ જગતસિંહ હરુભા</span></span></div>
+                <div class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0"></div><span><span class="lang-en">Raol Ashkoksinh Govubha</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">રાઓલ અશોકસિંહ ગોવુભા</span></span></div>
+                <div class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0"></div><span><span class="lang-en">Raol Vijaysinh Ramdevsinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">રાઓલ વિજયસિંહ રામદેવસિંહ</span></span></div>
+                <div class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0"></div><span><span class="lang-en">Raol Yuvarajsinh Digvijaysinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">રાઓલ યુવરાજસિંહ દિગ્વિજયસિંહ</span></span></div>
               </div>
             </div>
           </div>
 
-          <div class="bg-gradient-to-r from-transparent via-[#800000]/60 to-transparent border-y border-[#d4af37]/40 py-6 md:py-8 px-4 rounded-3xl max-w-3xl mx-auto mb-16 backdrop-blur-md shadow-2xl">
+          <div class="bg-gradient-to-r from-transparent via-[#800000]/60 to-transparent border-y border-[#d4af37]/40 py-6 md:py-8 px-4 rounded-3xl max-w-3xl mx-auto mb-16 backdrop-blur-md shadow-2xl reveal delay-400">
              <p class="font-sans-clean text-[#d4af37] font-bold tracking-widest text-xs md:text-base uppercase flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-center">
                <i class="ph-fill ph-warning-circle text-2xl md:text-3xl mb-2 md:mb-0"></i> 
-               <span>Note: Ghor Pratha Bandh Che <br class="md:hidden"><span class="text-[10px] md:text-xs text-gray-300 font-medium normal-case block mt-1">(The custom of 'Ghor' is respectfully not observed)</span></span>
+               <span class="lang-en">Note: Ghor Pratha Bandh Che <br class="md:hidden"><span class="text-[10px] md:text-xs text-gray-300 font-medium normal-case block mt-1">(The custom of 'Ghor' is respectfully not observed)</span></span>
+               <span class="lang-gu hidden font-gujarati tracking-wide text-[22px] font-bold">નોંધ : ઘોર પ્રથા બંધ છે.</span>
              </p>
           </div>
 
-          <div class="w-16 md:w-24 h-px bg-[#d4af37]/40 mx-auto mb-8 md:mb-10"></div>
+          <div class="w-16 md:w-24 h-px bg-[#d4af37]/40 mx-auto mb-8 md:mb-10 reveal"></div>
           
-          <p class="font-serif-editorial text-xl md:text-3xl italic mb-8 text-[#fae8dd] px-4 leading-relaxed">"We eagerly await your presence to grace this auspicious occasion."</p>
+          <p class="font-serif-editorial text-xl md:text-3xl italic mb-8 text-[#fae8dd] px-4 leading-relaxed reveal">
+            <span class="lang-en">"We eagerly await your presence to grace this auspicious occasion."</span>
+            <span class="lang-gu hidden font-gujarati text-[26px] tracking-wide font-bold">"આ પાવન અવસરે આપની ઉપસ્થિતિ એ જ અમારો આનંદ છે."</span>
+          </p>
           
-          <div class="flex justify-center pb-8">
+          <div class="flex justify-center pb-8 reveal delay-100">
              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="animate-pulse">
                 <path d="M12 22C17.5228 22 22 17.5228 22 12C22 10 18 8 12 2C6 8 2 10 2 12C2 17.5228 6.47715 22 12 22Z" fill="#d4af37" opacity="0.8"/>
                 <path d="M12 18C14.2091 18 16 16.2091 16 14C16 12.5 14 11 12 7C10 11 8 12.5 8 14C8 16.2091 9.79086 18 12 18Z" fill="#800000"/>
@@ -780,8 +1165,11 @@
           </div>
           
           <!-- Custom Footer -->
-          <div class="mt-4 border-t border-[#d4af37]/20 pt-10 flex flex-col items-center justify-center relative z-10">
-             <h3 class="font-serif-royal text-3xl md:text-4xl text-[#d4af37] mb-4 drop-shadow-md tracking-wider">Vaghela Parivar</h3>
+          <div class="mt-4 border-t border-[#d4af37]/20 pt-10 flex flex-col items-center justify-center relative z-10 reveal delay-200">
+             <h3 class="font-serif-royal text-3xl md:text-4xl text-[#d4af37] mb-4 drop-shadow-md tracking-wider">
+               <span class="lang-en">Vaghela Parivar</span>
+               <span class="lang-gu hidden font-gujarati tracking-wider">વાઘેલા પરિવાર</span>
+             </h3>
              <p class="font-sans-clean text-[10px] md:text-xs text-gray-400/80 tracking-[0.2em] uppercase text-center px-4 leading-relaxed">
                Designed By <span class="text-[#d4af37] font-bold">Nyota</span> <br class="md:hidden">For Harshvardhansinh & Vaghela Family
              </p>
@@ -803,9 +1191,9 @@
        <button onclick="document.getElementById('venue').scrollIntoView({behavior: 'smooth'})" class="flex flex-col items-center gap-1 text-white bg-gradient-to-b from-[#b30000] to-[#800000] p-4 rounded-full -mt-10 shadow-xl border-4 border-[#fdfbf7]">
          <i class="ph-fill ph-map-pin text-3xl"></i>
        </button>
-       <button onclick="window.open('https://calendar.google.com/', '_blank')" class="flex flex-col items-center gap-1 text-[#800000] opacity-70 hover:opacity-100">
-         <i class="ph-fill ph-calendar-plus text-2xl"></i>
-         <span class="text-[9px] font-bold uppercase tracking-wider">Save</span>
+       <button onclick="document.getElementById('gallery').scrollIntoView({behavior: 'smooth'})" class="flex flex-col items-center gap-1 text-[#800000] opacity-70 hover:opacity-100">
+         <i class="ph-fill ph-image text-2xl"></i>
+         <span class="text-[9px] font-bold uppercase tracking-wider">Gallery</span>
        </button>
        <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="flex flex-col items-center gap-1 text-[#800000] opacity-70 hover:opacity-100">
          <i class="ph-fill ph-phone-call text-2xl"></i>
@@ -813,6 +1201,9 @@
        </button>
     </div>
   </div>
+
+  <!-- Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <!-- APPLICATION LOGIC -->
   <script type="module">
@@ -822,6 +1213,40 @@
 
     // --- Configurations ---
     const WEDDING_DATE = new Date('2026-03-09T19:30:00').getTime(); // Hast Melap Date/Time
+
+    // --- Language Toggle Logic ---
+    const btnToggleLang = document.getElementById('btn-toggle-lang');
+    const langLabel = document.getElementById('lang-label');
+    const placeholdersName = document.querySelectorAll('.lang-placeholder');
+    const placeholdersMsg = document.querySelectorAll('.lang-placeholder-msg');
+    let isGujarati = false;
+
+    btnToggleLang.addEventListener('click', () => {
+      isGujarati = !isGujarati;
+      
+      const enElements = document.querySelectorAll('.lang-en');
+      const guElements = document.querySelectorAll('.lang-gu');
+      
+      if (isGujarati) {
+        // Switch to Gujarati
+        enElements.forEach(el => el.classList.add('hidden'));
+        guElements.forEach(el => el.classList.remove('hidden'));
+        langLabel.innerHTML = '<span class="font-sans-clean tracking-widest uppercase">English</span>';
+        
+        // Update input placeholders
+        placeholdersName.forEach(el => el.placeholder = "તમારું અને પરિવારનું નામ");
+        placeholdersMsg.forEach(el => el.placeholder = "હર્ષવર્ધનસિંહ અને જીજ્ઞાબા માટે આશીર્વાદ લખો...");
+      } else {
+        // Switch to English
+        enElements.forEach(el => el.classList.remove('hidden'));
+        guElements.forEach(el => el.classList.add('hidden'));
+        langLabel.innerHTML = '<span class="font-gujarati text-[13px] md:text-[15px] tracking-wide">ગુજરાતી</span>';
+        
+        // Update input placeholders
+        placeholdersName.forEach(el => el.placeholder = "Your Name & Family");
+        placeholdersMsg.forEach(el => el.placeholder = "Write your heartfelt wishes...");
+      }
+    });
 
     // --- UI Logic: Splash Screen & Audio ---
     const btnOpen = document.getElementById('btn-open-invitation');
@@ -848,9 +1273,9 @@
 
     function updateAudioIcon() {
       if (isPlaying) {
-        audioIcon.className = 'ph-fill ph-speaker-high text-xl';
+        audioIcon.className = 'ph-fill ph-speaker-high text-lg md:text-2xl';
       } else {
-        audioIcon.className = 'ph-fill ph-speaker-slash text-xl';
+        audioIcon.className = 'ph-fill ph-speaker-slash text-lg md:text-2xl';
       }
     }
 
@@ -864,13 +1289,70 @@
       updateAudioIcon();
     });
 
+    // --- Video Modal Logic (Fixed for HTML5 Video) ---
+    const btnPlayTeaser = document.getElementById('btn-play-teaser');
+    const videoModal = document.getElementById('video-modal');
+    const closeVideo = document.getElementById('close-video');
+    const teaserVideo = document.getElementById('teaser-video');
+
+    btnPlayTeaser.addEventListener('click', () => {
+      if (isPlaying) {
+        bgMusic.pause();
+        isPlaying = false;
+        updateAudioIcon();
+      }
+      
+      videoModal.classList.remove('hidden');
+      videoModal.classList.add('flex');
+      setTimeout(() => videoModal.classList.remove('opacity-0'), 10);
+      
+      // Auto play the native video
+      teaserVideo.play().catch(e => console.log("Autoplay prevented:", e));
+    });
+
+    closeVideo.addEventListener('click', () => {
+      videoModal.classList.add('opacity-0');
+      
+      // Stop the native video
+      teaserVideo.pause();
+      teaserVideo.currentTime = 0;
+
+      setTimeout(() => {
+        videoModal.classList.add('hidden');
+        videoModal.classList.remove('flex');
+      }, 300);
+    });
+
+    // --- Lightbox Logic ---
+    const galleryImages = document.querySelectorAll('.gallery-img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeLightbox = document.getElementById('close-lightbox');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        setTimeout(() => lightbox.classList.remove('opacity-0'), 10);
+      });
+    });
+
+    closeLightbox.addEventListener('click', () => {
+      lightbox.classList.add('opacity-0');
+      setTimeout(() => {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+      }, 300);
+    });
+
     // --- UI Logic: Petals Animation ---
     const petalsContainer = document.getElementById('petals-container');
     for (let i = 0; i < 25; i++) {
       const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       svg.setAttribute('class', 'petal');
       svg.setAttribute('viewBox', '0 0 512 512');
-      svg.setAttribute('fill', '#800000'); // Maroon petals
+      svg.setAttribute('fill', '#800000');
       svg.style.left = `${Math.random() * 100}vw`;
       svg.style.animationDuration = `${Math.random() * 8 + 6}s`;
       svg.style.animationDelay = `${Math.random() * 5}s`;
@@ -895,8 +1377,6 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
-          // Optional: Unobserve if you only want the animation to happen once
-          // observer.unobserve(entry.target); 
         }
       });
     }, observerOptions);
@@ -925,7 +1405,6 @@
 
     // --- UI Logic: Event Accordions ---
     const accordions = document.querySelectorAll('.event-accordion');
-    // Open the second one by default
     if(accordions.length > 1) {
        accordions[1].querySelector('.accordion-content').classList.add('open');
        accordions[1].querySelector('.event-icon').className = 'ph ph-caret-up text-xl event-icon';
@@ -937,7 +1416,6 @@
         const icon = acc.querySelector('.event-icon');
         const isOpen = content.classList.contains('open');
         
-        // Close all others
         document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
         document.querySelectorAll('.event-icon').forEach(i => i.className = 'ph ph-caret-down text-xl event-icon');
 
@@ -949,9 +1427,9 @@
     });
 
     // --- Firebase Setup ---
-    const firebaseConfigStr = typeof __firebase_config !== 'undefined' ? __firebase_config : '{}';
+    const firebaseConfigStr = (typeof __firebase_config !== 'undefined' && __firebase_config) ? __firebase_config : '{}';
     let firebaseConfig = {};
-    try { firebaseConfig = JSON.parse(firebaseConfigStr); } catch (e) {}
+    try { firebaseConfig = JSON.parse(firebaseConfigStr); } catch (e) { console.error("Firebase Config Error:", e); }
 
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
@@ -979,7 +1457,7 @@
       }
     });
 
-    // --- Firebase: Blessings System ---
+    // --- Firebase: Blessings System with Confetti ---
     const blessForm = document.getElementById('blessing-form');
     const blessBtn = document.getElementById('blessing-submit-btn');
     const blessList = document.getElementById('blessings-list');
@@ -993,7 +1471,7 @@
 
       if(!nameInput.value || !msgInput.value) return;
 
-      blessBtn.innerText = 'Sending...';
+      blessBtn.innerHTML = 'Sending... <i class="ph-bold ph-spinner animate-spin"></i>';
       blessBtn.disabled = true;
 
       try {
@@ -1003,16 +1481,53 @@
           userId: currentUser.uid,
           timestamp: Date.now()
         });
+        
+        var duration = 3 * 1000;
+        var end = Date.now() + duration;
+
+        (function frame() {
+          confetti({
+            particleCount: 5,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 },
+            colors: ['#d4af37', '#800000', '#f3e5ab']
+          });
+          confetti({
+            particleCount: 5,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 },
+            colors: ['#d4af37', '#800000', '#f3e5ab']
+          });
+
+          if (Date.now() < end) {
+            requestAnimationFrame(frame);
+          }
+        }());
+
         nameInput.value = '';
         msgInput.value = '';
-        blessBtn.innerText = 'Sent Successfully!';
+        
+        // Success Message depending on language
+        if(isGujarati) {
+          blessBtn.innerHTML = 'આશીર્વાદ મોકલાયા <i class="ph-bold ph-check"></i>';
+        } else {
+          blessBtn.innerHTML = 'Sent Successfully! <i class="ph-bold ph-check"></i>';
+        }
+        
         setTimeout(() => {
-          blessBtn.innerText = 'Send Blessings';
+          if(isGujarati) {
+            blessBtn.innerHTML = '<span class="lang-gu font-gujarati text-lg tracking-wide">આશીર્વાદ મોકલો</span> <i class="ph-fill ph-paper-plane-tilt text-lg"></i>';
+          } else {
+            blessBtn.innerHTML = '<span class="lang-en">Send Blessings</span> <i class="ph-fill ph-paper-plane-tilt text-lg"></i>';
+          }
           blessBtn.disabled = false;
         }, 3000);
+
       } catch (err) {
         console.error("Blessing Error:", err);
-        blessBtn.innerText = 'Send Blessings';
+        blessBtn.innerHTML = '<span class="lang-en">Send Blessings</span> <i class="ph-fill ph-paper-plane-tilt text-lg"></i>';
         blessBtn.disabled = false;
       }
     });
@@ -1025,7 +1540,11 @@
         
         blessList.innerHTML = '';
         if (blessings.length === 0) {
-          blessList.innerHTML = '<p class="text-center text-[#fae8dd]/70 col-span-2 italic py-8 text-lg">Awaiting the first blessing...</p>';
+          blessList.innerHTML = `
+            <p class="text-center text-[#fae8dd]/70 col-span-2 italic py-8 text-lg">
+              <span class="lang-en ${isGujarati ? 'hidden' : ''}">Awaiting the first blessing...</span>
+              <span class="lang-gu ${!isGujarati ? 'hidden' : ''} font-gujarati tracking-wide text-2xl font-bold">પ્રથમ આશીર્વાદની રાહ જોઇ રહ્યા છીએ...</span>
+            </p>`;
           return;
         }
 
@@ -1046,5 +1565,4 @@
 
   </script>
 </body>
-
 </html>
