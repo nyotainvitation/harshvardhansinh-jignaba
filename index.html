@@ -935,8 +935,8 @@
                   <i class="ph-fill ph-car-profile text-lg text-[#d4af37]"></i> Uber
                 </button>
                 
-                <!-- Rapido App Link -->
-                <button onclick="window.open('https://rapido.bike/', '_blank')" class="bg-[#F9C900] text-black py-3 px-2 rounded-full font-bold tracking-wider uppercase text-xs hover:bg-[#e0b500] transition-all flex items-center justify-center gap-2 flex-1 cursor-pointer shadow-[0_4px_15px_rgba(249,201,0,0.2)] border border-transparent hover:-translate-y-1">
+                <!-- Rapido Deep Link App Trigger -->
+                <button onclick="window.openRapido()" class="bg-[#F9C900] text-black py-3 px-2 rounded-full font-bold tracking-wider uppercase text-xs hover:bg-[#e0b500] transition-all flex items-center justify-center gap-2 flex-1 cursor-pointer shadow-[0_4px_15px_rgba(249,201,0,0.2)] border border-transparent hover:-translate-y-1">
                   <i class="ph-fill ph-moped text-lg"></i> Rapido
                 </button>
               </div>
@@ -1248,6 +1248,28 @@
 
     // --- Configurations ---
     const WEDDING_DATE = new Date('2026-03-09T19:30:00').getTime(); // Hast Melap Date/Time
+
+    // --- Ride Booking Logic (Rapido Deep Link) ---
+    window.openRapido = function() {
+      const address = encodeURIComponent("Godhavi, Sanand, Ahmedabad, Gujarat");
+      const isAndroid = /android/i.test(navigator.userAgent);
+      const isIOS = /ipad|iphone|ipod/i.test(navigator.userAgent);
+      
+      if (isAndroid) {
+        // Standard Android Intent for deep linking to Rapido App
+        window.location.href = `intent://ride?drop=${address}#Intent;scheme=rapido;package=com.rapido.passenger;end`;
+      } else if (isIOS) {
+        // iOS Custom URI Scheme
+        window.location.href = `rapido://ride?drop=${address}`;
+        // Fallback to App Store if app is not installed
+        setTimeout(() => {
+          window.open("https://apps.apple.com/in/app/rapido-bike-taxi-auto/id1052258660", "_blank");
+        }, 1500);
+      } else {
+        // Web fallback for Desktop
+        window.open("https://rapido.bike/", "_blank");
+      }
+    };
 
     // --- Language Toggle Logic ---
     const btnToggleLang = document.getElementById('btn-toggle-lang');
