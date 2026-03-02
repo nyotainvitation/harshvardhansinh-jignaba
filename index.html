@@ -422,7 +422,7 @@
             </h3>
             <p class="font-sans-clean text-gray-600 text-sm md:text-base leading-relaxed max-w-sm">
               <span class="lang-en">Carrying forward the proud legacy of the Vaghela family. A blend of modern vision rooted deeply in royal heritage and traditions.</span>
-              <span class="lang-gu hidden font-gujarati text-lg">વાઘેલા પરિવારની ગૌરવશાળી વિરાસતને આગળ વધારતા. આધુનિક દ્રષ્ટિ અને રાજવી પરંપરાઓનો સુંદર સંગમ.</span>
+              <span class="lang-gu hidden font-gujarati text-lg">વાઘેલા પરિવારની ગૌરવશાળી વિરાસતને આગળ ધપાવતા. આધુનિક દ્રષ્ટિ અને રાજવી પરંપરાઓનો સુંદર સંગમ.</span>
             </p>
           </div>
 
@@ -486,9 +486,9 @@
             <div class="w-10 h-px bg-[#d4af37]/50 mx-auto my-3 md:my-4"></div>
             
             <p class="font-serif-editorial text-lg md:text-xl font-bold mb-2 text-[#800000] flex flex-col gap-1">
-              <span class="lang-en font-sans-clean text-[10px] uppercase tracking-[0.2em] text-gray-500 font-normal">Small Brother Of</span>
+              <span class="lang-en font-sans-clean text-[10px] uppercase tracking-[0.2em] text-gray-500 font-normal">Big Brother Of</span>
               <span class="lang-en">Shri Kripalsinh Jayendrasinh Vaghela</span>
-              <span class="lang-gu hidden font-gujarati tracking-wide text-xl">શ્રી ક્રિપાલસિંહ જયેન્દ્રસિંહ વાઘેલા <br><span class="text-xs text-gray-500 tracking-normal font-normal">ના નાના ભાઈ</span></span>
+              <span class="lang-gu hidden font-gujarati tracking-wide text-xl">શ્રી ક્રિપાલસિંહ જયેન્દ્રસિંહ વાઘેલા <br><span class="text-xs text-gray-500 tracking-normal font-normal">ના મોટા ભાઈ</span></span>
             </p>
             <!-- End Added Section -->
             
@@ -912,11 +912,36 @@
                 <span class="lang-gu hidden font-gujarati text-2xl tracking-wide">ગોધાવી, તા. સાણંદ,<br>જી. અમદાવાદ, ગુજરાત</span>
               </span>
             </p>
-            <button onclick="window.open('https://maps.google.com/?q=Godhavi,Sanand,Ahmedabad', '_blank')" class="bg-gradient-to-r from-[#d4af37] to-[#b8860b] text-[#800000] py-4 px-10 rounded-full font-bold tracking-widest uppercase text-sm hover:brightness-110 transition-all flex items-center justify-center gap-3 w-max cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1">
-              <i class="ph-bold ph-navigation-arrow text-xl"></i> 
-              <span class="lang-en">Get Directions</span>
-              <span class="lang-gu hidden font-gujarati tracking-wide text-lg">લોકેશન જુઓ</span>
-            </button>
+            
+            <div class="flex flex-col items-center gap-5 w-full max-w-sm">
+              <button onclick="window.open('https://maps.google.com/?q=Godhavi,Sanand,Ahmedabad', '_blank')" class="bg-gradient-to-r from-[#d4af37] to-[#b8860b] text-[#800000] py-4 px-10 rounded-full font-bold tracking-widest uppercase text-sm hover:brightness-110 transition-all flex items-center justify-center gap-3 w-full cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1">
+                <i class="ph-bold ph-navigation-arrow text-xl"></i> 
+                <span class="lang-en">Get Directions</span>
+                <span class="lang-gu hidden font-gujarati tracking-wide text-lg">લોકેશન જુઓ</span>
+              </button>
+
+              <div class="w-full flex items-center gap-4 opacity-70 mt-2">
+                <div class="flex-1 h-px bg-[#fae8dd]/40"></div>
+                <span class="font-sans-clean text-[10px] md:text-xs tracking-widest text-[#fae8dd] uppercase font-semibold">
+                  <span class="lang-en">Book A Ride</span>
+                  <span class="lang-gu hidden font-gujarati tracking-wide">કેબ બુક કરો</span>
+                </span>
+                <div class="flex-1 h-px bg-[#fae8dd]/40"></div>
+              </div>
+
+              <div class="flex items-center justify-center gap-4 w-full">
+                <!-- Uber Universal Link (Auto-detects pickup, auto-fills dropoff) -->
+                <button onclick="window.open('https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=Bapa%20Sitaram%20Farm,%20Godhavi,%20Ahmedabad,%20Gujarat', '_blank')" class="bg-black text-white py-3 px-2 rounded-full font-bold tracking-wider uppercase text-xs hover:bg-gray-800 transition-all flex items-center justify-center gap-2 flex-1 cursor-pointer shadow-[0_4px_15px_rgba(0,0,0,0.5)] border border-[#d4af37]/40 hover:-translate-y-1">
+                  <i class="ph-fill ph-car-profile text-lg text-[#d4af37]"></i> Uber
+                </button>
+                
+                <!-- Rapido App Link -->
+                <button onclick="window.open('https://rapido.bike/', '_blank')" class="bg-[#F9C900] text-black py-3 px-2 rounded-full font-bold tracking-wider uppercase text-xs hover:bg-[#e0b500] transition-all flex items-center justify-center gap-2 flex-1 cursor-pointer shadow-[0_4px_15px_rgba(249,201,0,0.2)] border border-transparent hover:-translate-y-1">
+                  <i class="ph-fill ph-moped text-lg"></i> Rapido
+                </button>
+              </div>
+            </div>
+            
         </div>
       </div>
     </section>
@@ -1576,5 +1601,3 @@
   </script>
 </body>
 </html>
-
-
