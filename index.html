@@ -8,7 +8,7 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Google Fonts (Added Rasa for elegant Gujarati) -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&family=Rasa:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
     .font-serif-royal { font-family: 'Cinzel', serif; }
     .font-serif-editorial { font-family: 'Cormorant Garamond', serif; }
     .font-sans-clean { font-family: 'Montserrat', sans-serif; }
-    .font-gujarati { font-family: 'Rasa', serif; } /* Royal Gujarati Font */
+    .font-gujarati { font-family: 'Rasa', serif; }
 
     /* Parallax Effect */
     .parallax-bg {
@@ -52,7 +52,7 @@
       .parallax-bg { background-attachment: scroll; } 
     }
 
-    /* Premium Glassmorphism Classes */
+    /* Premium Glassmorphism */
     .glass-panel {
       background: rgba(255, 255, 255, 0.45);
       backdrop-filter: blur(16px);
@@ -231,12 +231,11 @@
   <!-- Audio Element -->
   <audio id="bg-music" src="Indian 1.wav" loop></audio>
 
-  <!-- SPLASH SCREEN (COVER PAGE) -->
+  <!-- SPLASH SCREEN -->
   <div id="splash-screen" class="fixed inset-0 z-[100] bg-[#fdfbf7] bg-mandala flex flex-col items-center justify-center p-4 text-center overflow-hidden transition-opacity duration-1000">
     <div id="petals-container"></div>
     
     <div class="z-10 flex flex-col items-center w-[92%] max-w-md bg-white p-6 md:p-10 rounded-2xl shadow-xl relative border border-transparent overflow-hidden">
-      <!-- Exact Double Inner Border -->
       <div class="absolute inset-2 border border-[#d4af37]/40 rounded-xl pointer-events-none"></div>
       <div class="absolute inset-3 border border-[#d4af37]/20 rounded-lg pointer-events-none"></div>
 
@@ -262,8 +261,7 @@
           <span class="lang-gu hidden font-gujarati text-[13px] tracking-wide">તા. ૯-૩-૨૦૨૬, સોમવાર</span>
         </p>
 
-        <!-- Fluid Typography Fixed to never cut off on Splash Screen -->
-        <h1 class="font-serif-royal text-[1.25rem] min-[375px]:text-[1.4rem] sm:text-[2rem] text-gradient-gold mb-3 py-1 w-full text-center leading-tight tracking-wide md:tracking-widest uppercase" style="word-break: keep-all;">
+        <h1 class="font-serif-royal text-[1.2rem] min-[375px]:text-[1.4rem] sm:text-[2rem] text-gradient-gold mb-3 py-1 w-full text-center leading-tight tracking-wide uppercase" style="word-break: keep-all;">
           <span class="lang-en">HARSHVARDHANSINH</span>
           <span class="lang-gu hidden font-gujarati tracking-wide font-bold text-2xl">ચિ. હર્ષવર્ધનસિંહ</span>
         </h1>
@@ -271,7 +269,7 @@
           <span class="lang-en">weds</span>
           <span class="lang-gu hidden font-gujarati font-bold text-xl not-italic">સંગાથે</span>
         </span>
-        <h1 class="font-serif-royal text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] text-gradient-gold mb-12 py-1 w-full text-center leading-tight tracking-widest uppercase">
+        <h1 class="font-serif-royal text-[1.8rem] sm:text-[2.2rem] md:text-[2.5rem] text-gradient-gold mb-12 py-1 w-full text-center leading-tight tracking-widest uppercase">
           <span class="lang-en">JIGNABA</span>
           <span class="lang-gu hidden font-gujarati tracking-wide font-bold text-3xl">સૌ. કાં. ચિ. જીજ્ઞાબા</span>
         </h1>
@@ -329,9 +327,8 @@
           <span class="lang-gu hidden font-gujarati font-bold text-[17px] tracking-wide">નરનારાયણ દેવ તથા કુળદેવી શ્રીઅંબાજી માતાજીની અસીમ કૃપાથી</span>
         </p>
         
-        <!-- FLUID HERO TYPOGRAPHY -->
         <h1 class="font-serif-royal text-white drop-shadow-2xl mb-4 md:mb-6 mt-2 md:mt-4 leading-tight w-full flex flex-col items-center">
-          <span class="block text-[1.4rem] min-[375px]:text-[1.6rem] sm:text-[3.5rem] md:text-6xl lg:text-7xl w-full text-center drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] uppercase tracking-wide md:tracking-wider px-2 md:px-0 reveal active delay-300" style="word-break: keep-all;">
+          <span class="block text-[1.3rem] min-[375px]:text-[1.6rem] sm:text-[3.5rem] md:text-6xl lg:text-7xl w-full text-center drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] uppercase tracking-wide md:tracking-wider px-2 md:px-0 reveal active delay-300" style="word-break: keep-all;">
             <span class="lang-en">HARSHVARDHANSINH</span>
             <span class="lang-gu hidden font-gujarati font-bold">ચિ. હર્ષવર્ધનસિંહ</span>
           </span>
@@ -355,7 +352,6 @@
           </p>
         </div>
 
-        <!-- Countdown -->
         <div class="flex gap-2 md:gap-8 justify-center text-center glass-panel px-4 py-3 md:px-8 md:py-4 rounded-3xl md:rounded-full max-w-max mx-auto border-[#d4af37]/50 reveal active delay-500">
           <div class="flex flex-col items-center min-w-[45px] md:min-w-[60px]">
             <span id="cd-days" class="text-xl md:text-4xl font-serif-royal text-[#800000] font-bold">00</span>
@@ -379,7 +375,6 @@
           </div>
         </div>
         
-        <!-- Play Teaser Button -->
         <div class="mt-4 md:mt-8 flex justify-center reveal active delay-500 z-40">
           <button id="btn-play-teaser" class="glass-panel px-5 py-2 md:py-3 rounded-full text-white border border-[#d4af37]/50 hover:bg-[#d4af37]/20 transition-all flex items-center gap-2 text-[10px] md:text-sm font-bold tracking-[0.2em] uppercase shadow-[0_0_15px_rgba(212,175,55,0.3)]">
             <i class="ph-fill ph-play-circle text-[#d4af37] text-lg md:text-2xl"></i> 
@@ -388,7 +383,6 @@
           </button>
         </div>
 
-        <!-- Scroll Button -->
         <div class="mt-6 md:mt-10 animate-bounce cursor-pointer z-30 text-[#d4af37] bg-gradient-to-b from-[#800000]/90 to-[#4a0000]/90 p-2.5 md:p-4 rounded-full backdrop-blur-md border border-[#d4af37]/60 shadow-[0_0_20px_rgba(212,175,55,0.5)] hover:bg-[#800000] transition-all hover:scale-110 flex items-center justify-center reveal active delay-500 w-max" onclick="document.getElementById('couple').scrollIntoView({behavior: 'smooth'})">
           <i class="ph ph-caret-double-down text-xl md:text-3xl"></i>
         </div>
@@ -406,11 +400,10 @@
         <div class="w-24 md:w-32 h-1 bg-[#d4af37] mx-auto mb-16 md:mb-20 rounded-full reveal delay-100"></div>
         
         <div class="grid md:grid-cols-2 gap-16 md:gap-12 lg:gap-24 items-center">
-          <!-- Groom Bio -->
           <div class="reveal delay-200 flex flex-col items-center group">
             <div class="w-56 h-56 md:w-72 md:h-72 rounded-full p-2 border-2 border-[#d4af37] shadow-[0_15px_40px_rgba(128,0,0,0.15)] mb-8 relative transition-transform duration-500 group-hover:scale-105 bg-white">
               <div class="absolute inset-0 rounded-full border-4 border-transparent border-t-[#800000] border-b-[#800000] animate-[spin_10s_linear_infinite] opacity-30"></div>
-              <img src="Groom.jpeg" alt="Groom" class="w-full h-full rounded-full object-cover object-top" />
+              <img src="Groom.jpeg" alt="Groom" class="w-full h-full rounded-full object-cover object-top" onerror="this.src='https://images.unsplash.com/photo-1610174098634-1188092abde5?auto=format&fit=crop&q=80&w=800'"/>
             </div>
             <p class="font-sans-clean text-[#d4af37] font-bold tracking-[0.3em] uppercase text-xs mb-2">
               <span class="lang-en">The Groom</span>
@@ -426,7 +419,6 @@
             </p>
           </div>
 
-          <!-- Bride Bio -->
           <div class="reveal delay-300 flex flex-col items-center group">
             <div class="w-56 h-56 md:w-72 md:h-72 rounded-full p-2 border-2 border-[#d4af37] shadow-[0_15px_40px_rgba(128,0,0,0.15)] mb-8 relative transition-transform duration-500 group-hover:scale-105 bg-white">
               <div class="absolute inset-0 rounded-full border-4 border-transparent border-l-[#800000] border-r-[#800000] animate-[spin_10s_linear_infinite] opacity-30"></div>
@@ -459,7 +451,6 @@
         <div class="w-24 md:w-32 h-1 bg-[#d4af37] mx-auto mb-10 md:mb-16 rounded-full reveal delay-100"></div>
 
         <div class="grid md:grid-cols-2 gap-8 md:gap-12 mb-16">
-          <!-- Groom Side -->
           <div class="glass-card p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden ornate-corners reveal hover:-translate-y-2 transition-transform duration-500 bg-white">
             <div class="absolute top-0 right-0 p-4 opacity-5">
               <svg width="120" height="120" viewBox="0 0 24 24" fill="#800000"><path d="M12 2L2 22h20L12 2z"/></svg>
@@ -482,15 +473,13 @@
               <span class="lang-gu hidden font-gujarati tracking-wide">શ્રી જયેન્દ્રસિંહ દશરથસિંહ વાઘેલા <br><span class="text-sm text-gray-500 tracking-normal font-normal">ના સુપુત્ર</span></span>
             </p>
             
-            <!-- Added Big Brother Section -->
             <div class="w-10 h-px bg-[#d4af37]/50 mx-auto my-3 md:my-4"></div>
             
             <p class="font-serif-editorial text-lg md:text-xl font-bold mb-2 text-[#800000] flex flex-col gap-1">
               <span class="lang-en font-sans-clean text-[10px] uppercase tracking-[0.2em] text-gray-500 font-normal">Big Brother Of</span>
               <span class="lang-en">Shri Kripalsinh Jayendrasinh Vaghela</span>
-              <span class="lang-gu hidden font-gujarati tracking-wide text-xl">શ્રી ક્રિપાલસિંહ જયેન્દ્રસિંહ વાઘેલા <br><span class="text-xs text-gray-500 tracking-normal font-normal">ના મોટા ભાઈ</span></span>
+              <span class="lang-gu hidden font-gujarati tracking-wide text-xl">શ્રી કિરપાલસિંહ જયેન્દ્રસિંહ વાઘેલા <br><span class="text-xs text-gray-500 tracking-normal font-normal">ના મોટા ભાઈ</span></span>
             </p>
-            <!-- End Added Section -->
             
             <p class="font-sans-clean text-xs md:text-sm text-gray-600 mb-2 mt-4">
               <span class="lang-en">Resident of Godhavi</span>
@@ -498,7 +487,6 @@
             </p>
           </div>
 
-          <!-- Bride Side -->
           <div class="glass-card p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden ornate-corners reveal delay-200 hover:-translate-y-2 transition-transform duration-500 bg-white">
             <div class="absolute top-0 left-0 p-4 opacity-5">
               <svg width="120" height="120" viewBox="0 0 24 24" fill="#800000"><circle cx="12" cy="12" r="10"/></svg>
@@ -530,7 +518,6 @@
           <svg class="absolute bottom-4 right-4 opacity-20 w-16 h-16 md:w-24 md:h-24 rotate-180" viewBox="0 0 100 100" fill="none" stroke="#d4af37" stroke-width="2"><path d="M10,50 Q50,10 50,50 T90,50" /><path d="M50,10 Q90,50 50,50 T50,90" /></svg>
 
           <div class="relative z-10 grid lg:grid-cols-12 gap-10">
-            
             <div class="text-left lg:col-span-7 border-b lg:border-b-0 lg:border-r border-[#d4af37]/30 pb-10 lg:pb-0 lg:pr-10">
               <h4 class="font-serif-royal text-xl md:text-3xl text-[#d4af37] mb-6 flex items-center gap-3 border-b border-[#d4af37]/20 pb-3 inline-flex">
                 <i class="ph ph-hands-praying"></i> 
@@ -587,7 +574,6 @@
                   <span class="lang-en">Cordial Invitation</span>
                   <span class="lang-gu hidden font-gujarati font-bold tracking-wide text-3xl">નિમંત્રક</span>
                 </h4>
-                
                 <div class="text-center mb-8">
                   <p class="font-serif-editorial text-xl md:text-2xl font-bold text-white mb-2">
                     <span class="lang-en">Vaghela Dashrathsinh Arjunsinh</span>
@@ -598,7 +584,6 @@
                     <span class="lang-gu hidden font-gujarati tracking-wide">વાઘેલા ભગીરથસિંહ દશરથસિંહ</span>
                   </p>
                 </div>
-                
                 <div class="space-y-6">
                   <div>
                     <p class="font-sans-clean text-xs font-bold text-[#d4af37] mb-1 tracking-[0.2em] uppercase flex items-center gap-2"><i class="ph-fill ph-house-line text-lg"></i> 
@@ -620,10 +605,8 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
     </section>
 
@@ -634,13 +617,21 @@
           <span class="lang-en">Mangalik Prasango</span>
           <span class="lang-gu hidden font-gujarati font-bold tracking-wide">માંગલિક પ્રસંગો</span>
         </h2>
-        <p class="font-serif-editorial text-xl text-center text-[#d4af37] italic mb-10 md:mb-16 reveal delay-100">
+        <p class="font-serif-editorial text-xl text-center text-[#d4af37] italic mb-8 md:mb-10 reveal delay-100">
           <span class="lang-en">Auspicious Wedding Events</span>
           <span class="lang-gu hidden font-gujarati tracking-wide text-2xl font-bold">રૂડા અવસરે પધારવા ભાવભર્યું આમંત્રણ</span>
         </p>
+
+        <!-- Master Add to Calendar Button (Triggers ICS generation for ALL events) -->
+        <div class="flex justify-center mb-10 md:mb-16 reveal delay-100">
+          <button onclick="window.downloadWeddingCalendar()" class="bg-gradient-to-r from-[#d4af37] to-[#b8860b] text-[#800000] px-6 py-3 rounded-full text-xs md:text-sm font-bold tracking-widest uppercase shadow-lg hover:shadow-xl hover:brightness-110 transition-all flex items-center gap-2 cursor-pointer border border-transparent">
+            <i class="ph-bold ph-calendar-plus text-lg"></i>
+            <span class="lang-en">Save All Events to Calendar</span>
+            <span class="lang-gu hidden font-gujarati tracking-wide text-[15px]">બધા પ્રસંગો કેલેન્ડરમાં ઉમેરો</span>
+          </button>
+        </div>
         
         <div class="relative border-l-2 border-[#d4af37]/40 ml-2 md:ml-12 space-y-8 pb-8">
-          
           <!-- Date 1 -->
           <div class="relative pl-6 md:pl-12 group cursor-pointer event-accordion reveal">
             <div class="absolute w-6 h-6 md:w-8 md:h-8 bg-[#800000] rounded-full -left-[13px] md:-left-[17px] top-5 md:top-4 border-4 border-[#fdfbf7] shadow-sm flex items-center justify-center group-hover:scale-125 transition-transform duration-300 z-10">
@@ -754,9 +745,12 @@
                     <i class="ph-fill ph-shirt-folded text-[#d4af37] text-sm"></i> 
                     <span class="lang-en">Dress Code: Vibrant Traditional</span><span class="lang-gu hidden font-gujarati text-[13px] tracking-wide">પહેરવેશ: પારંપરિક ગરબા પોશાક</span>
                   </span>
-                  <button onclick="window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&text=Raas+Garba+-+Harshvardhansinh+%26+Jignaba&dates=20260308T153000Z/20260308T183000Z&details=Join+us+for+an+evening+of+dance+and+celebration!&location=Godhavi+Village,+Ahmedabad', '_blank')" class="bg-[#d4af37]/10 text-[#800000] border border-[#d4af37]/50 px-3 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-wide hover:bg-[#d4af37] hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer z-20">
-                    <i class="ph-bold ph-calendar-plus text-sm"></i> 
-                    <span class="lang-en">Add to Calendar</span><span class="lang-gu hidden font-gujarati text-[13px] tracking-wide">કેલેન્ડરમાં ઉમેરો</span>
+                  
+                  <!-- DJ REQUEST BUTTON -->
+                  <button onclick="window.open('https://forms.gle/your-link-here', '_blank')" class="bg-gradient-to-r from-[#800000] to-[#5a0000] text-white border border-[#d4af37]/50 px-3 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-wide hover:brightness-110 transition-all flex items-center gap-1.5 cursor-pointer z-20 shadow-md">
+                    <i class="ph-fill ph-music-notes text-[#d4af37] text-sm"></i>
+                    <span class="lang-en">Request a Song from DJ</span>
+                    <span class="lang-gu hidden font-gujarati text-[13px] tracking-wide">DJ માટે ગીતની વિનંતી કરો</span>
                   </button>
                 </div>
 
@@ -797,7 +791,6 @@
               </div>
               <div class="accordion-content">
                 <div class="space-y-3 md:space-y-4 mt-4 font-sans-clean">
-                  
                   <div class="flex items-center justify-between bg-white/80 p-3 md:p-4 rounded-xl border border-[#d4af37]/20 shadow-sm">
                     <div class="flex items-center gap-3 md:gap-4">
                       <div class="bg-[#800000]/10 p-2 md:p-3 rounded-full shrink-0"><i class="ph-fill ph-horse text-[#800000] text-xl md:text-2xl"></i></div>
@@ -863,11 +856,6 @@
                     <span class="lang-en">Dress Code: Royal Rajputana</span>
                     <span class="lang-gu hidden font-gujarati text-[13px] tracking-wide">પહેરવેશ: રાજપૂતી પોશાક</span>
                   </span>
-                  <button onclick="window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&text=Hast+Melap+-+Harshvardhansinh+%26+Jignaba&dates=20260309T140000Z/20260309T160000Z&details=The+holy+wedding+ceremony.&location=Godhavi+Village,+Ahmedabad', '_blank')" class="bg-[#d4af37]/10 text-[#800000] border border-[#d4af37]/50 px-3 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-wide hover:bg-[#d4af37] hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer z-20">
-                    <i class="ph-bold ph-calendar-plus text-sm"></i> 
-                    <span class="lang-en">Add to Calendar</span>
-                    <span class="lang-gu hidden font-gujarati text-[13px] tracking-wide">કેલેન્ડરમાં ઉમેરો</span>
-                  </button>
                 </div>
 
                 <div class="mt-4 md:mt-6 flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-3 bg-[#fdfbf7] px-4 py-3 rounded-xl border border-[#d4af37]/30 text-xs md:text-sm font-medium">
@@ -930,18 +918,14 @@
               </div>
 
               <div class="flex items-center justify-center gap-4 w-full">
-                <!-- Uber Universal Link (Auto-detects pickup, auto-fills dropoff) -->
                 <button onclick="window.open('https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=Godhavi,%20Sanand,%20Ahmedabad,%20Gujarat', '_blank')" class="bg-black text-white py-3 px-2 rounded-full font-bold tracking-wider uppercase text-xs hover:bg-gray-800 transition-all flex items-center justify-center gap-2 flex-1 cursor-pointer shadow-[0_4px_15px_rgba(0,0,0,0.5)] border border-[#d4af37]/40 hover:-translate-y-1">
                   <i class="ph-fill ph-car-profile text-lg text-[#d4af37]"></i> Uber
                 </button>
-                
-                <!-- Rapido Deep Link App Trigger -->
                 <button onclick="window.openRapido()" class="bg-[#F9C900] text-black py-3 px-2 rounded-full font-bold tracking-wider uppercase text-xs hover:bg-[#e0b500] transition-all flex items-center justify-center gap-2 flex-1 cursor-pointer shadow-[0_4px_15px_rgba(249,201,0,0.2)] border border-transparent hover:-translate-y-1">
                   <i class="ph-fill ph-moped text-lg"></i> Rapido
                 </button>
               </div>
             </div>
-            
         </div>
       </div>
     </section>
@@ -1070,19 +1054,19 @@
                       <span class="lang-gu hidden font-gujarati tracking-wide text-[22px]">વાઘેલા જયેન્દ્રસિંહ દશરથસિંહ</span>
                   </span>
               </div>
+              <!-- Big Brother Highlight Removed as requested -->
               <div class="flex items-center gap-3 justify-center w-full">
                   <i class="ph ph-sparkle text-[#d4af37] text-sm shrink-0"></i>
                   <span>
                       <span class="lang-en">Vaghela Kirpalsinh Jayendrasinh</span>
-                      <span class="lang-gu hidden font-gujarati tracking-wide text-[22px]">વાઘેલા ક્રિપાલસિંહ જયેન્દ્રસિંહ</span>
+                      <span class="lang-gu hidden font-gujarati tracking-wide text-[22px]">વાઘેલા કિરપાલસિંહ જયેન્દ્રસિંહ</span>
                   </span>
               </div>
             </div>
 
-            <!-- 4 Columns layout matching original card -->
+            <!-- 4 Columns layout -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-3 gap-x-4 text-center lg:text-left font-serif-editorial text-base md:text-lg text-gray-300 px-2 md:px-4 leading-relaxed">
-              
-              <!-- Column 1 -->
+              <!-- Exact Names -->
               <div class="flex flex-col gap-2">
                   <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Mukeshsinh Rameshisinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા મુકેશસિંહ રમેશસિંહ</span></span></div>
                   <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Merubha Ranajitsinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા મેરુભા રણજીતસિંહ</span></span></div>
@@ -1091,8 +1075,6 @@
                   <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Pradipsinh Ashoksinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા પ્રદિપસિંહ અશોકસિંહ</span></span></div>
                   <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Vijaysinh Ashoksinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા વિજયસિંહ અશોકસિંહ</span></span></div>
               </div>
-
-              <!-- Column 2 -->
               <div class="flex flex-col gap-2">
                   <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Meghrajsinh Sukhdevsinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા મેઘરાજસિંહ સુખદેવસિંહ</span></span></div>
                   <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Mayursinh Jabbarsinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા મયુરસિંહ જબ્બરરસિંહ</span></span></div>
@@ -1101,8 +1083,6 @@
                   <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Karansinh Gajendrasinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા કરણસિંહ ગજેન્દ્રસિંહ</span></span></div>
                   <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Krushnasinh Gajendrasinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા કૃષ્ણસિંહ ગજેન્દ્રસિંહ</span></span></div>
               </div>
-
-              <!-- Column 3 -->
               <div class="flex flex-col gap-2">
                   <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Yuvarajsinh Virendrasinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા યુવરાજસિંહ વિરેન્દ્રસિંહ</span></span></div>
                   <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Jayvirsinh Merubha</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા જયવીરસિંહ મેરુભા</span></span></div>
@@ -1110,8 +1090,6 @@
                   <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Rudrajsinh Digubha</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા રૂદ્રરાજસિંહ દિગુભા</span></span></div>
                   <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Smitrajsinh Pradipsinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા સ્મિતરાજસિંહ પ્રદિપસિંહ</span></span></div>
               </div>
-
-              <!-- Column 4 -->
               <div class="flex flex-col gap-2">
                   <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Divyarajsinh Virendrasinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા દિવ્યરાજસિંહ વિરેન્દ્રસિંહ</span></span></div>
                   <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Vrajrajsinh Vijaysinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા વ્રજરાજસિંહ વિજયસિંહ</span></span></div>
@@ -1120,25 +1098,22 @@
                   <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Vaghela Karmarajsinh Pradipsinh</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા કર્મરાજસિંહ પ્રદિપસિંહ</span></span></div>
               </div>
             </div>
-            
-            <!-- Bottom Centered Special Mention -->
-            <div class="mt-6 text-center lg:text-right lg:pr-12 font-serif-editorial text-base md:text-lg text-gray-200 w-full">
-               <span class="lang-en">Vaghela Yakshikaba Bhagirathsinh</span>
-               <span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા યક્ષિકાબા ભગીરથસિંહ</span>
+            <div class="mt-6 text-center lg:text-right lg:pr-12 font-serif-editorial text-base md:text-lg text-gray-200 w-full flex items-center justify-center lg:justify-end gap-3">
+               <i class="ph ph-sparkle text-[#d4af37] text-sm shrink-0"></i>
+               <span>
+                 <span class="lang-en">Vaghela Yakshikaba Bhagirathsinh</span>
+                 <span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">વાઘેલા યક્ષિકાબા ભગીરથસિંહ</span>
+               </span>
             </div>
-            
-
           </div>
 
           <div class="grid lg:grid-cols-2 gap-8 md:gap-12 mb-16">
-            <!-- Monghera Maheman -->
             <div class="text-left glass-dark p-6 md:p-10 rounded-[2rem] h-full relative ornate-corners reveal delay-200 hover:-translate-y-2 transition-transform duration-500">
               <div class="absolute top-6 right-6 text-[#d4af37] opacity-30"><i class="ph-fill ph-crown text-4xl floating"></i></div>
               <h4 class="font-serif-editorial text-2xl md:text-3xl mb-8 text-[#d4af37] font-semibold border-b border-[#d4af37]/20 pb-4 inline-block pr-8">
                 <span class="lang-en">Esteemed Guests <br><span class="text-lg italic text-[#fae8dd] font-normal">(Monghera Maheman)</span></span>
                 <span class="lang-gu hidden font-gujarati tracking-wide font-bold text-3xl">મોંઘેરા મહેમાન</span>
               </h4>
-              
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-4 text-base md:text-lg text-gray-200 font-serif-editorial">
                 <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Jhala Manoharsinh Gajubha (Jamai Shri)</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">ઝાલા મનોહરસિંહ ગજુભા (જમાઈશ્રી)</span></span></div>
                 <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Jadeja Siddhrajshinh Kayanubha (Jamai Shri)</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">જાડેજા સિદ્ધરાજસિંહ કયાણુભા (જમાઈશ્રી)</span></span></div>
@@ -1151,15 +1126,12 @@
                 <div class="flex items-start gap-3"><i class="ph ph-sparkle text-[#d4af37] mt-1.5 text-sm shrink-0"></i><span><span class="lang-en">Jhala Bhagatsinh Gambhirsinh (Bhanubha)</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">ઝાલા ભગતસિંહ ગંભીરસિંહ (ભાણુભા)</span></span></div>
               </div>
             </div>
-            
-            <!-- Mosal Paksh -->
             <div class="text-left bg-[#130b0b] p-6 md:p-10 rounded-[2rem] border border-[#d4af37]/40 shadow-2xl h-full relative reveal delay-300 hover:-translate-y-2 transition-transform duration-500">
               <div class="absolute top-6 right-6 text-[#d4af37] opacity-30"><i class="ph-fill ph-users-three text-4xl floating"></i></div>
               <h4 class="font-serif-editorial text-2xl md:text-3xl mb-8 text-[#d4af37] font-semibold border-b border-[#d4af37]/20 pb-4 inline-block pr-8">
                 <span class="lang-en">Maternal Side <br><span class="text-lg italic text-[#fae8dd] font-normal">(Mosal Paksh)</span></span>
                 <span class="lang-gu hidden font-gujarati tracking-wide font-bold text-3xl">મોસાળ પક્ષ</span>
               </h4>
-              
               <div class="mb-8 bg-[#2a0e0e]/80 p-5 md:p-6 rounded-2xl border-l-[6px] border-[#d4af37] shadow-[0_8px_30px_rgba(0,0,0,0.2)] relative overflow-hidden backdrop-blur-md">
                 <p class="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[#d4af37] mb-2 font-sans-clean font-bold">In Loving Memory</p>
                 <p class="text-xl md:text-2xl text-[#fae8dd] font-serif-editorial font-bold leading-snug">
@@ -1167,7 +1139,6 @@
                   <span class="lang-gu hidden font-gujarati tracking-wide">સ્વ. શ્રી રાઓલ દિગ્વિજયસિંહ રામદેવસિંહ</span>
                 </p>
               </div>
-
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-4 text-base md:text-lg text-gray-200 font-sans-clean tracking-wide">
                 <div class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0"></div><span><span class="lang-en">Raol Jagatsinh Harubha</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">રાઓલ જગતસિંહ હરુભા</span></span></div>
                 <div class="flex items-start gap-3"><div class="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0"></div><span><span class="lang-en">Raol Ashkoksinh Govubha</span><span class="lang-gu hidden font-gujarati tracking-wide text-[19px]">રાઓલ અશોકસિંહ ગોવુભા</span></span></div>
@@ -1184,22 +1155,17 @@
                <span class="lang-gu hidden font-gujarati tracking-wide text-[22px] font-bold">નોંધ : ઘોર પ્રથા બંધ છે.</span>
              </p>
           </div>
-
           <div class="w-16 md:w-24 h-px bg-[#d4af37]/40 mx-auto mb-8 md:mb-10 reveal"></div>
-          
           <p class="font-serif-editorial text-xl md:text-3xl italic mb-8 text-[#fae8dd] px-4 leading-relaxed reveal">
             <span class="lang-en">"We eagerly await your presence to grace this auspicious occasion."</span>
             <span class="lang-gu hidden font-gujarati text-[26px] tracking-wide font-bold">"આ પાવન અવસરે આપની ઉપસ્થિતિ એ જ અમારો આનંદ છે."</span>
           </p>
-          
           <div class="flex justify-center pb-8 reveal delay-100">
              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="animate-pulse">
                 <path d="M12 22C17.5228 22 22 17.5228 22 12C22 10 18 8 12 2C6 8 2 10 2 12C2 17.5228 6.47715 22 12 22Z" fill="#d4af37" opacity="0.8"/>
                 <path d="M12 18C14.2091 18 16 16.2091 16 14C16 12.5 14 11 12 7C10 11 8 12.5 8 14C8 16.2091 9.79086 18 12 18Z" fill="#800000"/>
              </svg>
           </div>
-          
-          <!-- Custom Footer -->
           <div class="mt-4 border-t border-[#d4af37]/20 pt-10 flex flex-col items-center justify-center relative z-10 reveal delay-200">
              <h3 class="font-serif-royal text-3xl md:text-4xl text-[#d4af37] mb-4 drop-shadow-md tracking-wider">
                <span class="lang-en">Vaghela Parivar</span>
@@ -1209,7 +1175,6 @@
                Designed By <span class="text-[#d4af37] font-bold">Nyota</span> <br class="md:hidden">For Harshvardhansinh & Vaghela Family
              </p>
           </div>
-
        </div>
     </section>
 
@@ -1237,41 +1202,97 @@
     </div>
   </div>
 
-  <!-- Confetti Script -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
-  <!-- APPLICATION LOGIC -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
     import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
     import { getFirestore, collection, addDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-    // --- Configurations ---
-    const WEDDING_DATE = new Date('2026-03-09T19:30:00').getTime(); // Hast Melap Date/Time
+    const WEDDING_DATE = new Date('2026-03-09T19:30:00').getTime();
 
-    // --- Ride Booking Logic (Rapido Deep Link) ---
+    // JS Function for ICS Download
+    window.downloadWeddingCalendar = function() {
+      const events = [
+        {
+          start: '20260307T040000Z', end: '20260307T050000Z',
+          title: 'Vel Prasthan', summary: 'Vel Prasthan of Harshvardhansinh & Jignaba',
+          description: 'The joyful departure of the groom family.', location: 'Godhavi Village, Ahmedabad'
+        },
+        {
+          start: '20260308T022500Z', end: '20260308T030000Z', 
+          title: 'Ganesh Sthapan', summary: 'Ganesh Sthapan of Harshvardhansinh & Jignaba',
+          description: 'Pre-wedding rituals.', location: 'Bapa Sitaram Farm, Godhavi, Ahmedabad'
+        },
+        {
+          start: '20260308T030000Z', end: '20260308T050000Z', 
+          title: 'Mandap Muhurat', summary: 'Mandap Muhurat of Harshvardhansinh & Jignaba',
+          description: 'Pre-wedding rituals.', location: 'Bapa Sitaram Farm, Godhavi, Ahmedabad'
+        },
+        {
+          start: '20260308T083000Z', end: '20260308T093000Z', 
+          title: 'Grahshanti', summary: 'Grahshanti of Harshvardhansinh & Jignaba',
+          description: 'Pre-wedding rituals.', location: 'Bapa Sitaram Farm, Godhavi, Ahmedabad'
+        },
+        {
+          start: '20260308T153000Z', end: '20260308T183000Z', 
+          title: 'Raas Garba', summary: 'Raas Garba of Harshvardhansinh & Jignaba',
+          description: 'Join us for an evening of dance and celebration!', location: 'Bapa Sitaram Farm, Godhavi, Ahmedabad'
+        },
+        {
+          start: '20260309T130000Z', end: '20260309T133000Z', 
+          title: 'Fuleku', summary: 'Fuleku (Groom Procession) of Harshvardhansinh & Jignaba',
+          description: 'Groom Procession.', location: 'Bapa Sitaram Farm, Godhavi, Ahmedabad'
+        },
+        {
+          start: '20260309T140000Z', end: '20260309T160000Z', 
+          title: 'Hast Melap', summary: 'Hast Melap of Harshvardhansinh & Jignaba',
+          description: 'The holy wedding ceremony.', location: 'Bapa Sitaram Farm, Godhavi, Ahmedabad'
+        }
+      ];
+
+      let icsContent = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Nyota//Wedding Invite//EN\n";
+      
+      events.forEach(e => {
+        icsContent += "BEGIN:VEVENT\n";
+        icsContent += `DTSTART:${e.start}\n`;
+        icsContent += `DTEND:${e.end}\n`;
+        icsContent += `SUMMARY:${e.summary}\n`;
+        icsContent += `DESCRIPTION:${e.description}\n`;
+        icsContent += `LOCATION:${e.location}\n`;
+        icsContent += "BEGIN:VALARM\n";
+        icsContent += "ACTION:DISPLAY\n";
+        icsContent += `DESCRIPTION:Reminder: ${e.title} happens of Harshvardhansinh & Jignaba in 10 minutes!\n`;
+        icsContent += "TRIGGER:-PT10M\n";
+        icsContent += "END:VALARM\n";
+        icsContent += "END:VEVENT\n";
+      });
+      
+      icsContent += "END:VCALENDAR";
+
+      const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.setAttribute('download', 'Harshvardhansinh_Jignaba_Wedding.ics');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+
     window.openRapido = function() {
       const address = encodeURIComponent("Godhavi, Sanand, Ahmedabad, Gujarat");
       const isAndroid = /android/i.test(navigator.userAgent);
       const isIOS = /ipad|iphone|ipod/i.test(navigator.userAgent);
-      
       if (isAndroid) {
-        // Standard Android Intent for deep linking to Rapido App
         window.location.href = `intent://ride?drop=${address}#Intent;scheme=rapido;package=com.rapido.passenger;end`;
       } else if (isIOS) {
-        // iOS Custom URI Scheme
         window.location.href = `rapido://ride?drop=${address}`;
-        // Fallback to App Store if app is not installed
-        setTimeout(() => {
-          window.open("https://apps.apple.com/in/app/rapido-bike-taxi-auto/id1052258660", "_blank");
-        }, 1500);
+        setTimeout(() => { window.open("https://apps.apple.com/in/app/rapido-bike-taxi-auto/id1052258660", "_blank"); }, 1500);
       } else {
-        // Web fallback for Desktop
         window.open("https://rapido.bike/", "_blank");
       }
     };
 
-    // --- Language Toggle Logic ---
     const btnToggleLang = document.getElementById('btn-toggle-lang');
     const langLabel = document.getElementById('lang-label');
     const placeholdersName = document.querySelectorAll('.lang-placeholder');
@@ -1280,39 +1301,29 @@
 
     btnToggleLang.addEventListener('click', () => {
       isGujarati = !isGujarati;
-      
       const enElements = document.querySelectorAll('.lang-en');
       const guElements = document.querySelectorAll('.lang-gu');
-      
       if (isGujarati) {
-        // Switch to Gujarati
         enElements.forEach(el => el.classList.add('hidden'));
         guElements.forEach(el => el.classList.remove('hidden'));
         langLabel.innerHTML = '<span class="font-sans-clean tracking-widest uppercase">English</span>';
-        
-        // Update input placeholders
         placeholdersName.forEach(el => el.placeholder = "તમારું અને પરિવારનું નામ");
         placeholdersMsg.forEach(el => el.placeholder = "હર્ષવર્ધનસિંહ અને જીજ્ઞાબા માટે આશીર્વાદ લખો...");
       } else {
-        // Switch to English
         enElements.forEach(el => el.classList.remove('hidden'));
         guElements.forEach(el => el.classList.add('hidden'));
         langLabel.innerHTML = '<span class="font-gujarati text-[13px] md:text-[15px] tracking-wide">ગુજરાતી</span>';
-        
-        // Update input placeholders
         placeholdersName.forEach(el => el.placeholder = "Your Name & Family");
         placeholdersMsg.forEach(el => el.placeholder = "Write your heartfelt wishes...");
       }
     });
 
-    // --- UI Logic: Splash Screen & Audio ---
     const btnOpen = document.getElementById('btn-open-invitation');
     const splashScreen = document.getElementById('splash-screen');
     const mainApp = document.getElementById('main-app');
     const bgMusic = document.getElementById('bg-music');
     const btnToggleAudio = document.getElementById('btn-toggle-audio');
     const audioIcon = document.getElementById('audio-icon');
-
     let isPlaying = false;
 
     btnOpen.addEventListener('click', () => {
@@ -1321,66 +1332,39 @@
         splashScreen.style.display = 'none';
         mainApp.classList.remove('hidden');
         setTimeout(() => mainApp.style.opacity = '1', 50);
-        bgMusic.play().then(() => {
-          isPlaying = true;
-          updateAudioIcon();
-        }).catch(e => console.log("Audio autoplay blocked", e));
+        bgMusic.play().then(() => { isPlaying = true; updateAudioIcon(); }).catch(e => console.log("Audio autoplay blocked", e));
       }, 1000);
     });
 
     function updateAudioIcon() {
-      if (isPlaying) {
-        audioIcon.className = 'ph-fill ph-speaker-high text-lg md:text-2xl';
-      } else {
-        audioIcon.className = 'ph-fill ph-speaker-slash text-lg md:text-2xl';
-      }
+      if (isPlaying) { audioIcon.className = 'ph-fill ph-speaker-high text-lg md:text-2xl'; }
+      else { audioIcon.className = 'ph-fill ph-speaker-slash text-lg md:text-2xl'; }
     }
 
     btnToggleAudio.addEventListener('click', () => {
-      if (isPlaying) {
-        bgMusic.pause();
-      } else {
-        bgMusic.play();
-      }
+      if (isPlaying) { bgMusic.pause(); } else { bgMusic.play(); }
       isPlaying = !isPlaying;
       updateAudioIcon();
     });
 
-    // --- Video Modal Logic (Fixed for HTML5 Video) ---
     const btnPlayTeaser = document.getElementById('btn-play-teaser');
     const videoModal = document.getElementById('video-modal');
     const closeVideo = document.getElementById('close-video');
     const teaserVideo = document.getElementById('teaser-video');
 
     btnPlayTeaser.addEventListener('click', () => {
-      if (isPlaying) {
-        bgMusic.pause();
-        isPlaying = false;
-        updateAudioIcon();
-      }
-      
-      videoModal.classList.remove('hidden');
+      if (isPlaying) { bgMusic.pause(); isPlaying = false; updateAudioIcon(); }
+      videoModal.classList.remove('hidden', 'opacity-0');
       videoModal.classList.add('flex');
-      setTimeout(() => videoModal.classList.remove('opacity-0'), 10);
-      
-      // Auto play the native video
       teaserVideo.play().catch(e => console.log("Autoplay prevented:", e));
     });
 
     closeVideo.addEventListener('click', () => {
       videoModal.classList.add('opacity-0');
-      
-      // Stop the native video
-      teaserVideo.pause();
-      teaserVideo.currentTime = 0;
-
-      setTimeout(() => {
-        videoModal.classList.add('hidden');
-        videoModal.classList.remove('flex');
-      }, 300);
+      teaserVideo.pause(); teaserVideo.currentTime = 0;
+      setTimeout(() => { videoModal.classList.add('hidden'); videoModal.classList.remove('flex'); }, 300);
     });
 
-    // --- Lightbox Logic ---
     const galleryImages = document.querySelectorAll('.gallery-img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -1389,21 +1373,16 @@
     galleryImages.forEach(img => {
       img.addEventListener('click', () => {
         lightboxImg.src = img.src;
-        lightbox.classList.remove('hidden');
+        lightbox.classList.remove('hidden', 'opacity-0');
         lightbox.classList.add('flex');
-        setTimeout(() => lightbox.classList.remove('opacity-0'), 10);
       });
     });
 
     closeLightbox.addEventListener('click', () => {
       lightbox.classList.add('opacity-0');
-      setTimeout(() => {
-        lightbox.classList.add('hidden');
-        lightbox.classList.remove('flex');
-      }, 300);
+      setTimeout(() => { lightbox.classList.add('hidden'); lightbox.classList.remove('flex'); }, 300);
     });
 
-    // --- UI Logic: Petals Animation ---
     const petalsContainer = document.getElementById('petals-container');
     for (let i = 0; i < 25; i++) {
       const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -1414,107 +1393,65 @@
       svg.style.animationDuration = `${Math.random() * 8 + 6}s`;
       svg.style.animationDelay = `${Math.random() * 5}s`;
       svg.style.width = `${Math.random() * 15 + 10}px`;
-      
       const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
       path.setAttribute('d', 'M256,0C157.9,0,80,105.7,80,256s77.9,256,176,256s176-105.7,176-256S354.1,0,256,0z');
       path.setAttribute('opacity', '0.6');
-      
       svg.appendChild(path);
       petalsContainer.appendChild(svg);
     }
 
-    // --- Intersection Observer for Scroll Animations ---
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.15
-    };
-
-    const scrollObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
+    const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); } });
     }, observerOptions);
+    document.querySelectorAll('.reveal').forEach((el) => { scrollObserver.observe(el); });
 
-    document.querySelectorAll('.reveal').forEach((el) => {
-      scrollObserver.observe(el);
-    });
-
-    // --- UI Logic: Countdown Timer ---
     const elDays = document.getElementById('cd-days');
     const elHours = document.getElementById('cd-hours');
     const elMins = document.getElementById('cd-minutes');
 
-    const timer = setInterval(() => {
+    setInterval(() => {
       const now = new Date().getTime();
       const distance = WEDDING_DATE - now;
-      if (distance < 0) {
-        clearInterval(timer);
-        elDays.innerText = '00'; elHours.innerText = '00'; elMins.innerText = '00';
-        return;
-      }
+      if (distance < 0) { elDays.innerText = '00'; elHours.innerText = '00'; elMins.innerText = '00'; return; }
       elDays.innerText = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
       elHours.innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
       elMins.innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
     }, 1000);
 
-    // --- UI Logic: Event Accordions ---
     const accordions = document.querySelectorAll('.event-accordion');
     if(accordions.length > 1) {
        accordions[1].querySelector('.accordion-content').classList.add('open');
        accordions[1].querySelector('.event-icon').className = 'ph ph-caret-up text-xl event-icon';
     }
-
     accordions.forEach(acc => {
       acc.addEventListener('click', () => {
         const content = acc.querySelector('.accordion-content');
         const icon = acc.querySelector('.event-icon');
         const isOpen = content.classList.contains('open');
-        
         document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
         document.querySelectorAll('.event-icon').forEach(i => i.className = 'ph ph-caret-down text-xl event-icon');
-
-        if (!isOpen) {
-          content.classList.add('open');
-          icon.className = 'ph ph-caret-up text-xl event-icon';
-        }
+        if (!isOpen) { content.classList.add('open'); icon.className = 'ph ph-caret-up text-xl event-icon'; }
       });
     });
 
-    // --- Firebase Setup ---
     const firebaseConfigStr = (typeof __firebase_config !== 'undefined' && __firebase_config) ? __firebase_config : '{}';
     let firebaseConfig = {};
     try { firebaseConfig = JSON.parse(firebaseConfigStr); } catch (e) { console.error("Firebase Config Error:", e); }
-
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db = getFirestore(app);
     const appId = typeof __app_id !== 'undefined' ? __app_id : 'rajput-wedding-app';
     let currentUser = null;
-
     const initAuth = async () => {
       try {
-        if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
-          await signInWithCustomToken(auth, __initial_auth_token);
-        } else {
-          await signInAnonymously(auth);
-        }
-      } catch (err) {
-        console.error("Auth error:", err);
-      }
+        if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) { await signInWithCustomToken(auth, __initial_auth_token); } 
+        else { await signInAnonymously(auth); }
+      } catch (err) { console.error("Auth error:", err); }
     };
     initAuth();
+    onAuthStateChanged(auth, (user) => { currentUser = user; if (user) { loadBlessings(); } });
 
-    onAuthStateChanged(auth, (user) => {
-      currentUser = user;
-      if (user) {
-        loadBlessings();
-      }
-    });
-
-    // --- Firebase: Blessings System with Confetti ---
     const blessForm = document.getElementById('blessing-form');
     const blessBtn = document.getElementById('blessing-submit-btn');
     const blessList = document.getElementById('blessings-list');
@@ -1522,71 +1459,23 @@
     blessForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (!currentUser) return;
-
       const nameInput = document.getElementById('blessing-name');
       const msgInput = document.getElementById('blessing-message');
-
       if(!nameInput.value || !msgInput.value) return;
-
       blessBtn.innerHTML = 'Sending... <i class="ph-bold ph-spinner animate-spin"></i>';
       blessBtn.disabled = true;
-
       try {
         await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'blessings'), {
-          name: nameInput.value,
-          message: msgInput.value,
-          userId: currentUser.uid,
-          timestamp: Date.now()
+          name: nameInput.value, message: msgInput.value, userId: currentUser.uid, timestamp: Date.now()
         });
-        
-        var duration = 3 * 1000;
-        var end = Date.now() + duration;
-
-        (function frame() {
-          confetti({
-            particleCount: 5,
-            angle: 60,
-            spread: 55,
-            origin: { x: 0 },
-            colors: ['#d4af37', '#800000', '#f3e5ab']
-          });
-          confetti({
-            particleCount: 5,
-            angle: 120,
-            spread: 55,
-            origin: { x: 1 },
-            colors: ['#d4af37', '#800000', '#f3e5ab']
-          });
-
-          if (Date.now() < end) {
-            requestAnimationFrame(frame);
-          }
-        }());
-
-        nameInput.value = '';
-        msgInput.value = '';
-        
-        // Success Message depending on language
-        if(isGujarati) {
-          blessBtn.innerHTML = 'આશીર્વાદ મોકલાયા <i class="ph-bold ph-check"></i>';
-        } else {
-          blessBtn.innerHTML = 'Sent Successfully! <i class="ph-bold ph-check"></i>';
-        }
-        
+        confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 }, colors: ['#d4af37', '#800000'] });
+        nameInput.value = ''; msgInput.value = '';
+        blessBtn.innerHTML = isGujarati ? 'આશીર્વાદ મોકલાયા <i class="ph-bold ph-check"></i>' : 'Sent Successfully! <i class="ph-bold ph-check"></i>';
         setTimeout(() => {
-          if(isGujarati) {
-            blessBtn.innerHTML = '<span class="lang-gu font-gujarati text-lg tracking-wide">આશીર્વાદ મોકલો</span> <i class="ph-fill ph-paper-plane-tilt text-lg"></i>';
-          } else {
-            blessBtn.innerHTML = '<span class="lang-en">Send Blessings</span> <i class="ph-fill ph-paper-plane-tilt text-lg"></i>';
-          }
+          blessBtn.innerHTML = isGujarati ? '<span class="lang-gu font-gujarati text-lg tracking-wide">આશીર્વાદ મોકલો</span> <i class="ph-fill ph-paper-plane-tilt text-lg"></i>' : '<span>Send Blessings</span> <i class="ph-fill ph-paper-plane-tilt text-lg"></i>';
           blessBtn.disabled = false;
         }, 3000);
-
-      } catch (err) {
-        console.error("Blessing Error:", err);
-        blessBtn.innerHTML = '<span class="lang-en">Send Blessings</span> <i class="ph-fill ph-paper-plane-tilt text-lg"></i>';
-        blessBtn.disabled = false;
-      }
+      } catch (err) { console.error("Blessing Error:", err); blessBtn.innerHTML = 'Error!'; blessBtn.disabled = false; }
     });
 
     function loadBlessings() {
@@ -1594,32 +1483,19 @@
       onSnapshot(q, (snapshot) => {
         let blessings = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
         blessings.sort((a, b) => b.timestamp - a.timestamp); 
-        
         blessList.innerHTML = '';
         if (blessings.length === 0) {
-          blessList.innerHTML = `
-            <p class="text-center text-[#fae8dd]/70 col-span-2 italic py-8 text-lg">
-              <span class="lang-en ${isGujarati ? 'hidden' : ''}">Awaiting the first blessing...</span>
-              <span class="lang-gu ${!isGujarati ? 'hidden' : ''} font-gujarati tracking-wide text-2xl font-bold">પ્રથમ આશીર્વાદની રાહ જોઇ રહ્યા છીએ...</span>
-            </p>`;
+          blessList.innerHTML = `<p class="text-center text-[#fae8dd]/70 col-span-2 italic py-8 text-lg">Awaiting the first blessing...</p>`;
           return;
         }
-
         blessings.forEach(b => {
           const div = document.createElement('div');
           div.className = 'bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 relative fade-in text-[#fdfbf7]';
-          div.innerHTML = `
-            <i class="ph-fill ph-quotes absolute top-4 right-4 text-3xl text-[#d4af37] opacity-30"></i>
-            <p class="font-serif-editorial text-xl mb-4 pr-6 leading-relaxed">"${b.message.replace(/</g, "&lt;").replace(/>/g, "&gt;")}"</p>
-            <p class="font-sans-clean font-bold text-[#d4af37] text-sm tracking-wide">- ${b.name.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>
-          `;
+          div.innerHTML = `<i class="ph-fill ph-quotes absolute top-4 right-4 text-3xl text-[#d4af37] opacity-30"></i><p class="font-serif-editorial text-xl mb-4 pr-6 leading-relaxed">"${b.message}"</p><p class="font-sans-clean font-bold text-[#d4af37] text-sm tracking-wide">- ${b.name}</p>`;
           blessList.appendChild(div);
         });
-      }, (err) => {
-        console.error("Fetch Blessings Error:", err);
-      });
+      }, (err) => { console.error("Fetch Blessings Error:", err); });
     }
-
   </script>
 </body>
 </html>
